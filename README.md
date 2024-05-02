@@ -2,6 +2,8 @@
 
 Este repositório é dedicado ao desenvolvimento de páginas web com o objetivo de aprimorar minhas habilidades e explorar novos conceitos. Cada pasta neste repositório representa um projeto diferente, apresentando diferentes aspectos do desenvolvimento web.
 
+![Template](https://raw.githubusercontent.com/BrianMunizSilveira/meu-repositorio/main/template.png)
+
 Acesse meu Portifólio em: [Meu Portifólio](https://brianmunizsilveira.github.io/meu-repositorio/)
 
 ## Projetos Incluídos🖱️⌨️
