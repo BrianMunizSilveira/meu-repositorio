@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'LemonMilk';
+  src: url(src/imgs/LEMONMILK-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #474747;
+  margin: 0;
+  padding: 0;
+  background-image: url(src/imgs/bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'LemonMilk' ;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+ul, li {
+  text-align: justify;
+  color: #383838;
+}
+
+a {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+.album-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.album-item {
+  width: 200px;
+  margin: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.album-item:hover {
+  transform: scale(1.05);
+}
+
+.album-details {
+  padding: 10px;
+}
+
+.album-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.album-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.album-cover {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+img {
+  box-shadow: 0 0 5px;
+}
