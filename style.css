@@ -1,5 +1,20 @@
+/* Import da fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
+:root {
+
+  --cinza-trasparente: #333333e5;
+  --amarelo-destaque: #ffcc00;
+  --azul-1: #f0f8ff;
+  --azul-2: #d4e5f3;
+  --cor-link: #7fffd4;
+  --cinza-escuro: #333;
+  --cor-hover: #ff0000;
+
+  --fonte1: 'Poppins', sans-serif;
+}
+/* Reset de estilos */
 * {
   padding: 0;
   margin: 0;
@@ -8,35 +23,44 @@
   box-sizing: border-box;
 }
 
+/* Estilos para o corpo da página */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #333;
+  font-family: var(--fonte1);
+  background-color: var(--cinza-trasparente);
 }
 
+/*Estilos para Main*/
+main div p {
+  line-height: 1.5em;
+}
+
+/* Estilos para o cabeçalho */
 header {
-  background-color: #333;
   color: #fff;
   padding: 2rem;
 }
 
+/* Estilos para o container */
 .container {
   width: 80%;
   margin: 5px auto;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Estilos para títulos */
 h1, h2 {
   margin: 0;
 }
 
+/* Estilos para parágrafos */
 p {
   text-align: justify;
 }
 
+/* Estilos para a navegação */
 nav ul {
   list-style: none;
   margin: 0;
@@ -57,15 +81,17 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffcc00; 
+  color: var(--amarelo-destaque); 
 }
 
+/* Estilos para links no rodapé */
 footer > div.container > p > a {
-  color: aquamarine;
+  color: var(--cor-link);
 }
 
+/* Estilos para a seção de portfólio */
 #portfolio {
-  background-color: #f0f8ff;
+  background-color: var(--azul-1);
   padding: 10px 0;
 }
 
@@ -73,45 +99,52 @@ footer > div.container > p > a {
   margin-bottom: 40px;
   margin: 10px;
   width: auto;
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background-color: var(--azul-2);
+  padding: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .project h3 {
   margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .project p {
-  color: #555;
+  padding: 30px;
+  text-align: justify;
+  line-height: 2em;
 }
 
 .project a {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #333;
+  background-color: var(--cinza-escuro);
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
 }
 
-.project a:hover {
-  background-color: #ffcc00; 
+.project a:hover { 
+  color: var(--cor-hover);
+  transition: color 0.3s ease;
 }
 
+.icons {
+  display: grid;
+  justify-content: space-around;
+}
+
+/* Estilos para o rodapé */
 footer {
-  background-color: #333;
+  background-color: var(--cinza-escuro);
   color: #fff;
   padding: 5px;
 }
 
 footer a {
-  color: #ffcc00; 
+  color: var(--amarelo-destaque); 
   text-decoration: none;
 }
 
@@ -119,7 +152,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
+/* Estilos responsivos */
 @media only screen and (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -151,13 +184,13 @@ footer a:hover {
   }
 
   footer {
-    background-color: #333;
+    background-color: var(--cinza-escuro);
     color: #fff;
     padding: 5px;
   }
 
   footer a {
-    color: #ffcc00; 
+    color: var(--amarelo-destaque); 
     text-decoration: none;
   }
 
