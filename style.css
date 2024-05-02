@@ -155,12 +155,9 @@ footer a:hover {
 /* Estilos responsivos */
 @media only screen and (max-width: 768px) {
   .container {
+    width: 100%;
     flex-direction: column;
     text-align: center;
-  }
-
-  body {
-    text-align: justify;
   }
 
   nav {
@@ -175,12 +172,12 @@ footer a:hover {
     margin: 0 0 10px 0;
   }
 
-  #portfolio .container {
+  #sobre .container {
     text-align: center;
   }
 
-  .project {
-    text-align: center;
+  .profile-image {
+    max-width: 80%;
   }
 
   footer {
@@ -190,7 +187,7 @@ footer a:hover {
   }
 
   footer a {
-    color: var(--amarelo-destaque); 
+    color: var(--amarelo-destaque);
     text-decoration: none;
   }
 
