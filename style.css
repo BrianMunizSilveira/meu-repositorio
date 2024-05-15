@@ -14,6 +14,7 @@
 
   --fonte1: 'Poppins', sans-serif;
 }
+
 /* Reset de estilos */
 * {
   padding: 0;
@@ -51,7 +52,8 @@ header {
 }
 
 /* Estilos para títulos */
-h1, h2 {
+h1,
+h2 {
   margin: 0;
 }
 
@@ -81,11 +83,11 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--amarelo-destaque); 
+  color: var(--amarelo-destaque);
 }
 
 /* Estilos para links no rodapé */
-footer > div.container > p > a {
+footer>div.container>p>a {
   color: var(--cor-link);
 }
 
@@ -126,7 +128,7 @@ footer > div.container > p > a {
   border-radius: 4px;
 }
 
-.project a:hover { 
+.project a:hover {
   color: var(--cor-hover);
   transition: color 0.3s ease;
 }
@@ -144,7 +146,7 @@ footer {
 }
 
 footer a {
-  color: var(--amarelo-destaque); 
+  color: var(--amarelo-destaque);
   text-decoration: none;
 }
 
