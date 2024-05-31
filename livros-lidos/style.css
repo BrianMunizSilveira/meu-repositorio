@@ -124,6 +124,31 @@ img {
     border-radius: 4px;
 }
 
+#backToTopBtn {
+    display: none; /* Oculto por padrão */
+    position: fixed; /* Fixa na tela */
+    bottom: 20px; /* Distância do fundo */
+    right: 20px; /* Distância da direita */
+    z-index: 99; /* Fica acima de outros elementos */
+    border: none; /* Remove a borda */
+    outline: none; /* Remove o contorno */
+    background-color: #3498db63; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 20px; /* Tamanho da fonte */
+}
+
+#backToTopBtn:hover {
+    background-color: #2376ad; /* Cor de fundo ao passar o mouse */
+}
+
+i {
+    font-size: 30px;
+}
+
+
 /* Estilos responsivos */
 @media only screen and (max-width: 800px) {
     nav li {
