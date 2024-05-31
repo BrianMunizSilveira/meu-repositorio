@@ -93,6 +93,11 @@ li {
     margin-bottom: 10px;
 }
 
+.proximos-livros {
+    list-style-type: circle;
+    list-style: inside;
+}
+
 a {
     color: #3498db;
     text-decoration: none;
