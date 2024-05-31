@@ -12,6 +12,8 @@ function scrollFunction() {
 }
 
 document.getElementById("backToTopBtn").onclick = function() {
-    document.body.scrollTop = 0; // Para Safari
-    document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 };
