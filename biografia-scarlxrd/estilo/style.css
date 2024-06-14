@@ -22,6 +22,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
 a.externo::after {
     content: '\00A0\1F517';
 }
@@ -202,6 +203,27 @@ footer a:hover {
 .myth-city {
     margin: auto;
     margin-bottom: 25px;
+}
+
+#backToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: var(--cor6); 
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px; 
+    font-size: 20px;
+}
+
+#backToTopBtn:hover {
+    transition: 0.5s;
+    background-color: var(--cor7);
 }
 
 @media (max-width: 768px) {
