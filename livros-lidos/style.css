@@ -38,6 +38,7 @@ nav {
 nav a {
     color: #fff;
     font-weight: bold;
+    text-decoration: none;
     transition: color 0.3s ease;
     position: relative;
     padding: 8px 15px;
@@ -65,6 +66,21 @@ nav a::before {
 nav a:hover::before {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+details summary {
+    color: #3498db;
+    margin: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#indice fieldset {
+    border: none;
+}
+
+#indice fieldset a {
+    display: block;
 }
 
 h1 {
