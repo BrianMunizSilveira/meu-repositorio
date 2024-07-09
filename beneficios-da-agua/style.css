@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nanum+Myeongjo&display=swap');
 
 * {
     margin: 0;
@@ -11,7 +10,7 @@
 
 body {
     min-height: 100vh;
-    font-family: 'Bree Serif' ,Verdana, Geneva, Tahoma, serif;
+    font-family: Verdana, Geneva, Tahoma, serif;
     font-size: 16px;
     background: #a9d2ef url('./src/img/sssurf.svg') bottom center no-repeat;
     background-size: cover;
