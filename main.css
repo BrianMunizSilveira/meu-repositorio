@@ -1,17 +1,14 @@
 /* Import da fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
 :root {
-
-  --cinza-trasparente: #333333e5;
+  --cinza-transparente: #333333e5;
   --amarelo-destaque: #ffcc00;
   --azul-1: #f0f8ff;
   --azul-2: #d4e5f3;
   --cor-link: #7fffd4;
   --cinza-escuro: #333;
   --cor-hover: #ff0000;
-
   --fonte1: 'Poppins', sans-serif;
 }
 
@@ -29,46 +26,50 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--fonte1);
-  background-color: var(--cinza-trasparente);
-}
-
-/*Estilos para Main*/
-main div p {
-  line-height: 1.5em;
+  background-color: var(--azul-1);
+  color: var(--cinza-escuro);
+  line-height: 1.6;
 }
 
 /* Estilos para o cabeçalho */
 header {
+  background-color: var(--azul-2);
   color: #fff;
   padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para o container */
 .container {
-  width: 80%;
-  margin: 5px auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 /* Estilos para títulos */
-h1,
-h2 {
+h1 {
+  color: var(--cinza-escuro);
+}
+
+h1, h2 {
   margin: 0;
+  font-weight: 700;
 }
 
 /* Estilos para parágrafos */
 p {
   text-align: justify;
+  margin-bottom: 1.5rem;
 }
 
 /* Estilos para a navegação */
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  font-size: 1.4rem;
+  justify-content: center;
 }
 
 nav li {
@@ -77,7 +78,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--cinza-escuro);
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -87,62 +88,58 @@ nav a:hover {
 }
 
 /* Estilos para links no rodapé */
-footer>div.container>p>a {
+footer > div.container > p > a {
   color: var(--cor-link);
+  text-decoration: none;
+}
+
+footer > div.container > p > a:hover {
+  text-decoration: underline;
 }
 
 /* Estilos para a seção de portfólio */
 #portfolio {
-  background-color: var(--azul-1);
-  padding: 10px 0;
+  background-color: #fff;
+  padding: 40px 0;
 }
 
 .project {
-  margin-bottom: 40px;
-  margin: 10px;
-  width: auto;
   background-color: var(--azul-2);
-  padding: 1.2rem;
-  margin-bottom: 30px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project h3 {
-  margin-top: 10px;
-  margin-bottom: 10px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .project p {
-  padding: 30px;
   text-align: justify;
-  line-height: 2em;
+  line-height: 1.6;
 }
 
 .project a {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
+  padding: 10px 20px;
   background-color: var(--cinza-escuro);
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .project a:hover {
-  color: var(--cor-hover);
-  transition: color 0.3s ease;
-}
-
-.icons {
-  display: grid;
-  justify-content: space-around;
+  background-color: var(--cor-hover);
 }
 
 /* Estilos para o rodapé */
 footer {
   background-color: var(--cinza-escuro);
   color: #fff;
-  padding: 5px;
+  text-align: center;
+  padding: 20px 0;
 }
 
 footer a {
@@ -157,13 +154,8 @@ footer a:hover {
 /* Estilos responsivos */
 @media only screen and (max-width: 768px) {
   .container {
-    width: 100%;
     flex-direction: column;
     text-align: center;
-  }
-
-  nav {
-    margin-top: 20px;
   }
 
   nav ul {
@@ -171,29 +163,14 @@ footer a:hover {
   }
 
   nav li {
-    margin: 0 0 10px 0;
+    margin: 10px 0;
   }
 
-  #sobre .container {
-    text-align: center;
-  }
-
-  .profile-image {
-    max-width: 80%;
+  p {
+    padding: 0 10px;
   }
 
   footer {
-    background-color: var(--cinza-escuro);
-    color: #fff;
-    padding: 5px;
-  }
-
-  footer a {
-    color: var(--amarelo-destaque);
-    text-decoration: none;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
+    padding: 10px 0;
   }
 }
