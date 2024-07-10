@@ -1,0 +1,230 @@
+/* REGRA */
+@charset "UTF-8";
+
+/* FONTE POETSEN */
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+/* FONTE OPEN SANS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTE GAGALIN */
+@font-face {
+    font-family: 'Gagalin-Regular';
+    src: url('./src/fontes/Gagalin-Regular.otf') format('opentype');
+    font-display: swap;
+    font-weight: normal;
+    font-style: regular;
+}
+
+/* VARIÁVEIS */
+:root {
+    --primary-bg-color: #1F2020;
+    --primary-font-color: #fff;
+    --secondary-font-color: #FBC84D;
+    --accent-color: #F5C44B;
+    --accent-color-hover: #b89337;
+    --price-color: rgb(255, 204, 0);
+    --price-color-hover: #8a6e00;
+    --text-color: #F1FFFE;
+    --body-bg-gradient: linear-gradient(to bottom, #A08356, #C1B789, #BAAA6D, #AE974A, #BDB176);
+    --main-bg-image: url('./src/imagem/bg.webp');
+    --font-gagalin: 'Gagalin-Regular', sans-serif;
+    --font-poetsen: 'Poetsen One', sans-serif;
+    --font-opensans: 'Open Sans', sans-serif;
+}
+
+/* BODY */
+body {
+    background-image: var(--body-bg-gradient);
+}
+
+main {
+    max-width: 95%;
+    margin: auto;
+    padding: 20px;
+    background: var(--primary-bg-color) var(--main-bg-image) right center no-repeat fixed;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* HEADER */
+header,
+h1 {
+    text-align: center;
+}
+
+h1 {
+    font-family: var(--font-gagalin);
+    font-weight: 300;
+    letter-spacing: 1rem;
+    font-size: 4rem;
+    color: var(--primary-font-color);
+    margin-bottom: 5px;
+}
+
+.slogan {
+    font-family: var(--font-poetsen);
+    font-weight: 600;
+    font-style: normal;
+    color: var(--secondary-font-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+/* SEÇÕES */
+h2 {
+    font-family: var(--font-gagalin);
+    font-weight: 300;
+    color: var(--accent-color);
+    margin-top: 5px;
+    letter-spacing: 5px;
+    transition: color 0.3s;
+}
+
+h2:hover {
+    color: var(--accent-color-hover);
+}
+
+p {
+    color: var(--text-color);
+    margin: 5px;
+    font-family: var(--font-opensans);
+    font-weight: 500;
+    font-style: normal;
+}
+
+.item p {
+    display: inline-block;
+    
+}
+
+.price {
+    color: var(--price-color);
+    text-align: right;
+    transition: color 0.3s;
+}
+
+.price:hover {
+    color: var(--price-color-hover);
+}
+
+#bebidas {
+    margin: 20px;
+    text-align: center;
+}
+
+.refri {
+    font-family: var(--font-poetsen);
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-font-color);
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 20px;
+    font-family: var(--font-opensans);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--secondary-font-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--accent-color-hover)
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    .slogan {
+        font-size: 0.8rem;
+    }
+
+    .item {
+        padding: 10px;
+    }
+
+    .price {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+
+    .slogan {
+        font-size: 0.7rem;
+    }
+
+    .item {
+        padding: 5px;
+    }
+
+    .price {
+        text-align: left;
+        margin-top: 5px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+        margin: 10px 0;
+    }
+
+    footer a {
+        font-size: 0.8rem;
+        margin: 5px 0;
+    }
+}

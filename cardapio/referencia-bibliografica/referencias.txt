@@ -1,17 +1,20 @@
-	PROJETO CARDÁPIO 
+==================================================================================================================================
+													
+													PROJETO CARDÁPIO 
 
-==========================
-	DESIGN
+==================================================================================================================================
+														DESIGN
 
 CANVA: https://www.canva.com/design/DAGKfHT8aMQ/sBmcBAghjMBD7JoGi2pPMg/edit
 
-==========================
-	FONTES
+==================================================================================================================================
+														FONTES
 
-FONTE POETSEN ONE: https://fonts.google.com/specimen/Poetsen+One?preview.text=Poetsen%20One&query=Poetsen+One
+GAGALIN (h1, h2 e Preços): https://font.download/font/gagalinFONTE 
 
-OPEN SANS: https://fonts.google.com/specimen/Open+Sans?query=Open+sans
+POETSEN ONE (Slogan e Refrigerantes): https://fonts.google.com/specimen/Poetsen+One?preview.text=Poetsen%20One&query=Poetsen+One
 
-GAGALIN: https://font.download/font/gagalin
+OPEN SANS (Descrição do produto): https://fonts.google.com/specimen/Open+Sans?query=Open+sans
 
-==========================	
+
+==================================================================================================================================	
