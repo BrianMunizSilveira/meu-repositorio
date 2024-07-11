@@ -17,7 +17,6 @@ html {
 
 body {
     font-family: 'Georgia', serif;
-    line-height: 1.8;
     margin: 0;
     padding: 0;
     background: url('https://images.unsplash.com/photo-1579097380689-4351e0a200ed?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center fixed;
@@ -103,6 +102,14 @@ h2, h4 {
     color: var(--primary-color);
 }
 
+mark {
+    background-color: transparent;
+}
+.masully {
+    color: #F2388F;
+    text-decoration: underline;
+}
+
 hr {
     border: 1px solid var(--primary-color);
     margin: 20px 0;
@@ -150,6 +157,11 @@ img {
     border: 1px solid #ddd;
     box-shadow: var(--secondary-color) 0 0 8px;
     border-radius: 4px;
+    display: block;
+}
+
+figcaption {
+    font-size: 14px;
 }
 
 #backToTopBtn {
