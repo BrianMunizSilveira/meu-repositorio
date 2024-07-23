@@ -126,6 +126,30 @@ p {
     line-height: 1.6;
 }
 
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #3498db63;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#backToTopBtn:hover {
+    background-color: #2376ad;
+}
+
+i {
+    font-size: 30px;
+}
+
 @media (max-width: 768px) {
     .book {
         width: 120px;
