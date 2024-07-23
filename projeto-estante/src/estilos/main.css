@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.bookshelf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-top: 15px;
+    background-size: cover;
+}
+
+.book p {
+    margin: 0;
+    font-size: 14px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    /* Oculta inicialmente o modal */
+    position: fixed;
+    /* Permanece fixo na tela */
+    z-index: 999;
+    /* Z-index alto para estar sobre todos os elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Habilita rolagem quando necessário */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Centraliza verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#modal-resenha {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .book {
+        width: 120px;
+    }
+
+    #modal-title {
+        font-size: 20px;
+    }
+
+    #modal-resenha {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .book p {
+        font-size: 12px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+    }
+
+    #modal-title {
+        font-size: 18px;
+    }
+
+    #modal-resenha {
+        font-size: 12px;
+    }
+}
