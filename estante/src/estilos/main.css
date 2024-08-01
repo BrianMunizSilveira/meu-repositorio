@@ -1,37 +1,40 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 /* Variáveis */
 :root {
     --font-body: 'Merriweather', serif;
     --font-title: 'Georgia', serif;
-    --font-paragraph: 'Merriweather', serif;
-    --color-background: #f4f4f4;
-    --color-header-bg: #333;
-    --color-header-text: #fff;
-    --color-book-bg: #fff;
-    --color-book-border: #ddd;
+    --font-paragraph: "Libre Baskerville", serif;
+    --color-background: #fafafa;
+    --color-header-bg: #2c3e50;
+    --color-header-text: #ecf0f1;
+    --color-book-bg: #ffffff;
+    --color-book-border: #bdc3c7;
     --color-book-shadow: rgba(0, 0, 0, 0.1);
-    --color-modal-bg: #fefefe;
+    --color-modal-bg: #ffffff;
     --color-modal-overlay: rgba(0, 0, 0, 0.5);
-    --color-close: #aaa;
-    --color-close-hover: black;
+    --color-close: #95a5a6;
+    --color-close-hover: #2c3e50;
     --color-backtotop: #3498db63;
-    --color-backtotop-hover: #2376ad;
-    --color-strong-masully: #F2388F;
+    --color-backtotop-hover: #2980b9;
+    --color-strong-masully: #e74c3c;
 
     /* Tamanhos e espaçamentos base */
     --base-font-size: 16px; /* 1rem */
-    --base-line-height: 1.5;
-    --modal-margin-top: 15%;
-    --modal-content-padding: 1.25rem;
-    --book-width: 9.375rem; /* 150px */
-    --book-width-small: 6.25rem; /* 100px */
+    --base-line-height: 1.6;
+    --modal-margin-top: 10%;
+    --modal-content-padding: 1.5rem;
+    --book-width: 10rem; /* 160px */
+    --book-width-small: 7rem; /* 112px */
     --book-margin: 0.625rem; /* 10px */
-    --font-size-large: 2rem; /* 32px */
+    --font-size-large: 2.25rem; /* 36px */
     --font-size-medium: 1.5rem; /* 24px */
     --font-size-small: 1rem; /* 16px */
     --font-size-xsmall: 0.875rem; /* 14px */
     --font-size-xxsmall: 0.75rem; /* 12px */
+    --transition-time: 0.3s; /* Tempo de transição */
 }
 
 /* Estilos Globais */
@@ -43,49 +46,67 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 1rem; /* 16px */
+    font-size: var(--base-font-size); /* 16px */
     line-height: var(--base-line-height);
+    color: #2c3e50;
 }
 
 header, nav {
     background-color: var(--color-header-bg);
     color: var(--color-header-text);
-    padding: 0.625rem 0; /* 10px */
+    padding: 1rem 0; /* 16px */
     width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color var(--transition-time);
+}
+
+header:hover, nav:hover {
+    background-color: #34495e;
 }
 
 header {
     text-align: center;
+    transition: transform var(--transition-time);
+}
+
+header:hover {
+    transform: scale(1.02); /* Efeito de zoom */
 }
 
 nav {
-    text-align: justify;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 nav > ul > li > a {
     color: var(--color-header-text);
     text-decoration: none;
-    margin: auto;
-    font-size: 1rem; /* 16px */
+    font-size: var(--font-size-small);
     font-family: var(--font-paragraph);
-    transition: color 0.3s;
-    display: inline-block;
-    padding: 0.3125rem; /* 5px */
-    border-radius: 0.3125rem; /* 5px */
+    transition: color var(--transition-time), transform var(--transition-time);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 nav > ul > li > a:hover {
-    color: #35a0e7;
+    color: #3498db;
+    transform: scale(1.1);
 }
 
 h1 {
     margin: 0;
     font-family: var(--font-title);
-    font-size: var(--font-size-large); /* 32px */
+    font-size: var(--font-size-large);
+    transition: color var(--transition-time);
+}
+
+h1:hover {
+    color: #3498db;
 }
 
 main {
-    padding: 1.25rem; /* 20px */
+    padding: 2rem;
     width: 100%;
     max-width: 75rem; /* 1200px */
 }
@@ -93,52 +114,65 @@ main {
 section.estante {
     background-color: var(--color-book-bg);
     border: 1px solid var(--color-book-border);
-    border-radius: 0.3125rem; /* 5px */
+    border-radius: 0.5rem;
     margin: var(--book-margin);
     padding: var(--book-margin);
     text-align: center;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform var(--transition-time);
+}
+
+section.estante:hover {
+    transform: scale(1.02);
 }
 
 .bookshelf {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: var(--book-margin); /* Espaçamento entre os livros */
 }
 
 .book {
     background-color: var(--color-book-bg);
     border: 1px solid var(--color-book-border);
-    border-radius: 0.3125rem; /* 5px */
+    border-radius: 0.5rem;
     margin: var(--book-margin);
     padding: var(--book-margin);
     text-align: center;
     width: var(--book-width);
     box-shadow: 0 0.125rem 0.3125rem var(--color-book-shadow); /* 0 2px 5px */
-    transition: transform 0.3s;
+    transition: transform var(--transition-time), box-shadow var(--transition-time);
     cursor: pointer;
 }
 
 .book:hover {
     transform: scale(1.05);
+    box-shadow: 0 0.25rem 0.5rem var(--color-book-shadow); /* 0 4px 8px */
 }
 
 .book img {
     max-width: 100%;
     height: auto;
     border-bottom: 1px solid var(--color-book-border);
-    margin-top: 0.9375rem; /* 15px */
+    margin-top: 1rem; /* 16px */
     background-size: cover;
+    transition: transform var(--transition-time);
+}
+
+.book:hover img {
+    transform: scale(1.1);
 }
 
 .book p {
     margin: 0;
-    font-size: var(--font-size-xsmall); /* 14px */
+    font-size: var(--font-size-xsmall);
     font-family: var(--font-paragraph);
 }
 
 p {
-    margin-bottom: 0.3125rem; /* 5px */
+    margin-bottom: 1rem;
     font-family: var(--font-paragraph);
 }
 
@@ -146,26 +180,26 @@ article {
     margin: auto;
     padding: var(--book-margin);
     background-color: var(--color-book-bg);
-    border: 0.3125rem solid var(--color-book-border); /* 5px */
-    border-radius: 0.3125rem; /* 5px */
+    border: 1px solid var(--color-book-border);
+    border-radius: 0.5rem;
     box-shadow: 0 0.125rem 0.3125rem var(--color-book-shadow); /* 0 2px 5px */
-    transition: transform 0.3s;
+    transition: transform var(--transition-time);
     max-width: 45rem; /* 720px */
 }
 
 article:hover {
-    transform: scale(1.005);
+    transform: scale(1.01);
 }
 
 article h2 {
     margin: var(--book-margin);
     font-family: var(--font-title);
-    font-size: var(--font-size-large); /* 32px */
+    font-size: var(--font-size-medium);
 }
 
 article p {
     margin: var(--book-margin);
-    font-size: var(--font-size-small); /* 16px */
+    font-size: 17px;
     font-family: var(--font-paragraph);
 }
 
@@ -174,81 +208,105 @@ strong.masully {
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
+    transition: transform var(--transition-time);
 }
 
-/* Modal */
+strong.masully:hover {
+    transform: rotate(-5deg);
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* Estilo do Modal */
 .modal {
-    display: none;
+    display: none; /* Inicialmente escondido */
     position: fixed;
-    z-index: 999;
+    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: var(--color-modal-overlay);
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo semi-transparente */
+}
+
+#modal-title {
+    text-align: justify;
+    font-weight: 700;
+    letter-spacing: 5px;
+    font-family: math;
 }
 
 .modal-content {
-    background-color: var(--color-modal-bg);
-    margin: var(--modal-margin-top) auto;
-    padding: var(--modal-content-padding);
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza o modal na tela */
+    padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 37.5rem; /* 600px */
-    border-radius: 0.3125rem; /* 5px */
-    position: relative;
+    width: 80%; /* Largura do modal */
+    max-width: 600px; /* Largura máxima */
 }
 
 .close {
-    color: var(--color-close);
+    color: #aaa;
     float: right;
-    font-size: 1.75rem; /* 28px */
+    font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: var(--color-close-hover);
+    color: black;
     text-decoration: none;
+    cursor: pointer;
 }
 
-#modal-title {
-    font-size: 1.5rem; /* 24px */
+.modal-content h2 {
+    margin-top: 0;
+}
+
+#modal-sobre {
+    line-height: 1.5rem;
+    margin-top: 15px;
+    font-family: monospace;
+    text-align: justify;
+}
+
+.destaque-modal-sobre {
     font-weight: bold;
-    margin-bottom: var(--book-margin);
-    font-family: var(--font-title);
-}
-
-#modal-resenha {
-    font-size: var(--font-size-small); /* 16px */
-    line-height: 1.6;
-    font-family: var(--font-paragraph);
 }
 
 #backToTopBtn {
     display: none;
     position: fixed;
-    bottom: 1.25rem; /* 20px */
-    right: 1.25rem; /* 20px */
+    bottom: 1.25rem;
+    right: 1.25rem;
     z-index: 99;
     border: none;
     outline: none;
     background-color: var(--color-backtotop);
     color: white;
     cursor: pointer;
-    padding: 0.625rem; /* 10px */
-    border-radius: 0.625rem; /* 10px */
-    font-size: 1.25rem; /* 20px */
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    font-size: 1.25rem;
+    box-shadow: 0 0.125rem 0.3125rem var(--color-book-shadow);
+    transition: background-color var(--transition-time), transform var(--transition-time);
 }
 
 #backToTopBtn:hover {
     background-color: var(--color-backtotop-hover);
+    transform: translateY(-3px);
 }
 
 i {
-    font-size: 1.875rem; /* 30px */
+    font-size: 1.875rem;
+    transition: transform var(--transition-time);
+}
+
+i:hover {
+    transform: scale(1.1);
 }
 
 /* Media Queries */
@@ -262,20 +320,20 @@ i {
     }
 
     article h2 {
-        font-size: var(--font-size-medium); /* 24px */
+        font-size: var(--font-size-medium);
     }
 
     article p {
-        font-size: var(--font-size-small); /* 16px */
+        font-size: var(--font-size-small);
     }
 
     h1 {
-        font-size: 1.20rem; /* 36px */
+        font-size: 1.875rem; /* 30px */
         letter-spacing: 0.3125rem;
     }
 
     section.estante {
-        padding: 0.625rem; /* 10px */
+        padding: 0.625rem;
     }
 
     .modal-content {
@@ -283,49 +341,49 @@ i {
     }
 
     .close {
-        font-size: 1.5rem; /* 24px */
+        font-size: 1.5rem;
     }
 
     #modal-title {
-        font-size: 1.25rem; /* 20px */
+        font-size: 1.25rem;
     }
 
     #modal-resenha {
-        font-size: 0.875rem; /* 14px */
+        font-size: var(--font-size-xsmall);
     }
 
     #backToTopBtn {
-        font-size: 1rem; /* 16px */
+        font-size: 1rem;
     }
 
     i {
-        font-size: 1.25rem; /* 20px */
+        font-size: 1.25rem;
     }
 }
 
 @media (max-width: 30rem) { /* 480px */
     body {
-        font-size: var(--font-size-xsmall); /* 14px */
+        font-size: var(--font-size-xsmall);
     }
 
     h1 {
-        font-size: 1rem; /* 32px */
+        font-size: 1.5rem; /* 24px */
     }
 
     nav > ul > li > a {
-        font-size: var(--font-size-xsmall); /* 14px */
+        font-size: var(--font-size-xsmall);
     }
 
     main {
-        padding: 0.625rem; /* 10px */
+        padding: 0.625rem;
     }
 
     article h2 {
-        font-size: 1.25rem; /* 20px */
+        font-size: 1.25rem;
     }
 
     article p {
-        font-size: var(--font-size-xsmall); /* 14px */
+        font-size: var(--font-size-xsmall);
     }
 
     .modal-content {
@@ -334,11 +392,11 @@ i {
     }
 
     #modal-title {
-        font-size: 1.125rem; /* 18px */
+        font-size: 1.125rem;
     }
 
     #modal-resenha {
-        font-size: var(--font-size-xxsmall); /* 12px */
+        font-size: var(--font-size-xxsmall);
     }
 
     footer {
@@ -350,12 +408,12 @@ i {
     }
 
     .book {
-        width: var(--book-width-small); /* 100px */
-        padding: 0.3125rem; /* 5px */
+        width: var(--book-width-small);
+        padding: 0.3125rem;
     }
 
     .book p {
-        font-size: var(--font-size-xxsmall); /* 12px */
+        font-size: var(--font-size-xxsmall);
     }
 
     .modal-content {
@@ -364,10 +422,10 @@ i {
     }
 
     #modal-title {
-        font-size: 1.125rem; /* 18px */
+        font-size: 1.125rem;
     }
 
     #modal-resenha {
-        font-size: var(--font-size-xxsmall); /* 12px */
+        font-size: var(--font-size-xxsmall);
     }
 }
