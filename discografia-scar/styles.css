@@ -1,41 +1,126 @@
 @font-face {
   font-family: 'LemonMilk';
-  src: url(src/imgs/LEMONMILK-Regular.otf);
+  src: url('src/imgs/LEMONMILK-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AmazDooMLeft';
+  src: url('src/font/AmazDooMLeft.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Break gothic';
+  src: url('src/font/Break-gothic.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #474747;
+  background-color: #eedddd;
+  color: #fff;
   margin: 0;
   padding: 0;
-  background-image: url(src/imgs/bg.jpg);
+  background-image: url('https://i0.wp.com/www.ambientlightblog.com/wp-content/uploads/2018/12/Scarlxrd_051218_0028-feature.jpg?fit=2048%2C1075&ssl=1');
   background-attachment: fixed;
   background-size: cover;
 }
 
 main {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 180px auto; /* COMPENSANDO MARGEM DO TITULO */
   padding: 20px;
-  background-color: #ffffff;
+  color: #fff;
+  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
   font-family: 'LemonMilk' ;
 }
 
-header {
+.efeito-vidro {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 137, 137, 0.315);
+  align-items: center;
+  color: #fff;
   text-align: center;
-  margin-bottom: 20px;
-}
+  }
 
 h1 {
-  color: #333;
+  background: #210401 url('./src/imgs/bg.gif') no-repeat center;
+  background-size: 100%;
+  position: fixed;
+  color: #fff;
+  font-family: 'Break gothic';
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0;
+  padding: 20px 0px 50px 0px;
+  box-shadow: 0px 11px 20px 0px rgb(0 0 0);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.gif-title {
+  margin-top: 25px;
+  margin-bottom: -40px;
+  width: 100px;
+}
+
+.title {
+  color: #ff0000;
+  font-family: 'Break gothic';
+  font-size: 40px;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul, li {
   text-align: justify;
-  color: #383838;
+  color: #fff;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul li.icon-list::before {
+  content: "⛓️";
+}
+
+ul li::before {
+  margin-right: 10px; /* Espaçamento entre o emoji e o texto */
+}
+
+li {
+  margin-bottom: 10px;
+  list-style-position: inside;
+  /* list-style-image: url('https://imgs.search.brave.com/ZXWyugFhCpctJtvnTcGak9IjJ68qF7MvaDhEeL1dUGg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzI0NjY5NjM3L2Mv/MTI4MC8xMjgwLzAv/MC9pbC9hZWQwYjIv/NDkxMzA0OTc0OC9p/bF82MDB4NjAwLjQ5/MTMwNDk3NDhfN3Nv/Ni5qcGc'); */
+  width: 100%;
+}
+
+.fundo-lista {
+  background-color: #000000bb;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+
 }
 
 a {
@@ -55,7 +140,7 @@ a {
 .album-item {
   width: 200px;
   margin: 10px;
-  background-color: #fff;
+  background-color: #210401;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
@@ -71,14 +156,20 @@ a {
 .album-title {
   font-size: 16px;
   font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
+  color: #fff;
+  margin: 10px 0px 15px 0px;
+  text-align: center;
 }
 
 .album-description {
   font-size: 14px;
-  color: #666;
+  color: #ffc3c3;
   margin-bottom: 10px;
+}
+
+p {
+  font-family: 'AmazDooMLeft';
+  font-size: 30px;
 }
 
 .link a {
