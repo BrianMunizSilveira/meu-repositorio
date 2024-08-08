@@ -1,3 +1,4 @@
+/* Fontes Personalizadas */
 @font-face {
   font-family: 'LemonMilk';
   src: url('src/imgs/LEMONMILK-Regular.otf');
@@ -19,9 +20,10 @@
   font-style: normal;
 }
 
+/* Estilos Gerais do Body */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #eedddd;
+  background-color: #000000;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -30,104 +32,77 @@ body {
   background-size: cover;
 }
 
+/* Estilos do Main */
 main {
   max-width: 800px;
   margin: 180px auto; /* COMPENSANDO MARGEM DO TITULO */
   padding: 20px;
   color: #fff;
-  
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-  font-family: 'LemonMilk' ;
+  font-family: 'LemonMilk';
 }
 
-.efeito-vidro {
-  background: rgba(255, 255, 255, 0);
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 137, 137, 0.315);
-  align-items: center;
-  color: #fff;
-  text-align: center;
-  }
-
+/* Estilos dos Títulos */
 h1 {
-  background: #210401 url('./src/imgs/bg.gif') no-repeat center;
-  background-size: 100%;
-  position: fixed;
+  background-color: #5a00007e;
   color: #fff;
   font-family: 'Break gothic';
   font-size: 40px;
   text-align: center;
-  margin-top: 0;
-  padding: 20px 0px 50px 0px;
-  box-shadow: 0px 11px 20px 0px rgb(0 0 0);
+  margin: 0;
+  padding: 15px 0 20px 0;
+  box-shadow: 0px 11px 20px rgba(153, 0, 0, 0.295);
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1;
 }
 
-.gif-title {
-  margin-top: 25px;
-  margin-bottom: -40px;
-  width: 100px;
+h2 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
 }
 
 .title {
   color: #ff0000;
   font-family: 'Break gothic';
   font-size: 40px;
-  margin-top: 0;
+  margin: 0;
 }
 
-h2 {
-  font-size: 50px;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-ul, li {
-  text-align: justify;
+/* Estilos das Listas */
+ul {
+  padding: 0;
+  margin: 15px;
+  list-style-type: none;
+  background-color: #000000bb;
+  border-radius: 10px;
   color: #fff;
 }
 
 li {
-  list-style-type: none;
-}
-
-ul li.icon-list::before {
-  content: "⛓️";
+  margin-bottom: 10px;
+  text-align: justify;
+  list-style-position: inside;
 }
 
 ul li::before {
+  content: "⛓️";
   margin-right: 10px; /* Espaçamento entre o emoji e o texto */
 }
 
-li {
-  margin-bottom: 10px;
-  list-style-position: inside;
-  /* list-style-image: url('https://imgs.search.brave.com/ZXWyugFhCpctJtvnTcGak9IjJ68qF7MvaDhEeL1dUGg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzI0NjY5NjM3L2Mv/MTI4MC8xMjgwLzAv/MC9pbC9hZWQwYjIv/NDkxMzA0OTc0OC9p/bF82MDB4NjAwLjQ5/MTMwNDk3NDhfN3Nv/Ni5qcGc'); */
-  width: 100%;
-}
-
-.fundo-lista {
-  background-color: #000000bb;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
-  text-align: justify;
-
-}
-
+/* Estilos dos Links */
 a {
   color: rgb(255, 0, 0);
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos dos Álbuns */
 .album-list {
   list-style: none;
   padding: 0;
@@ -157,7 +132,7 @@ a {
   font-size: 16px;
   font-weight: bold;
   color: #fff;
-  margin: 10px 0px 15px 0px;
+  margin: 10px 0 15px;
   text-align: center;
 }
 
@@ -167,25 +142,45 @@ a {
   margin-bottom: 10px;
 }
 
-p {
-  font-family: 'AmazDooMLeft';
-  font-size: 30px;
-}
-
-.link a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.link a:hover {
-  text-decoration: underline;
-}
-
 .album-cover {
   width: 100%;
   height: auto;
 }
 
+/* Estilos do Parágrafo */
+p {
+  font-family: 'AmazDooMLeft';
+  font-size: 23px;
+  text-align: center;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+/* Estilos para o botão de voltar ao topo */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Inicialmente escondido */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 90px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Certifique-se de que o botão está acima de outros elementos */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #555;
+}
+
+/* Estilos do Footer */
 footer {
   background-color: #333;
   color: #fff;
@@ -198,6 +193,9 @@ footer {
   margin: 0 auto;
 }
 
+/* Estilos das Imagens */
 img {
-  box-shadow: 0 0 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: auto;
 }
