@@ -2,188 +2,169 @@
 @font-face {
   font-family: 'LemonMilk';
   src: url('src/imgs/LEMONMILK-Regular.otf');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: 'AmazDooMLeft';
   src: url('src/font/AmazDooMLeft.ttf');
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Break gothic';
+  font-family: 'BreakGothic';
   src: url('src/font/Break-gothic.ttf');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* Estilos Gerais do Body */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #000000;
-  color: #fff;
+  background-color: #1c1c1c;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   background-image: url('https://i0.wp.com/www.ambientlightblog.com/wp-content/uploads/2018/12/Scarlxrd_051218_0028-feature.jpg?fit=2048%2C1075&ssl=1');
-  background-attachment: fixed;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Estilos do Main */
 main {
-  max-width: 800px;
-  margin: 180px auto; /* COMPENSANDO MARGEM DO TITULO */
-  padding: 20px;
-  color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-family: 'LemonMilk';
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
 }
 
 /* Estilos dos Títulos */
 h1 {
-  background-color: #5a00007e;
-  color: #fff;
-  font-family: 'Break gothic';
-  font-size: 40px;
+  font-family: 'BreakGothic', sans-serif;
+  font-size: 3rem;
   text-align: center;
-  margin: 0;
-  padding: 15px 0 20px 0;
-  box-shadow: 0px 11px 20px rgba(153, 0, 0, 0.295);
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  color: #ff0000;
+  margin-bottom: 30px;
+  letter-spacing: 14px;
 }
 
 h2 {
-  font-size: 50px;
+  font-family: 'LemonMilk', sans-serif;
+  font-size: 2rem;
   text-align: center;
-  margin: 0;
+  color: #ffffff;
+  margin: 20px 0;
 }
 
 .title {
   color: #ff0000;
-  font-family: 'Break gothic';
-  font-size: 40px;
-  margin: 0;
 }
 
 /* Estilos das Listas */
 ul {
   padding: 0;
-  margin: 15px;
-  list-style-type: none;
-  background-color: #000000bb;
-  border-radius: 10px;
-  color: #fff;
+  list-style: none;
+  margin: 0;
 }
 
 li {
-  margin-bottom: 10px;
-  text-align: justify;
-  list-style-position: inside;
-}
-
-ul li::before {
-  content: "⛓️";
-  margin-right: 10px; /* Espaçamento entre o emoji e o texto */
-}
-
-/* Estilos dos Links */
-a {
-  color: rgb(255, 0, 0);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  margin-bottom: 20px;
 }
 
 /* Estilos dos Álbuns */
 .album-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .album-item {
-  width: 200px;
-  margin: 10px;
-  background-color: #210401;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #292929;
+  border-radius: 10px;
+  overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
 
 .album-item:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
 .album-details {
-  padding: 10px;
-}
-
-.album-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  margin: 10px 0 15px;
+  padding: 15px;
   text-align: center;
 }
 
-.album-description {
-  font-size: 14px;
-  color: #ffc3c3;
+.album-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
   margin-bottom: 10px;
+}
+
+.album-description {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 15px;
 }
 
 .album-cover {
   width: 100%;
   height: auto;
+  display: block;
+}
+
+/* Wrapper para as capas dos álbuns */
+.album-cover-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.album-cover {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+
+.secondary-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.album-cover-wrapper:hover .primary-cover {
+  opacity: 0;
+}
+
+.album-cover-wrapper:hover .secondary-cover {
+  opacity: 1;
+}
+
+/* Estilos dos Links */
+a {
+  color: #ff0000;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* Estilos do Parágrafo */
 p {
-  font-family: 'AmazDooMLeft';
-  font-size: 23px;
+  font-family: 'AmazDooMLeft', sans-serif;
+  font-size: 2rem;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 10px 0;
-}
-
-/* Estilos para o botão de voltar ao topo */
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none; /* Inicialmente escondido */
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 90px;
-  height: 90px;
-  font-size: 24px;
-  text-align: center;
-  line-height: 90px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000; /* Certifique-se de que o botão está acima de outros elementos */
-}
-
-#scrollToTopBtn:hover {
-  background-color: #555;
 }
 
 /* Estilos do Footer */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #1c1c1c;
+  color: #ffffff;
   padding: 20px 0;
   text-align: center;
 }
@@ -195,7 +176,88 @@ footer {
 
 /* Estilos das Imagens */
 img {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   display: block;
-  margin: auto;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+  main {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .album-title {
+    font-size: 1.25rem;
+  }
+
+  .album-description {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 25px 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .album-title {
+    font-size: 1.1rem;
+  }
+
+  .album-description {
+    font-size: 0.85rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 5px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 8px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .album-title {
+    font-size: 1rem;
+  }
+
+  .album-description {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
