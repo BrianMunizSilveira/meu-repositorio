@@ -19,57 +19,56 @@
 
 body {
     background-color: #1c1c1c;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--fonte-padrao);
+    color: #000;
 }
-
 
 a.externo::after {
     content: '\00A0\1F517';
 }
 
 header {
-    background-image: linear-gradient(to bottom, #050505,#DF0A3D,#0A0A0C);
-    background-color: var(--cor4);
+    background: linear-gradient(to bottom, #050505, #DF0A3D, #0A0A0C);
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
 }
 
-header > h1 {
+header h1 {
     color: #fff;
     font-family: var(--fonte-orbitron);
     font-size: 2em;
     font-weight: normal;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.267);
 }
 
-header > p {
+header p {
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
     color: #fff;
     max-width: 600px;
-    padding: 0 10px 50px 10px;
+    padding: 0 10px 50px;
     margin: auto;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.315);
 }
 
 nav {
     background-color: #050505;
     padding: 10px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.192);
 }
 
-nav > a {
+nav a {
     color: #DF0A3D;
     padding: 10px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition-duration: 0.6s;
+    transition: background-color 0.6s, color 0.6s;
 }
 
-nav > a:hover {
+nav a:hover {
     background-color: #DF0A3D;
     color: #050505;
 }
@@ -81,16 +80,14 @@ main {
     margin-bottom: 30px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+    border-radius: 0 0 10px 10px;
 }
 
 main h1 {
     color: var(--cor6);
     font-family: var(--fonte-orbitron);
     letter-spacing: 5px;
-    font-weight: normal;
     font-size: 1.8em;
 }
 
@@ -99,17 +96,17 @@ main h2 {
     color: var(--cor6);
     letter-spacing: 5px;
     font-size: 1.4em;
-    font-weight: normal;
-    background-image: linear-gradient(to right, #050505, transparent);
+    background: linear-gradient(to right, #050505, transparent);
     text-indent: 8px;
+    padding-bottom: 5px;
 }
 
 main p {
-    margin: 15px 0px;
+    margin: 15px 0;
     text-align: justify;
     text-indent: 30px;
     font-size: 1em;
-    line-height: 2em;
+    line-height: 1.6em;
 }
 
 main strong {
@@ -124,6 +121,7 @@ main a {
     color: #fff;
     background-color: var(--cor6);
     padding: 2px 6px;
+    border-radius: 3px;
 }
 
 main a:hover {
@@ -133,6 +131,7 @@ main a:hover {
 
 main img {
     width: 100%;
+    height: auto;
 }
 
 main img.pequena {
@@ -143,18 +142,19 @@ main img.pequena {
 
 div.video {
     background-color: var(--cor7);
-    margin: 0px -20px 30px -20px;
+    margin: 0 -20px 30px -20px;
     padding: 20px;
-    padding-bottom: 57%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     position: relative;
+    border-radius: 10px;
 }
 
-div.video > iframe {
+div.video iframe {
     position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 aside {
@@ -166,17 +166,17 @@ aside {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.280);
 }
 
-aside > h3 {
+aside h3 {
     background-color: var(--cor6);
     font-family: var(--fonte-orbitron);
     color: #fff;
     padding: 10px;
-    margin: -10px -10px 0px -10px;
-    border-radius: 10px 10px 0px 0px;
+    margin: -10px -10px 0 -10px;
+    border-radius: 10px 10px 0 0;
 }
 
-aside > ul {
-    list-style-type: '\1714\00A0\00A0';
+aside ul {
+    list-style: '\1714\00A0\00A0';
     list-style-position: inside;
     columns: 2;
 }
@@ -206,36 +206,35 @@ footer a:hover {
 }
 
 #backToTopBtn {
-    display: none; 
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99; 
-    border: none; 
-    outline: none; 
-    background-color: var(--cor6); 
+    z-index: 99;
+    border: none;
+    background-color: var(--cor6);
     color: white;
     cursor: pointer;
     padding: 10px;
-    border-radius: 10px; 
+    border-radius: 10px;
     font-size: 20px;
+    transition: background-color 0.5s;
 }
 
 #backToTopBtn:hover {
-    transition: 0.5s;
     background-color: var(--cor7);
 }
 
 @media (max-width: 768px) {
-    header > h1 {
+    header h1 {
         font-size: 1.5em;
     }
 
-    header > p {
+    header p {
         font-size: 1em;
     }
 
-    nav > a {
+    nav a {
         display: block;
         margin-bottom: 5px;
     }
@@ -244,7 +243,7 @@ footer a:hover {
         padding: 10px;
     }
 
-    aside > ul {
+    aside ul {
         columns: 1;
     }
 }
@@ -255,11 +254,11 @@ footer a:hover {
         min-height: 100px;
     }
 
-    header > h1 {
+    header h1 {
         font-size: 1.2em;
     }
 
-    header > p {
+    header p {
         font-size: 0.9em;
         padding-bottom: 30px;
     }
@@ -268,12 +267,12 @@ footer a:hover {
         padding: 5px;
     }
 
-    nav > a {
+    nav a {
         padding: 5px;
     }
 
     div.video {
-        margin: 0px -10px 20px -10px;
+        margin: 0 -10px 20px -10px;
         padding-bottom: 50%;
     }
 }
