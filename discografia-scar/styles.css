@@ -161,6 +161,17 @@ p {
   margin: 10px 0;
 }
 
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
 /* Estilos do Footer */
 footer {
   background-color: #1c1c1c;
