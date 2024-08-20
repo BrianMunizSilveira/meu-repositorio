@@ -22,7 +22,7 @@ body {
     background: var(--background-color) url('../imagens/capas/bg.webp') no-repeat fixed;
     background-size: cover;
     color: var(--font-color);
-    font-size: 1rem; /* 16px */
+    font-size: 16px; /* 1rem = 16px */
 }
 
 header {
@@ -32,13 +32,12 @@ header {
 }
 
 main {
-    text-align: justify;
     max-width: 800px;
     margin: 20px auto;
     padding: 30px;
     background-color: #fff;
     box-shadow: var(--box-shadow);
-    animation: fadeIn 0.5s ease-in;
+    animation: fadeIn var(--transition-speed) ease-in;
 }
 
 @keyframes fadeIn {
@@ -49,12 +48,9 @@ main {
 nav ol {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    list-style-position: inside;    
+    list-style: none;
     gap: 10px;
     padding: 0;
-}
-
-nav li {
     margin: 0;
 }
 
@@ -65,13 +61,16 @@ nav a {
     border-radius: 5px;
     text-align: center;
     color: #fff;
+    text-decoration: none;
     transition: background-color var(--transition-speed), transform var(--transition-speed);
+    position: relative;
 }
 
 nav a:hover {
     background-color: var(--accent-color-dark);
     transform: scale(1.05);
 }
+
 nav a::before {
     content: '';
     position: absolute;
@@ -105,9 +104,9 @@ h2, h4 {
 }
 
 h2 {
-    border-bottom: 0.125rem solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     margin: 20px 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 article:hover {
@@ -116,6 +115,7 @@ article:hover {
 
 ol {
     padding: 0;
+    margin: 0;
 }
 
 li {
@@ -124,17 +124,17 @@ li {
 
 .proximos-livros {
     list-style-type: circle;
-    list-style: inside;
+    padding-left: 20px; /* Add padding for better alignment */
 }
 
 a {
     color: var(--primary-color);
     text-decoration: none;
-    transition: background-color var(--transition-speed), color var(--transition-speed);
+    transition: color var(--transition-speed), background-color var(--transition-speed);
 }
 
 a:hover {
-    color: #333;
+    color: var(--accent-color-light);
     text-decoration: underline;
 }
 
@@ -150,33 +150,32 @@ p {
 img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin: 20px 0;
     border: 1px solid #ddd;
     box-shadow: var(--secondary-color) 0 0 8px;
     border-radius: 4px;
 }
 
 #backToTopBtn {
-    display: none;
+    display: none; /* Inicialmente invisível */
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 99;
     border: none;
-    outline: none;
     background-color: rgba(34, 158, 188, 0.7);
     color: white;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 15px; /* Aumentei o padding para melhor usabilidade */
     border-radius: 10px;
     font-size: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    animation: fadeIn 0.5s ease-in;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
 }
 
 #backToTopBtn.show {
-    opacity: 1;
+    display: block; /* Torna o botão visível quando a classe .show é adicionada */
+    opacity: 1; /* Faz o botão aparecer gradualmente */
 }
 
 #backToTopBtn:hover {
@@ -190,32 +189,23 @@ img {
     letter-spacing: 2px;
 }
 
-@media only screen and (max-width: 800px) {
-    nav li {
-        margin: 5px;
+@media (max-width: 800px) {
+    nav ol {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
 
-@media only screen and (max-width: 600px) {
-    nav {
-        padding: 10px 0;
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    nav ol {
+        grid-template-columns: 1fr;
     }
 
     nav a {
         padding: 8px 10px;
-    }
-
-    nav li {
-        margin-bottom: 10px;
-    }
-
-    main {
-        padding: 20px;
     }
 }
 
