@@ -184,8 +184,10 @@ img {
     transform: scale(1.1);
 }
 
-i {
-    font-size: 30px;
+.masully {
+    color: #e679dc;
+    text-decoration: underline;
+    letter-spacing: 2px;
 }
 
 @media only screen and (max-width: 800px) {
