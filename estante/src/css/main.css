@@ -148,12 +148,14 @@ p {
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
     margin: 20px 0;
     border: 1px solid #ddd;
     box-shadow: var(--secondary-color) 0 0 8px;
     border-radius: 4px;
+    margin: auto;
 }
 
 #backToTopBtn {
