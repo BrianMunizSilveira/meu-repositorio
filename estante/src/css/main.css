@@ -1,3 +1,7 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --primary-color-light: #8ECAE6;
     --primary-color: #219EBC;
@@ -8,6 +12,7 @@
     --background-color: #f9f5e7;
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     --transition-speed: 0.3s;
+    --font-resenha: 'Noto Serif', sans-serif;
 }
 
 html {
@@ -99,18 +104,30 @@ h1 {
     font-size: 2.5rem;
 }
 
-h2, h4 {
+h2, h3, h4 {
     color: var(--primary-color);
 }
 
 h2 {
+    margin-bottom: 15px;
+}
+
+h3 {
     border-bottom: 2px solid var(--primary-color);
     margin: 20px 0;
     font-size: 1.5rem;
 }
 
+section > p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 article:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+article > p {
+    font-family: var(--font-resenha);
 }
 
 ol {
@@ -151,11 +168,19 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    margin: 20px 0;
+    margin: 20px auto;
     border: 1px solid #ddd;
     box-shadow: var(--secondary-color) 0 0 8px;
     border-radius: 4px;
-    margin: auto;
+}
+
+.info {
+    margin-top: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+sub {
+    color: aqua;
 }
 
 #backToTopBtn {
@@ -190,6 +215,8 @@ img {
     text-decoration: underline;
     letter-spacing: 2px;
 }
+
+/* Media Queries */
 
 @media (max-width: 800px) {
     nav ol {
