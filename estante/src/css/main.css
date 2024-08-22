@@ -141,7 +141,7 @@ li {
 
 .proximos-livros {
     list-style-type: circle;
-    padding-left: 20px; /* Add padding for better alignment */
+    padding-left: 20px; /* Melhor alinhamento */
 }
 
 a {
@@ -157,6 +157,12 @@ a:hover {
 
 section {
     margin-bottom: 30px;
+}
+
+section > h2 > strong.numeracao {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: normal;
 }
 
 p {
@@ -193,7 +199,7 @@ sub {
     background-color: rgba(34, 158, 188, 0.7);
     color: white;
     cursor: pointer;
-    padding: 10px 15px; /* Aumentei o padding para melhor usabilidade */
+    padding: 10px 15px; /* Melhor usabilidade */
     border-radius: 10px;
     font-size: 20px;
     opacity: 0; /* Inicialmente invisível */
