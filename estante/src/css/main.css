@@ -3,21 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    /* Paleta de cores original */
-    --primary-color-light: #8ECAE6; /* Cor Primária Clara */
-    --primary-color: #219EBC; /* Cor Primária */
-    --secondary-color: #023047; /* Cor Secundária */
-    --accent-color-light: #FFB703; /* Cor de Acento Clara */
-    --accent-color-dark: #FB8500; /* Cor de Acento Escura */
-    --background-color: #f9f5e7; /* Cor de Fundo */
-    --font-color: #333; /* Cor de Texto */
+    --primary-color-light: #8ECAE6;
+    --primary-color: #219EBC;
+    --secondary-color: #023047;
+    --accent-color-light: #FFB703;
+    --accent-color-dark: #FB8500;
+    --background-color: #f9f5e7;
+    --font-color: #333;
     --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-    /* Tipografia */
     --font-family-main: 'Georgia', serif;
     --font-family-alt: 'Noto Serif', sans-serif;
 
-    /* Configurações adicionais */
     --transition-speed: 0.3s;
     --border-radius: 5px;
 }
@@ -148,7 +145,7 @@ li {
 
 .proximos-livros {
     list-style-type: circle;
-    padding-left: 20px; /* Melhor alinhamento */
+    padding-left: 20px;
 }
 
 a {
@@ -197,7 +194,7 @@ sub {
 }
 
 #backToTopBtn {
-    display: none; /* Inicialmente invisível */
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -206,16 +203,16 @@ sub {
     background-color: rgba(34, 158, 188, 0.7);
     color: white;
     cursor: pointer;
-    padding: 10px 15px; /* Melhor usabilidade */
+    padding: 10px 15px;
     border-radius: var(--border-radius);
     font-size: 20px;
-    opacity: 0; /* Inicialmente invisível */
+    opacity: 0;
     transition: opacity var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
 }
 
 #backToTopBtn.show {
-    display: block; /* Torna o botão visível quando a classe .show é adicionada */
-    opacity: 1; /* Faz o botão aparecer gradualmente */
+    display: block;
+    opacity: 1;
 }
 
 #backToTopBtn:hover {
