@@ -1,0 +1,200 @@
+:root {
+    --primary-color-light: #8ECAE6;
+    --primary-color: #219EBC;
+    --secondary-color: #023047;
+    --accent-color-light: #FFB703;
+    --accent-color-dark: #FB8500;
+    --background-color: #f9f5e7;
+    --font-color: #333;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    --font-family-main: 'Georgia', serif;
+    --font-family-alt: 'Noto Serif', sans-serif;
+
+    --transition-speed: 0.3s;
+    --border-radius: 5px;
+
+    --container-width: 1200px;
+    --gutter-width: 20px;
+    --section-padding: 40px;
+}
+
+body {
+    background-color: var(--background-color);
+    background: rgba(255, 255, 255, 0.9) url('https://images.pexels.com/photos/14201325/pexels-photo-14201325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center no-repeat fixed; 
+    background-size: cover;
+    color: var(--font-color);
+    font-family: var(--font-family-main);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding: 0 var(--gutter-width);
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade para destacar o conteúdo */
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+header {
+    text-align: center;
+    margin-bottom: var(--section-padding);
+    padding-bottom: var(--gutter-width);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 2em;
+    margin-top: 30px;
+    border-left: 5px solid var(--primary-color-light);
+    padding-left: 15px;
+}
+
+h3 {
+    color: var(--primary-color-light);
+    font-size: 1.5em;
+    margin-top: 25px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-color-dark);
+}
+
+p {
+    font-family: var(--font-family-alt);
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color-light);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+ul li:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+ul li::before {
+    content: '📚';
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+a {
+    color: var(--accent-color-dark);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transition-speed);
+    word-break: break-all;
+}
+
+a:hover {
+    color: var(--accent-color-light);
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: var(--section-padding);
+    padding-top: var(--gutter-width);
+    border-top: 2px solid var(--primary-color);
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}
+
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    background-color: rgba(34, 158, 188, 0.7);
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
+}
+
+#backToTopBtn.show {
+    display: block;
+    opacity: 1;
+}
+
+#backToTopBtn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
+}
