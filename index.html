@@ -4,96 +4,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./src/img/lampada.png" type="image/x-icon">
-    <link rel="stylesheet" href="./main.css">
-    <title>Meu Portfólio</title>
-    
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-          
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Fim Google Fonts -->
+    <!-- Boostrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Fim Boostrap Icons -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+
+    <script src="./src/js/script.js" defer></script>
+
+    <title>B.M.S Web Developer</title>
 </head>
 
 <body>
 
+    <button id="backToTopBtn">↑</button>
     <header>
-        <div class="container">
-            <h1>Brian Muniz Silveira | Portfólio</h1>
-            <nav>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <picture>
+                        <source media="(max-width: 750px)" srcset="./src/img/logo-p.png" type="image/png">
+                        <source media="(max-width: 1210px)" srcset="./src/img/logo-m.png" type="image/png">
+                        <img src="./src/img/logo.png" alt="Imagem flexivel" title="Paisagem">
+                    </picture>
+                </a>
+            </div> <!-- Logo -->
+
+            <nav class="menu-desktop">
                 <ul>
-                    <li><a href="./sobre-mim.html">SOBRE</a></li>
-                    <li><a href="./contato.html">CONTATO</a></li>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="#especialidades">Especilidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </nav>
+
+            <div class="btn-contato">
+                <a href="#contato">
+                    <button>Contato</button>
+                </a>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+        </div> <!-- btn-contato -->
+
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-fechar">
+                <i class="bi bi-x-lg"></i>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="#especialidades">Especilidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                </ul>
+            </nav>
+
+        </div> <!-- Menu-mobile -->
+        <div class="overlay-menu" id="overlay-menu">
+
         </div>
     </header>
 
-    <main id="portfolio">
-        <div class="container">
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
+                        <p>Alcance o próximo nível com uma presença online que une design envolvente, funcionalidade simples e resultados sólidos. Cada projeto é pensado para surpreender e converter.</p>
 
-            <div class="project">
-                <h3>Descubra os Segredos da Hidratação &#x1F4A7;</h3>
-                <p>
-                    "5 Benefícios da Água" explora os impactos positivos da hidratação na saúde do corpo e da mente. O texto analisa como a água é crucial para a saúde dos órgãos, desempenho físico e mental, e saúde digestiva. Além dos cinco benefícios principais, oferece uma "Reflexão Pessoal" para que os leitores avaliem seus hábitos de consumo de água. Conclui destacando a água como o 'elixir da vida' e incentivando mudanças simples para melhorar a saúde física e mental.
-                </p>
-                <div class="icons">
-                    <p>Tecnologias usadas: <br>
-                        <i class="devicon-html5-plain-wordmark colored"></i>
-                        <i class="devicon-css3-plain-wordmark colored"></i>
-                    </p>
-                </div>
-                <p>Clique <a href="./beneficios-da-agua/index.html"><i>AQUI</i></a> para ver o projeto</p>
-            </div>
+                        <div class="btn-contato">
+                            <a href="#contatos">
+                                <button>Entre em contato</button>
+                            </a>
+                        </div>
+                    </div> <!-- Txt-topo-site -->
 
-            <div class="project">
-                <h3>Explore a Jornada Musical de Scarlxrd &#x1F3A4;</h3>
-                <p>
-                    A biografia de Scarlxrd detalha sua evolução de Mazzi Maz no YouTube a um inovador rapper, pioneiro do trap metal ao misturar trap e heavy metal. A narrativa cobre sua carreira desde a banda Myth City até seus álbuns solo, destacando sua estética única e sucessos como 'Heart Attack'. A página também inclui informações sobre sua carreira independente e discografia completa, com uma homenagem especial do fã -Mxlfylxrd-(Eu mesmo) e um link para explorar mais sobre sua música.
-                </p>
-                <div class="icons">
-                    <p>Tecnologias usadas:
-                        <br>
-                        <i class="devicon-html5-plain-wordmark colored"></i>
-                        <i class="devicon-css3-plain-wordmark colored"></i>
-                    </p>
-                </div>
-                <p>Acesse <a href="./biografia-scarlxrd/index.html">Aqui</a> o projeto.</p>
-            </div>
+                    <div class="img-topo-site">
+                        <img src="./src/img/me3.png" alt="Uma foto do meu rosto">
+                    </div> <!-- Img-topo-site -->
+                </div> <!-- Flex -->
+            </div> <!-- Interface -->
+        </section> <!-- Topo-do-site -->
 
-            <div class="project">
-                <h3>Minha Lista de Livros Lidos ao Longo da Vida &#x1F4DA;</h3>
-                <p>
-                    Nesta lista, cada livro representa uma experiência transformadora. "Os Monstros do Cartógrafo" de Rob Stevens foi o início de uma paixão pela leitura, revelando um mundo mágico e inesquecível. "Dinos do Brasil" de Luiz E. Anelli, por sua vez, superou expectativas ao tornar a história e a biologia dos dinossauros fascinantes, enriquecendo minha compreensão do passado geológico e biológico do Brasil. Cada obra não é apenas uma leitura, mas um marco que molda minha jornada literária e aguardo ansiosamente os próximos capítulos, ansioso por novas aventuras e aprendizados.
-                </p>
-                <div class="icons">
-                    <p>Tecnologias usadas:
-                        <br>
-                        <i class="devicon-html5-plain-wordmark colored"></i>
-                        <i class="devicon-css3-plain-wordmark colored"></i>
-                    </p>
-                </div>
-                <p>Acesse <a href="./estante/index.html">Aqui</a> o projeto.</p>
-            </div>
-            
-            <div class="project">
-                <h3>Descubra Meu Projeto de Cardápio Virtual! &#x1F354;</h3>
-                <p>Bem-vindo ao meu projeto de cardápio online, onde você pode explorar uma variedade de pratos e fazer pedidos de forma conveniente. Este projeto foi desenvolvido com um foco na experiência do usuário e na funcionalidade, utilizando as mais recentes tecnologias web para garantir uma navegação intuitiva e uma apresentação visual atraente. Aproveite para visualizar o cardápio virtual e experimentar a facilidade de fazer pedidos online.</p>
-                <div class="icons">
-                    <p>Tecnologias usadas:
-                        <br>
-                        <i class="devicon-html5-plain-wordmark colored"></i>
-                        <i class="devicon-css3-plain-wordmark colored"></i>
-                    </p>
-                </div>
-                <p>Acesse <a href="./cardapio/index.html">Aqui</a> o projeto.</p>
-            </div>
+        <section class="especialidades">
+            <div class="interface">
+                <h2 class="titulo" id="especialidades">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-square"></i>
+                        <h3>Website</h3>
+                        <p>Especializado no desenvolvimento de websites responsivos, com foco em performance otimizada, acessibilidade e design intuitivo. Utilizo tecnologias modernas como HTML5, CSS3, JavaScript para criar soluções web eficientes e escaláveis.</p>
+                    </div> <!-- Especialidades-box -->
 
-        </div>
+                    <div class="especialidades-box">
+                        <i class="bi bi-book"></i>
+                        <h3>Leitura</h3>
+                        <p>Dedicação ao aprendizado contínuo e desenvolvimento pessoal por meio da leitura. Exploro uma vasta gama de temas, de tecnologia a literatura, enriquecendo minha perspectiva e criatividade no desenvolvimento de soluções.</p>
+                    </div> <!-- Especialidades-box -->
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-box"></i>
+                        <h3>Speedcubing</h3>
+                        <p>Com experiência em Speedcubing, cultivo habilidades como pensamento rápido, resolução de problemas e foco sob pressão. Sempre em busca de soluções rápidas e eficientes tanto no cubo quanto no código.</p>
+                    </div> <!-- Especialidades-box -->
+                </div> <!-- Flex -->
+            </div> <!-- Interface -->
+        </section> <!-- Especialidades -->
+
+        <section class="sobre">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-sobre">
+                        <img src="./src/img/pessoa-eu.jpg" alt="Uma foto minha em frente ao espelho" width="100%" style="border-radius: 5%;">
+                    </div> <!-- Img-sobre -->
+
+                    <div class="txt-sobre">
+                        <h2 id="sobre">MUITO PRAZER, <span>SOU BRIAN MUNIZ.</span></h2>
+
+                        <p>
+                            Olá! Sou Brian, um estudante autodidata de Desenvolvimento Web (Front-end) apaixonado por tecnologia, leitura e speedcubing. Minha jornada atual é dedicada ao constante aprimoramento das habilidades no desenvolvimento web. Estou empenhado em explorar as nuances do Front-End, buscando sempre novos desafios e oportunidades para aprimorar meu conhecimento técnico. Acredito que a combinação da minha paixão por tecnologia, minha curiosidade insaciável e meu comprometimento em aprender continuamente me impulsionará a contribuir de maneira significativa no cenário dinâmico do desenvolvimento web.
+                        </p>
+
+                        <div class="btn-social">
+                            <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-linkedin"></i></button></a>
+                        </div> <!-- Btn-social -->
+                    </div> <!-- Txt-sobre -->
+
+                </div> <!-- Flex -->
+            </div> <!-- Interface -->
+        </section> <!-- Sobre -->
+
+        <section class="portifolio">
+            <div class="interface">
+                <h2 class="titulo" id="projetos">MEU <span>PORTIFÓLIO.</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(./src/img/projeto_3.png);">
+                        <div class="overlay">Quem é Scarlxrd?</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(./src/img/projeto_1.png); background-position: center;">
+                        <div class="overlay">Desafio: Order Summary</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(./src/img/projeto_2.png);">
+                        <div class="overlay">Minha Jornada Literária</div>
+                    </div>
+                </div> <!-- Flex -->
+            </div> <!-- Interface -->
+        </section> <!-- Portifolio -->
+
+        <section class="formulario">
+            <div class="interface">
+                <h2 class="titulo" id="contato">FALA <span>COMIGO.</span></h2>
+
+                <form action="">
+                    <input type="text" name="seu_nome" id="seu_nome" placeholder="Seu nome (Obrigatório):" required>
+                    <input type="text" name="seu_email" id="seu_email" placeholder="Seu email (Obrigatório):" required>
+                    <input type="text" name="seu_celular" id="seu-celular" placeholder="Seu Número de celular (Opcional):">
+                    <textarea name="sua_mensagem" id="sua_mensagem" placeholder="Sua mensagem (Obrigatório):" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div> <!-- Interface -->
+        </section> <!-- Formulario -->
+
     </main>
 
     <footer>
-        <div class="container">
-            <p>2024 Brian Muniz Silveira.</p>
-        </div>
-    </footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="./src/img/logo.png" alt="Logo da Agência BRN">
+                    </div> <!-- Logo-footer -->
+                    <div class="btn-social" id="contatos">
+                        <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-instagram"></i></button></a>
+                            <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-github"></i></button></a>
+                            <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-linkedin"></i></button></a>
+                    </div> <!-- Btn-social -->
+                </div>
+            </div> <!-- Line-footer -->
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:brian.muniz.silveira@gmail.com">brian.muniz.silveira@gmail.com</a></p>
+            </div> <!-- Line-footer -->
+        </div> <!-- Interface -->
+    </footer> 
 
 </body>
 
