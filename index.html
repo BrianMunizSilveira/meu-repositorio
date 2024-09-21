@@ -5,21 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Brian Muniz Silveira">
-    <meta name="description" content="Brian Muniz Silveira, desenvolvedor web focado em criar websites responsivos e eficientes com tecnologias modernas. Confira seu portfólio e entre em contato.">
+    <meta name="description"
+        content="Brian Muniz Silveira, desenvolvedor web focado em criar websites responsivos e eficientes com tecnologias modernas. Confira seu portfólio e entre em contato.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style">
     <!-- Fim Google Fonts -->
     <!-- Boostrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
     <!-- Fim Boostrap Icons -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
-
-    <script src="./src/js/script.js" defer></script>
 
     <title>B.M.S Web Developer</title>
 </head>
@@ -32,14 +29,15 @@
             <div class="logo">
                 <a href="#">
                     <picture>
-                        <source media="(max-width: 750px)" srcset="./src/img/logo-p.png" type="image/png">
-                        <source media="(max-width: 1210px)" srcset="./src/img/logo-m.png" type="image/png">
-                        <img src="./src/img/logo.png" alt="Imagem flexivel" title="Paisagem">
-                    </picture>
+                        <source media="(max-width: 750px)" srcset="./src/img/logo-p.webp">
+                        <source media="(min-width: 751px) and (max-width: 1210px)" srcset="./src/img/logo-m.webp">
+                        <source media="(min-width: 1211px)" srcset="./src/img/logo-m.webp">
+                        <img src="./src/img/logo-p.png" alt="Logo">
+                    </picture>                    
                 </a>
             </div> <!-- Logo -->
 
-            <nav class="menu-desktop">
+            <nav class="menu-desktop" role="navigation">
                 <ul>
                     <li><a href="./index.html">Início</a></li>
                     <li><a href="#especialidades">Especilidades</a></li>
@@ -86,7 +84,8 @@
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
-                        <p>Alcance o próximo nível com uma presença online que une design envolvente, funcionalidade simples e resultados sólidos. Cada projeto é pensado para surpreender e converter.</p>
+                        <p>Alcance o próximo nível com uma presença online que une design envolvente, funcionalidade
+                            simples e resultados sólidos. Cada projeto é pensado para surpreender e converter.</p>
 
                         <div class="btn-contato">
                             <a href="#contatos">
@@ -96,7 +95,7 @@
                     </div> <!-- Txt-topo-site -->
 
                     <div class="img-topo-site">
-                        <img src="./src/img/me3.png" alt="Uma foto do meu rosto">
+                        <link rel="preload" href="./src/img/eu1.webp" as="image">
                     </div> <!-- Img-topo-site -->
                 </div> <!-- Flex -->
             </div> <!-- Interface -->
@@ -109,19 +108,25 @@
                     <div class="especialidades-box">
                         <i class="bi bi-code-square"></i>
                         <h3>Website</h3>
-                        <p>Especializado no desenvolvimento de websites responsivos, com foco em performance otimizada, acessibilidade e design intuitivo. Utilizo tecnologias modernas como HTML5, CSS3, JavaScript para criar soluções web eficientes e escaláveis.</p>
+                        <p>Especializado no desenvolvimento de websites responsivos, com foco em performance otimizada,
+                            acessibilidade e design intuitivo. Utilizo tecnologias modernas como HTML5, CSS3, JavaScript
+                            para criar soluções web eficientes e escaláveis.</p>
                     </div> <!-- Especialidades-box -->
 
                     <div class="especialidades-box">
                         <i class="bi bi-book"></i>
                         <h3>Leitura</h3>
-                        <p>Dedicação ao aprendizado contínuo e desenvolvimento pessoal por meio da leitura. Exploro uma vasta gama de temas, de tecnologia a literatura, enriquecendo minha perspectiva e criatividade no desenvolvimento de soluções.</p>
+                        <p>Dedicação ao aprendizado contínuo e desenvolvimento pessoal por meio da leitura. Exploro uma
+                            vasta gama de temas, de tecnologia a literatura, enriquecendo minha perspectiva e
+                            criatividade no desenvolvimento de soluções.</p>
                     </div> <!-- Especialidades-box -->
 
                     <div class="especialidades-box">
                         <i class="bi bi-box"></i>
                         <h3>Speedcubing</h3>
-                        <p>Com experiência em Speedcubing, cultivo habilidades como pensamento rápido, resolução de problemas e foco sob pressão. Sempre em busca de soluções rápidas e eficientes tanto no cubo quanto no código.</p>
+                        <p>Com experiência em Speedcubing, cultivo habilidades como pensamento rápido, resolução de
+                            problemas e foco sob pressão. Sempre em busca de soluções rápidas e eficientes tanto no cubo
+                            quanto no código.</p>
                     </div> <!-- Especialidades-box -->
                 </div> <!-- Flex -->
             </div> <!-- Interface -->
@@ -131,20 +136,40 @@
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
-                        <img src="./src/img/pessoa-eu.jpg" alt="Uma foto minha em frente ao espelho" width="100%" style="border-radius: 5%;">
+                        <img src="./src/img/eu2.webp" loading="lazy" alt="Uma foto minha em frente ao espelho" style="border-radius: 5%; width: 100%;">
                     </div> <!-- Img-sobre -->
 
                     <div class="txt-sobre">
                         <h2 id="sobre">MUITO PRAZER, <span>SOU BRIAN MUNIZ.</span></h2>
 
                         <p>
-                            Olá! Sou Brian, um estudante autodidata de Desenvolvimento Web (Front-end) apaixonado por tecnologia, leitura e speedcubing. Minha jornada atual é dedicada ao constante aprimoramento das habilidades no desenvolvimento web. Estou empenhado em explorar as nuances do Front-End, buscando sempre novos desafios e oportunidades para aprimorar meu conhecimento técnico. Acredito que a combinação da minha paixão por tecnologia, minha curiosidade insaciável e meu comprometimento em aprender continuamente me impulsionará a contribuir de maneira significativa no cenário dinâmico do desenvolvimento web.
+                            Olá! Sou Brian, um estudante autodidata de Desenvolvimento Web (Front-end) apaixonado por
+                            tecnologia, leitura e speedcubing. Minha jornada atual é dedicada ao constante aprimoramento
+                            das habilidades no desenvolvimento web. Estou empenhado em explorar as nuances do Front-End,
+                            buscando sempre novos desafios e oportunidades para aprimorar meu conhecimento técnico.
+                            Acredito que a combinação da minha paixão por tecnologia, minha curiosidade insaciável e meu
+                            comprometimento em aprender continuamente me impulsionará a contribuir de maneira
+                            significativa no cenário dinâmico do desenvolvimento web.
                         </p>
 
                         <div class="btn-social">
-                            <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-github"></i></button></a>
-                            <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-linkedin"></i></button></a>
+                            <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer" aria-label="Meu Instagram">
+                                <button aria-label="Logo do Instagram">
+                                  <i class="bi bi-instagram"></i>
+                                </button>
+                              </a>
+                              
+                              <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer" aria-label="Meu GitHub">
+                                <button aria-label="Logo do Github">
+                                  <i class="bi bi-github"></i>
+                                </button>
+                              </a>
+                              
+                              <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer" aria-label="Meu LinkedIn">
+                                <button aria-label="Logo do LinkedIn">
+                                  <i class="bi bi-linkedin"></i>
+                                </button>
+                              </a>                              
                         </div> <!-- Btn-social -->
                     </div> <!-- Txt-sobre -->
 
@@ -156,14 +181,21 @@
             <div class="interface">
                 <h2 class="titulo" id="projetos">MEU <span>PORTIFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(./src/img/projeto_3.png);">
-                        <div class="overlay">Quem é Scarlxrd?</div>
+                    <div class="img-port" style="background-image: url(./src/img/scarlxrd.webp);" loading="lazy">
+                        <a href="./biografia-scarlxrd/index.html" target="_blank" rel="next" alt="Biografia de Scarlxrd">
+                            <div class="overlay">Quem é Scarlxrd?</div>
+                        </a>
                     </div>
-                    <div class="img-port" style="background-image: url(./src/img/projeto_1.png); background-position: center;">
-                        <div class="overlay">Desafio: Order Summary</div>
+                    <div class="img-port"
+                        style="background-image: url(./src/img/summary.webp); background-position: center;" loading="lazy"> 
+                        <a href="https://order-summary-pearl.vercel.app/" target="_blank" rel="next">
+                            <div class="overlay">Desafio: Order Summary</div>
+                        </a>
                     </div>
-                    <div class="img-port" style="background-image: url(./src/img/projeto_2.png);">
-                        <div class="overlay">Minha Jornada Literária</div>
+                    <div class="img-port" style="background-image: url(./src/img/estante.webp);" loading="lazy">
+                        <a href="./estante/index.html" target="_blank" rel="next">
+                            <div class="overlay">Minha Jornada Literária</div>
+                        </a>
                     </div>
                 </div> <!-- Flex -->
             </div> <!-- Interface -->
@@ -176,8 +208,10 @@
                 <form action="">
                     <input type="text" name="seu_nome" id="seu_nome" placeholder="Seu nome (Obrigatório):" required>
                     <input type="text" name="seu_email" id="seu_email" placeholder="Seu email (Obrigatório):" required>
-                    <input type="text" name="seu_celular" id="seu-celular" placeholder="Seu Número de celular (Opcional):">
-                    <textarea name="sua_mensagem" id="sua_mensagem" placeholder="Sua mensagem (Obrigatório):" required></textarea>
+                    <input type="text" name="seu_celular" id="seu-celular"
+                        placeholder="Seu Número de celular (Opcional):">
+                    <textarea name="sua_mensagem" id="sua_mensagem" placeholder="Sua mensagem (Obrigatório):"
+                        required></textarea>
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
             </div> <!-- Interface -->
@@ -193,18 +227,33 @@
                         <img src="./src/img/logo.png" alt="Logo da Agência BRN">
                     </div> <!-- Logo-footer -->
                     <div class="btn-social" id="contatos">
-                        <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-instagram"></i></button></a>
-                            <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-github"></i></button></a>
-                            <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer" aria-label="Meu Instagram">
+                            <button aria-label="Logo do Instagram">
+                              <i class="bi bi-instagram"></i>
+                            </button>
+                          </a>
+                          <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer" aria-label="Meu GitHub">
+                            <button aria-label="Logo do Github">
+                              <i class="bi bi-github"></i>
+                            </button>
+                          </a>
+                          <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer" aria-label="Meu LinkedIn">
+                            <button aria-label="Logo do LinkedIn">
+                              <i class="bi bi-linkedin"></i>
+                            </button>
+                          </a>                          
                     </div> <!-- Btn-social -->
                 </div>
             </div> <!-- Line-footer -->
 
             <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:brian.muniz.silveira@gmail.com">brian.muniz.silveira@gmail.com</a></p>
+                <p><i class="bi bi-envelope-fill"></i> <a
+                        href="mailto:brian.muniz.silveira@gmail.com">brian.muniz.silveira@gmail.com</a></p>
             </div> <!-- Line-footer -->
         </div> <!-- Interface -->
-    </footer> 
+    </footer>
+
+    <script src="./src/js/script.js" defer></script>
 
 </body>
 
