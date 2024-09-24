@@ -452,6 +452,7 @@ footer .line-footer p a {
 
     section.topo-do-site {
         padding: 20px 8%;
+        line-height: 1.7;
     }
 
     .topo-do-site h1 {
@@ -466,6 +467,7 @@ footer .line-footer p a {
     /* ESTILO DA ESPECIALIDADES */
     section.especialidades {
         padding: 40px 8%;
+        line-height: 1.7;
     }
 
     /* ESTILOs SOBRE */
