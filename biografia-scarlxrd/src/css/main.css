@@ -1,22 +1,4 @@
-@charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
-:root {
-    --cor0: #E0AAFF;
-    --cor1: #C77DFF;
-    --cor2: #9D4EDD;
-    --cor3: #7B2CBF;
-    --cor4: #5A189A;
-    --cor5: #3C096C;
-    --cor6: #F20F4B;
-    --cor7: #394053;
-
-    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-orbitron: 'Orbitron', sans-serif;
-}
-
+/* Estilos Gerais */
 body {
     background-color: #1c1c1c;
     font-family: var(--fonte-padrao);
@@ -24,9 +6,10 @@ body {
 }
 
 a.externo::after {
-    content: '\00A0\1F517';
+    content: '\00A0\1F517'; /* Adiciona ícone de link externo */
 }
 
+/* Cabeçalho */
 header {
     background: linear-gradient(to bottom, #050505, #DF0A3D, #0A0A0C);
     min-height: 150px;
@@ -36,11 +19,11 @@ header {
 
 header h1 {
     color: #fff;
-    font-family: var(--fonte-orbitron);
+    font-family: var(--fonte-josefin);
     font-size: 2em;
     font-weight: normal;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.267);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.27);
 }
 
 header p {
@@ -50,13 +33,14 @@ header p {
     max-width: 600px;
     padding: 0 10px 50px;
     margin: auto;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.315);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.32);
 }
 
+/* Navegação */
 nav {
     background-color: #050505;
     padding: 10px;
-    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.192);
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.19);
 }
 
 nav a {
@@ -73,6 +57,7 @@ nav a:hover {
     color: #050505;
 }
 
+/* Conteúdo Principal */
 main {
     min-width: 300px;
     max-width: 1000px;
@@ -80,38 +65,39 @@ main {
     margin-bottom: 30px;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.42);
     border-radius: 0 0 10px 10px;
 }
 
-main h1 {
+main h1, main h2 {
+    font-family: var(--fonte-josefin);
     color: var(--cor6);
-    font-family: var(--fonte-orbitron);
-    letter-spacing: 5px;
+}
+
+main h1 {
     font-size: 1.8em;
 }
 
 main h2 {
-    font-family: var(--fonte-orbitron);
-    color: var(--cor6);
-    letter-spacing: 5px;
-    font-size: 1.4em;
-    background: linear-gradient(to right, #050505, transparent);
+    font-size: 1.3em;
+    background: linear-gradient(to right, #d9d9d9, transparent);
     text-indent: 8px;
-    padding-bottom: 5px;
+    padding: 0.2rem;
+    border-radius: 10px;
 }
 
 main p {
     margin: 15px 0;
     text-align: justify;
-    text-indent: 30px;
+    text-indent: 20px;
     font-size: 1em;
-    line-height: 1.6em;
+    line-height: 1.7em;
 }
 
 main strong {
     color: var(--cor6);
-    font-family: var(--fonte-orbitron);
+    font-family: var(--fonte-josefin);
+    font-size: 1.1em;
     font-weight: bold;
 }
 
@@ -129,6 +115,7 @@ main a:hover {
     color: var(--cor3);
 }
 
+/* Imagens */
 main img {
     width: 100%;
     height: auto;
@@ -140,11 +127,12 @@ main img.pequena {
     margin: auto;
 }
 
+/* Vídeo */
 div.video {
     background-color: var(--cor7);
-    margin: 0 -20px 30px -20px;
+    margin: 0 -20px 30px;
     padding: 20px;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
     position: relative;
     border-radius: 10px;
 }
@@ -157,21 +145,21 @@ div.video iframe {
     height: 100%;
 }
 
+/* Sidebar */
 aside {
     background-color: var(--cor7);
     color: #fff;
-    font-family: var(--fonte-orbitron);
+    font-family: var(--fonte-josefin);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.280);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.28);
 }
 
 aside h3 {
     background-color: var(--cor6);
-    font-family: var(--fonte-orbitron);
     color: #fff;
     padding: 10px;
-    margin: -10px -10px 0 -10px;
+    margin: -10px -10px 0;
     border-radius: 10px 10px 0 0;
 }
 
@@ -181,6 +169,7 @@ aside ul {
     columns: 2;
 }
 
+/* Rodapé */
 footer {
     background-color: #050505;
     color: #fff;
@@ -191,7 +180,7 @@ footer {
 
 footer a {
     color: var(--cor6);
-    font-weight: bolder;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -200,11 +189,7 @@ footer a:hover {
     color: var(--cor1);
 }
 
-.myth-city {
-    margin: auto;
-    margin-bottom: 25px;
-}
-
+/* Botão Voltar ao Topo */
 #backToTopBtn {
     display: none;
     position: fixed;
@@ -225,54 +210,8 @@ footer a:hover {
     background-color: var(--cor7);
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    nav a {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    aside ul {
-        columns: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding-top: 20px;
-        min-height: 100px;
-    }
-
-    header h1 {
-        font-size: 1.2em;
-    }
-
-    header p {
-        font-size: 0.9em;
-        padding-bottom: 30px;
-    }
-
-    nav {
-        padding: 5px;
-    }
-
-    nav a {
-        padding: 5px;
-    }
-
-    div.video {
-        margin: 0 -10px 20px -10px;
-        padding-bottom: 50%;
-    }
+/* Classes Diversas */
+.myth-city {
+    margin: auto;
+    margin-bottom: 25px;
 }

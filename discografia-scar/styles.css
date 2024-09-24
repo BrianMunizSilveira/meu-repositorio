@@ -1,4 +1,4 @@
-/* Fontes Personalizadas */
+/* Importação de Fontes Personalizadas */
 @font-face {
   font-family: 'LemonMilk';
   src: url('src/imgs/LEMONMILK-Regular.otf');
@@ -14,19 +14,44 @@
   src: url('src/font/Break-gothic.ttf');
 }
 
-/* Estilos Gerais do Body */
+/* Estilos Globais */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #1c1c1c;
+  background: url('https://i0.wp.com/www.ambientlightblog.com/wp-content/uploads/2018/12/Scarlxrd_051218_0028-feature.jpg?fit=2048%2C1075&ssl=1') no-repeat center center fixed;
+  background-size: cover;
   color: #ffffff;
   margin: 0;
   padding: 0;
-  background-image: url('https://i0.wp.com/www.ambientlightblog.com/wp-content/uploads/2018/12/Scarlxrd_051218_0028-feature.jpg?fit=2048%2C1075&ssl=1');
-  background-size: cover;
-  background-attachment: fixed;
 }
 
-/* Estilos do Main */
+a {
+  color: #ff0000;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos Principais */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -36,36 +61,47 @@ main {
 }
 
 /* Estilos dos Títulos */
+h1, h2 {
+  text-align: center;
+  margin: 0 0 30px;
+}
+
 h1 {
   font-family: 'BreakGothic', sans-serif;
   font-size: 3rem;
-  text-align: center;
   color: #ff0000;
-  margin-bottom: 30px;
   letter-spacing: 14px;
 }
 
 h2 {
   font-family: 'LemonMilk', sans-serif;
   font-size: 2rem;
-  text-align: center;
   color: #ffffff;
-  margin: 20px 0;
 }
 
 .title {
   color: #ff0000;
 }
 
-/* Estilos das Listas */
-ul {
-  padding: 0;
-  list-style: none;
-  margin: 0;
+/* Estilos de Texto */
+p {
+  font-family: 'AmazDooMLeft', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.6;
+  margin: 10px 0;
 }
 
-li {
-  margin-bottom: 20px;
+/* Estilos de Sumário */
+summary {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.8;
+  margin: 15px 0;
 }
 
 /* Estilos dos Álbuns */
@@ -104,13 +140,7 @@ li {
   margin-bottom: 15px;
 }
 
-.album-cover {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Wrapper para as capas dos álbuns */
+/* Estilos das Capas dos Álbuns */
 .album-cover-wrapper {
   position: relative;
   width: 100%;
@@ -140,38 +170,6 @@ li {
   opacity: 1;
 }
 
-/* Estilos dos Links */
-a {
-  color: #ff0000;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Estilos do Parágrafo */
-p {
-  font-family: 'AmazDooMLeft', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  line-height: 1.6;
-  margin: 10px 0;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 10px;
-  color: #ffffff;
-  font-size: 1.25rem;
-  text-align: center;
-  line-height: 1.8;
-  margin: 15px 0;
-}
-
 /* Estilos do Footer */
 footer {
   background-color: #1c1c1c;
@@ -183,13 +181,6 @@ footer {
 .footer-content {
   max-width: 800px;
   margin: 0 auto;
-}
-
-/* Estilos das Imagens */
-img {
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Media Queries para Responsividade */
@@ -210,12 +201,8 @@ img {
     font-size: 1.25rem;
   }
 
-  .album-description {
-    font-size: 0.9rem;
-  }
-
   p {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -237,12 +224,8 @@ img {
     font-size: 1.1rem;
   }
 
-  .album-description {
-    font-size: 0.85rem;
-  }
-
   p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -262,10 +245,6 @@ img {
 
   .album-title {
     font-size: 1rem;
-  }
-
-  .album-description {
-    font-size: 0.8rem;
   }
 
   p {
