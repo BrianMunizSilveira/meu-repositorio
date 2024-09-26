@@ -6,7 +6,7 @@ body {
 }
 
 a.externo::after {
-    content: '\00A0\1F517'; /* Adiciona ícone de link externo */
+    content: '\00A0\1F517'; 
 }
 
 /* Cabeçalho */
@@ -82,7 +82,7 @@ main h2 {
     font-size: 1.3em;
     background: linear-gradient(to right, #d9d9d9, transparent);
     text-indent: 8px;
-    padding: 0.2rem;
+    padding: 1rem;
     border-radius: 10px;
 }
 
@@ -132,7 +132,7 @@ div.video {
     background-color: var(--cor7);
     margin: 0 -20px 30px;
     padding: 20px;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    padding-bottom: 56.25%;
     position: relative;
     border-radius: 10px;
 }
@@ -150,9 +150,14 @@ aside {
     background-color: var(--cor7);
     color: #fff;
     font-family: var(--fonte-josefin);
-    padding: 10px;
+    padding: 2rem;
     border-radius: 10px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.28);
+}
+
+abbr {
+    border-bottom: 1px dotted;
+    cursor: help;
 }
 
 aside h3 {
@@ -163,19 +168,31 @@ aside h3 {
     border-radius: 10px 10px 0 0;
 }
 
-aside ul {
-    list-style: '\1714\00A0\00A0';
+aside ol {
+    list-style-type: decimal;
     list-style-position: inside;
+    padding-left: 20px;
     columns: 2;
+}
+
+aside li {
+    padding: 0.5rem;
+    line-height: 1.5em;
 }
 
 /* Rodapé */
 footer {
-    background-color: #050505;
-    color: #fff;
-    text-align: center;
-    font-size: 0.8em;
-    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    background-color: #222; 
+    color: #fff; 
+}
+
+footer p {
+    margin: 10px;
 }
 
 footer a {
@@ -197,7 +214,7 @@ footer a:hover {
     right: 20px;
     z-index: 99;
     border: none;
-    background-color: var(--cor6);
+    background-color: #eb0e496b;
     color: white;
     cursor: pointer;
     padding: 10px;

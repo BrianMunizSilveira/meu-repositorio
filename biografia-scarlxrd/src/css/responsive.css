@@ -1,53 +1,73 @@
 /* Responsividade para dispositivos com largura máxima de 768px */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em; /* Ajusta o tamanho da fonte do título */
+        font-size: 1.5em;
     }
 
     header p {
-        font-size: 1em; /* Ajusta o tamanho da fonte do parágrafo */
+        font-size: 1em;
     }
 
     nav a {
-        display: block; /* Torna os links da navegação blocos completos para facilitar o toque */
-        margin-bottom: 5px; /* Adiciona espaçamento entre os links */
+        display: block;
+        margin-bottom: 5px;
     }
 
     main {
-        padding: 5%; /* Ajusta o espaçamento interno para dar mais respiro */
+        padding: 5%;
     }
 
-    aside ul {
-        columns: 1; /* Muda as colunas da lista lateral para uma única coluna */
+    aside {
+        padding: 8%;
+        line-height: 1.5em;
+    }
+
+    aside ol {
+        columns: 1;
+    }
+
+    aside li {
+        padding: 0.4rem;
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        align-items: center; 
+        padding: 20px;
+        background-color: #222; 
+        color: #fff; 
+        flex-direction: column;
     }
 }
 
 /* Responsividade para dispositivos com largura máxima de 480px */
 @media (max-width: 480px) {
     header {
-        padding-top: 20px; /* Reduz o padding superior */
-        min-height: 100px; /* Reduz a altura mínima do cabeçalho */
+        padding-top: 20px;
+        min-height: 100px;
     }
 
     header h1 {
-        font-size: 1.2em; /* Diminui o tamanho da fonte do título para telas menores */
+        font-size: 1.2em;
     }
 
     header p {
-        font-size: 0.9em; /* Diminui o tamanho da fonte do parágrafo */
-        padding-bottom: 30px; /* Reduz o espaçamento inferior */
+        font-size: 0.9em;
+        padding-bottom: 30px
     }
 
     nav {
-        padding: 5px; /* Diminui o padding da navegação */
+        padding: 5px;
     }
 
     nav a {
-        padding: 5px; /* Reduz o padding dos links de navegação */
+        padding: 5px;
     }
 
     div.video {
-        margin: 0 -10px 20px -10px; /* Ajusta as margens do contêiner de vídeo */
-        padding-bottom: 50%; /* Ajusta o aspect ratio do vídeo para se adaptar melhor a telas pequenas */
+        margin: 0 -10px 20px -10px;
+        padding-bottom: 50%;
     }
 }

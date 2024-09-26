@@ -1,3 +1,4 @@
+/* "Setinha" para retornar ao topo */ 
 window.onscroll = function() {
     scrollFunction();
 };
@@ -17,3 +18,13 @@ document.getElementById("backToTopBtn").onclick = function() {
         behavior: 'smooth'
     });
 };
+
+
+/* Tooltip para os albuns */
+const abbrs = document.querySelectorAll('abbr');
+
+abbrs.forEach(function(abbr) {
+    abbr.addEventListener('click', function() {
+        alert(this.getAttribute('title'));
+    })
+})
