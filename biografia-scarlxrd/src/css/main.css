@@ -76,9 +76,13 @@ main h1, main h2 {
 
 main h1 {
     font-size: 1.8em;
+    text-align: center;
+    margin: 1rem;
 }
 
 main h2 {
+    text-align: center;
+    margin: 1rem;
     font-size: 1.3em;
     background: linear-gradient(to right, #d9d9d9, transparent);
     text-indent: 8px;
@@ -87,11 +91,12 @@ main h2 {
 }
 
 main p {
-    margin: 15px 0;
     text-align: justify;
     text-indent: 20px;
     font-size: 1em;
     line-height: 1.7em;
+    max-width: 500px;
+    margin: auto;
 }
 
 main strong {
@@ -119,6 +124,8 @@ main a:hover {
 main img {
     width: 100%;
     height: auto;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 main img.pequena {
@@ -153,6 +160,7 @@ aside {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.28);
+    margin: 1rem;
 }
 
 abbr {
