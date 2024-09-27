@@ -8,17 +8,17 @@ body {
 }
 
 a {
-    color: var(--cor-principal);
-    text-decoration: none;
+    color: var(--cor-secundaria);
+    text-decoration: underline;
     transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    color: var(--cor-secundaria);
-    text-decoration: underline;
+    color: var(--cor-principal);
 }
 
-ul, ol,
+ul,
+ol,
 li {
     list-style: decimal;
     margin: 0;
