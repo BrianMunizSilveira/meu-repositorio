@@ -1,12 +1,16 @@
 /* Estilos Gerais */
 body {
-    background-color: #1c1c1c;
+    background-color: #fff;
     font-family: var(--fonte-padrao);
-    color: #000;
+    color: #fff; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
 }
 
 a.externo::after {
     content: '\00A0\1F517'; 
+    font-size: 1.1em;
 }
 
 /* Cabeçalho */
@@ -20,14 +24,13 @@ header {
 header h1 {
     color: #fff;
     font-family: var(--fonte-josefin);
-    font-size: 2em;
-    font-weight: normal;
+    font-size: 2.5em;
+    font-weight: 400;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.27);
 }
 
 header p {
-    font-family: var(--fonte-padrao);
     font-size: 1.2em;
     color: #fff;
     max-width: 600px;
@@ -41,6 +44,9 @@ nav {
     background-color: #050505;
     padding: 10px;
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav a {
@@ -49,7 +55,7 @@ nav a {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.6s, color 0.6s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
@@ -62,9 +68,8 @@ main {
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
-    margin-bottom: 30px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #1a1a1a;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.42);
     border-radius: 0 0 10px 10px;
 }
@@ -72,20 +77,17 @@ main {
 main h1, main h2 {
     font-family: var(--fonte-josefin);
     color: var(--cor6);
+    text-align: center;
+    margin: 1rem;
 }
 
 main h1 {
-    font-size: 1.8em;
-    text-align: center;
-    margin: 1rem;
+    font-size: 2em;
 }
 
 main h2 {
-    text-align: center;
-    margin: 1rem;
-    font-size: 1.3em;
+    font-size: 1.5em;
     background: linear-gradient(to right, #d9d9d9, transparent);
-    text-indent: 8px;
     padding: 1rem;
     border-radius: 10px;
 }
@@ -111,20 +113,20 @@ main a {
     font-weight: bold;
     color: #fff;
     background-color: var(--cor6);
-    padding: 2px 6px;
-    border-radius: 3px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 main a:hover {
+    background-color: var(--cor3);
     text-decoration: underline;
-    color: var(--cor3);
 }
 
 /* Imagens */
 main img {
     width: 100%;
     height: auto;
-    margin: 1rem;
     padding: 1rem;
 }
 
@@ -139,8 +141,8 @@ div.video {
     background-color: var(--cor7);
     margin: 0 -20px 30px;
     padding: 20px;
-    padding-bottom: 56.25%;
     position: relative;
+    padding-bottom: 56.25%;
     border-radius: 10px;
 }
 
@@ -163,9 +165,8 @@ aside {
     margin: 1rem;
 }
 
-abbr {
-    border-bottom: 1px dotted;
-    cursor: help;
+aside p {
+    margin: 1rem 0;
 }
 
 aside h3 {
@@ -222,13 +223,13 @@ footer a:hover {
     right: 20px;
     z-index: 99;
     border: none;
-    background-color: #eb0e496b;
+    background-color: #eb0e49cc;
     color: white;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 20px;
-    transition: background-color 0.5s;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s;
 }
 
 #backToTopBtn:hover {

@@ -2,60 +2,78 @@
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5em;
+        margin-bottom: 15px;
     }
 
     header p {
         font-size: 1em;
+        padding: 0 5%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
     }
 
     nav a {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
+        padding: 8px;
+        text-align: center;
     }
 
     main {
         padding: 5%;
     }
 
+    main h1, main h2 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
     aside {
-        padding: 8%;
+        padding: 6%;
         line-height: 1.5em;
     }
 
     aside ol {
         columns: 1;
+        padding-left: 0;
     }
 
     aside li {
         padding: 0.4rem;
+        font-size: 0.9em;
     }
 
     footer {
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: space-between; 
-        align-items: center; 
-        padding: 20px;
-        background-color: #222; 
-        color: #fff; 
         flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    footer p, footer a {
+        margin: 5px 0;
+        font-size: 0.9em;
     }
 }
 
 /* Responsividade para dispositivos com largura máxima de 480px */
 @media (max-width: 480px) {
     header {
-        padding-top: 20px;
+        padding-top: 15px;
         min-height: 100px;
     }
 
     header h1 {
         font-size: 1.2em;
+        margin-bottom: 10px;
     }
 
     header p {
         font-size: 0.9em;
-        padding-bottom: 30px
+        padding: 0 10px 25px;
     }
 
     nav {
@@ -64,10 +82,42 @@
 
     nav a {
         padding: 5px;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 5%;
+    }
+
+    main h1, main h2 {
+        font-size: 1.2em;
+    }
+
+    main p {
+        font-size: 0.95em;
+        line-height: 1.6em;
     }
 
     div.video {
-        margin: 0 -10px 20px -10px;
+        margin: 0 -10px 20px;
         padding-bottom: 50%;
+    }
+
+    aside {
+        padding: 5%;
+    }
+
+    aside h3 {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.85em;
+    }
+
+    footer a {
+        padding: 5px;
     }
 }
