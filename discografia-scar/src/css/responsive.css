@@ -1,6 +1,7 @@
 /* Media Queries para Responsividade */
 @media (max-width: 1024px) {
     main {
+      margin: auto;
       padding: 30px 15px;
     }
   
@@ -11,6 +12,11 @@
     h2 {
       font-size: 1.75rem;
     }
+
+    ul, ol {
+      padding: 1.5rem;
+    }
+
   
     .album-title {
       font-size: 1.25rem;
