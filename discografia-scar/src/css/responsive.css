@@ -1,0 +1,69 @@
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+    main {
+      padding: 30px 15px;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    h2 {
+      font-size: 1.75rem;
+    }
+  
+    .album-title {
+      font-size: 1.25rem;
+    }
+  
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    main {
+      padding: 25px 10px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 10px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .album-title {
+      font-size: 1.1rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    main {
+      padding: 20px 5px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+      letter-spacing: 8px;
+    }
+  
+    h2 {
+      font-size: 1.25rem;
+    }
+  
+    .album-title {
+      font-size: 1rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  

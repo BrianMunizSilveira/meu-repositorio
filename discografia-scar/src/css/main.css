@@ -1,0 +1,163 @@
+/* Estilos gerais */
+body {
+    font-family: var(--fonte-principal);
+    color: var(--cor-secundaria);
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+
+ul, ol,
+li {
+    list-style: decimal;
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+/* Estilos principais */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: rbga(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+/* Estilos dos Títulos */
+h1,
+h2 {
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    color: var(--cor-principal);
+    margin: 2rem;
+    letter-spacing: 14px;
+}
+
+h2 {
+    font-family: var(--fonte-subtitulo);
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+}
+
+.title {
+    color: var(--cor-principal);
+}
+
+/* Estilos de texto */
+p {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* Estilos de Sumário */
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: var(--cor-principal);
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+/* Estilos dos albuns */
+.album-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.album-item {
+    background-color: var(--cor-album-fundo);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.album-item:hover {
+    transform: translateY(-5px);
+}
+
+.album-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.album-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.album-description {
+    font-size: 1rem;
+    color: var(--cor-texto-claro);
+    margin-bottom: 15px;
+}
+
+/* Estilos das capas dos albuns */
+.album-cover-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.album-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.5s ease;
+}
+
+.secondary-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.album-cover-wrapper:hover .primary-cover {
+    opacity: 0;
+}
+
+.album-cover-wrapper:hover .secondary-cover {
+    opacity: 1;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
