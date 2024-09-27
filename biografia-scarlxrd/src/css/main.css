@@ -93,6 +93,7 @@ main h2 {
 }
 
 main p {
+    font-display: swap;
     text-align: justify;
     text-indent: 20px;
     font-size: 1em;
@@ -106,6 +107,7 @@ main strong {
     font-family: var(--fonte-josefin);
     font-size: 1.1em;
     font-weight: bold;
+    font-display: swap;
 }
 
 main a {
