@@ -161,3 +161,30 @@ footer {
     max-width: 800px;
     margin: 0 auto;
 }
+
+/* Estilo do botão de voltar ao topo */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none; 
+}
+
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+.back-to-top:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
+}
