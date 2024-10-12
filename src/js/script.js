@@ -28,3 +28,27 @@ document.addEventListener('scroll', function() {
 document.getElementById('backToTopBtn').addEventListener('click', function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Envio de e-mail
+document.addEventListener("DOMContentLoaded", function() {
+    // Inicializar o EmailJS
+    emailjs.init("OseWI6pnm-kvssoSJ");
+
+    // Adicionar evento de submit ao formulário
+    const form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir o reload da página ao enviar o formulário
+
+            // Enviar o formulário usando o EmailJS
+            emailjs.sendForm('service_sii999k', 'template_ieno9yb', this)
+                .then(function() {
+                    alert('Mensagem enviada com sucesso!');
+                }, function(error) {
+                    alert('Ocorreu um erro. Tente novamente.', error);
+                });
+        });
+    } else {
+        console.error('Formulário não encontrado');
+    }
+});

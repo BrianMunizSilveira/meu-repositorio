@@ -11,24 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">    
     <!-- Fim Google Fonts -->
-    <!-- Boostrap Icons -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         media="print" onload="this.media='all'">
-    <!-- Fim Boostrap Icons -->
+    <!-- Fim Bootstrap Icons -->
     <link rel="stylesheet" href="./style.css" media="print" onload="this.media='all'">
     <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
 
     <title>B.M.S Web Developer</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
 
-    <button id="backToTopBtn">↑</button>
+    <button id="backToTopBtn" aria-label="Voltar ao topo">↑</button>
     <header>
         <div class="interface">
             <div class="logo">
-                <a href="#">
+                <a href="#" aria-label="Ir para a página inicial">
                     <picture>
                         <source media="(max-width: 750px)" srcset="./src/img/logo-p.webp">
                         <source media="(min-width: 751px) and (max-width: 1210px)" srcset="./src/img/logo-m.webp">
@@ -38,10 +40,10 @@
                 </a>
             </div> <!-- Logo -->
 
-            <nav class="menu-desktop" role="navigation">
+            <nav class="menu-desktop" aria-label="Menu principal">
                 <ul>
                     <li><a href="./index.html">Início</a></li>
-                    <li><a href="#especialidades">Especilidades</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                 </ul>
@@ -49,65 +51,63 @@
 
             <div class="btn-contato">
                 <a href="#contato">
-                    <button>Contato</button>
+                    <button aria-label="Entrar em contato">Contato</button>
                 </a>
             </div>
 
-            <div class="btn-abrir-menu" id="btn-menu">
+            <button class="btn-abrir-menu" id="btn-menu" aria-label="Abrir menu">
                 <i class="bi bi-list"></i>
-            </div>
+            </button>
 
         </div> <!-- btn-contato -->
 
-        <div class="menu-mobile" id="menu-mobile">
-            <div class="btn-fechar">
+        <div class="menu-mobile" id="menu-mobile" aria-hidden="true">
+            <button class="btn-fechar" aria-label="Fechar menu">
                 <i class="bi bi-x-lg"></i>
-            </div>
+            </button>
 
-            <nav>
+            <nav aria-label="Menu navegação móvel">
                 <ul>
                     <li><a href="./index.html">Início</a></li>
-                    <li><a href="#especialidades">Especilidades</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </nav>
-
         </div> <!-- Menu-mobile -->
-        <div class="overlay-menu" id="overlay-menu">
 
-        </div>
+        <div class="overlay-menu" id="overlay-menu" aria-hidden="true"></div>
     </header>
 
     <main>
-        <section class="topo-do-site">
+        <section class="topo-do-site" aria-labelledby="main-heading">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
-                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
+                        <h1 id="main-heading">TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h1>
                         <p>Alcance o próximo nível com uma presença online que une design envolvente, funcionalidade
                             simples e resultados sólidos. Cada projeto é pensado para surpreender e converter.</p>
 
                         <div class="btn-contato">
-                            <a href="#contatos">
-                                <button>Entre em contato</button>
+                            <a href="#contato">
+                                <button aria-label="Entrar em contato">Entre em contato</button>
                             </a>
                         </div>
                     </div> <!-- Txt-topo-site -->
 
                     <div class="img-topo-site">
-                        <img src="./src/img/eu1.webp" alt="Uma imagem minha">
+                        <img src="./src/img/eu1.webp" alt="Retrato de Brian Muniz">
                     </div> <!-- Img-topo-site -->
                 </div> <!-- Flex -->
             </div> <!-- Interface -->
         </section> <!-- Topo-do-site -->
 
-        <section class="especialidades">
+        <section class="especialidades" aria-labelledby="especialidades-heading">
             <div class="interface">
-                <h2 class="titulo" id="especialidades">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <h2 class="titulo" id="especialidades-heading">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
                     <div class="especialidades-box">
-                        <i class="bi bi-code-square"></i>
+                        <i class="bi bi-code-square" aria-hidden="true"></i>
                         <h3>Website</h3>
                         <p>Especializado no desenvolvimento de websites responsivos, com foco em performance otimizada,
                             acessibilidade e design intuitivo. Utilizo tecnologias modernas como HTML5, CSS3, JavaScript
@@ -115,7 +115,7 @@
                     </div> <!-- Especialidades-box -->
 
                     <div class="especialidades-box">
-                        <i class="bi bi-book"></i>
+                        <i class="bi bi-book" aria-hidden="true"></i>
                         <h3>Leitura</h3>
                         <p>Dedicação ao aprendizado contínuo e desenvolvimento pessoal por meio da leitura. Exploro uma
                             vasta gama de temas, de tecnologia a literatura, enriquecendo minha perspectiva e
@@ -123,7 +123,7 @@
                     </div> <!-- Especialidades-box -->
 
                     <div class="especialidades-box">
-                        <i class="bi bi-box"></i>
+                        <i class="bi bi-box" aria-hidden="true"></i>
                         <h3>Speedcubing</h3>
                         <p>Com experiência em Speedcubing, cultivo habilidades como pensamento rápido, resolução de
                             problemas e foco sob pressão. Sempre em busca de soluções rápidas e eficientes tanto no cubo
@@ -133,16 +133,16 @@
             </div> <!-- Interface -->
         </section> <!-- Especialidades -->
 
-        <section class="sobre">
+        <section class="sobre" aria-labelledby="sobre-heading">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
-                        <img src="./src/img/eu2.webp" loading="lazy" alt="Uma foto minha em frente ao espelho"
+                        <img src="./src/img/eu2.webp" loading="lazy" alt="Brian Muniz em frente ao espelho"
                             style="border-radius: 5%; width: 100%;">
                     </div> <!-- Img-sobre -->
 
                     <div class="txt-sobre">
-                        <h2 id="sobre">MUITO PRAZER, <span>SOU BRIAN MUNIZ.</span></h2>
+                        <h2 id="sobre-heading">MUITO PRAZER, <span>SOU BRIAN MUNIZ.</span></h2>
 
                         <p>
                             Olá! Sou Brian, um estudante autodidata de Desenvolvimento Web (Front-end) apaixonado por
@@ -156,21 +156,21 @@
 
                         <div class="btn-social">
                             <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer"
-                                aria-label="Meu Instagram">
+                                aria-label="Instagram">
                                 <button aria-label="Logo do Instagram">
                                     <i class="bi bi-instagram"></i>
                                 </button>
                             </a>
 
                             <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer"
-                                aria-label="Meu GitHub">
+                                aria-label="GitHub">
                                 <button aria-label="Logo do Github">
                                     <i class="bi bi-github"></i>
                                 </button>
                             </a>
 
                             <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Meu LinkedIn">
+                                rel="noopener noreferrer" aria-label="LinkedIn">
                                 <button aria-label="Logo do LinkedIn">
                                     <i class="bi bi-linkedin"></i>
                                 </button>
@@ -182,25 +182,26 @@
             </div> <!-- Interface -->
         </section> <!-- Sobre -->
 
-        <section class="portifolio">
+        <section class="portifolio" aria-labelledby="portfolio-heading">
             <div class="interface">
-                <h2 class="titulo" id="projetos">MEU <span>PORTIFÓLIO.</span></h2>
+                <h2 class="titulo" id="portfolio-heading">MEU <span>PORTIFÓLIO.</span></h2>
                 <div class="flex">
-                    <div class="img-port" style="background-image: url(./src/img/scarlxrd.webp);" loading="lazy">
+                    <div class="img-port" style="background-image: url(./src/img/scarlxrd.webp);">
                         <a href="./biografia-scarlxrd/index.html" target="_blank" rel="next"
-                            alt="Biografia de Scarlxrd">
+                            aria-label="Biografia de Scarlxrd">
                             <div class="overlay">Quem é Scarlxrd?</div>
                         </a>
                     </div>
                     <div class="img-port"
-                        style="background-image: url(./src/img/summary.webp); background-position: center;"
-                        loading="lazy">
-                        <a href="https://order-summary-pearl.vercel.app/" target="_blank" rel="next">
+                        style="background-image: url(./src/img/summary.webp); background-position: center;">
+                        <a href="https://order-summary-pearl.vercel.app/" target="_blank" rel="next"
+                            aria-label="Desafio Order Summary">
                             <div class="overlay">Desafio: Order Summary</div>
                         </a>
                     </div>
-                    <div class="img-port" style="background-image: url(./src/img/estante.webp);" loading="lazy">
-                        <a href="./estante/index.html" target="_blank" rel="next">
+                    <div class="img-port" style="background-image: url(./src/img/estante.webp);">
+                        <a href="./estante/index.html" target="_blank" rel="next"
+                            aria-label="Minha Jornada Literária">
                             <div class="overlay">Minha Jornada Literária</div>
                         </a>
                     </div>
@@ -208,17 +209,23 @@
             </div> <!-- Interface -->
         </section> <!-- Portifolio -->
 
-        <section class="formulario">
+        <section class="formulario" aria-labelledby="contato-heading">
             <div class="interface">
-                <h2 class="titulo" id="contato">FALA <span>COMIGO.</span></h2>
+                <h2 class="titulo" id="contato-heading">FALA <span>COMIGO.</span></h2>
 
-                <form action="">
-                    <input type="text" name="seu_nome" id="seu_nome" placeholder="Seu nome (Obrigatório):" required>
-                    <input type="text" name="seu_email" id="seu_email" placeholder="Seu email (Obrigatório):" required>
-                    <input type="text" name="seu_celular" id="seu-celular"
-                        placeholder="Seu Número de celular (Opcional):">
-                    <textarea name="sua_mensagem" id="sua_mensagem" placeholder="Sua mensagem (Obrigatório):"
-                        required></textarea>
+                <form id="contact-form" aria-label="Formulário de contato">
+                    <label for="seu_nome">Seu nome:</label>
+                    <input type="text" name="seu_nome" id="seu_nome" placeholder="Seu nome (Obrigatório)" required>
+
+                    <label for="seu_email">Seu E-mail:</label>
+                    <input type="email" name="seu_email" id="seu_email" placeholder="Seu E-mail (Obrigatório)" required>
+
+                    <label for="seu_celular">Seu Número de celular:</label>
+                    <input type="tel" name="seu_celular" id="seu_celular" placeholder="Seu Número de celular (Opcional)">
+
+                    <label for="sua_mensagem">Sua mensagem:</label>
+                    <textarea name="sua_mensagem" id="sua_mensagem" placeholder="Sua mensagem (Obrigatório)" required></textarea>
+
                     <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
                 </form>
             </div> <!-- Interface -->
@@ -235,20 +242,20 @@
                     </div> <!-- Logo-footer -->
                     <div class="btn-social" id="contatos">
                         <a href="https://www.instagram.com/mxlfylxrd/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Meu Instagram">
-                            <button aria-label="Logo do Instagram">
+                            aria-label="Instagram">
+                            <button aria-label="Instagram">
                                 <i class="bi bi-instagram"></i>
                             </button>
                         </a>
                         <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer"
-                            aria-label="Meu GitHub">
-                            <button aria-label="Logo do Github">
+                            aria-label="GitHub">
+                            <button aria-label="GitHub">
                                 <i class="bi bi-github"></i>
                             </button>
                         </a>
                         <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank"
-                            rel="noopener noreferrer" aria-label="Meu LinkedIn">
-                            <button aria-label="Logo do LinkedIn">
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <button aria-label="LinkedIn">
                                 <i class="bi bi-linkedin"></i>
                             </button>
                         </a>
@@ -257,8 +264,7 @@
             </div> <!-- Line-footer -->
 
             <div class="line-footer borda">
-                <p><i class="bi bi-envelope-fill"></i> <a
-                        href="mailto:brian.muniz.silveira@gmail.com">brian.muniz.silveira@gmail.com</a></p>
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:brian.muniz.silveira@gmail.com">brian.muniz.silveira@gmail.com</a></p>
             </div> <!-- Line-footer -->
         </div> <!-- Interface -->
     </footer>
