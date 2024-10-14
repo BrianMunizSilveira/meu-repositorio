@@ -1,6 +1,31 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color-light: #8ECAE6;
+    --primary-color: #219EBC;
+    --secondary-color: #023047;
+    --accent-color-light: #FFB703;
+    --accent-color-dark: #FB8500;
+    --background-color: #f9f5e7;
+    --font-color: #333;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    --font-family-main: 'Georgia', serif;
+    --font-family-alt: 'Noto Serif', sans-serif;
+
+    --transition-speed: 0.3s;
+    --border-radius: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
 }

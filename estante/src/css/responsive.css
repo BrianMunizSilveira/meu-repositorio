@@ -1,0 +1,42 @@
+@media (max-width: 800px) {
+    nav ol {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    main {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+    }
+
+    nav ol {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        padding: 12px 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    img {
+        margin-bottom: 15px;
+    }
+}
+
