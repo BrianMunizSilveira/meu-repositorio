@@ -32,6 +32,10 @@
 }
 
 @media (max-width: 480px) {
+    body {
+        background-image: none;
+    }
+
     header {
         padding: 15px;
     }
@@ -42,7 +46,7 @@
     }
 
     nav a {
-        padding: 12px;
+        padding: 50px;
     }
 
     main {
@@ -50,6 +54,7 @@
     }
 
     h2 {
+        margin-top: 1rem;
         font-size: 1.25rem;
     }
 
