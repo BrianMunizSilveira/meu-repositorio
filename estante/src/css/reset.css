@@ -10,20 +10,13 @@
 }
 
 :root {
-    --primary-color-light: #8ECAE6;
-    --primary-color: #219EBC;
-    --secondary-color: #023047;
-    --accent-color-light: #FFB703;
-    --accent-color-dark: #FB8500;
-    --background-color: #f9f5e7;
+    --background-color: #f5f5f5;
     --font-color: #333;
-    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    --font-family-main: 'Georgia', serif;
-    --font-family-alt: 'Noto Serif', sans-serif;
-
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+    --accent-color-dark: #c0392b;
     --transition-speed: 0.3s;
-    --border-radius: 5px;
 }
 
 html {
