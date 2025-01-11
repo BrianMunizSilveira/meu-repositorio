@@ -51,7 +51,7 @@ form {
 
 .flex {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .btn-contato button {
@@ -297,6 +297,7 @@ footer .line-footer p a {
 }
 
 section.portifolio .flex {
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 60px
 }
