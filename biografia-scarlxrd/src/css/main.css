@@ -108,6 +108,10 @@ p {
     text-align: center;
 }
 
+div>.quote>img {
+    width: 100%;
+}
+
 .timeline {
     position: relative;
     padding: 2rem 0;
