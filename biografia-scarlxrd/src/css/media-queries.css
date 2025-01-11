@@ -1,0 +1,75 @@
+/* Breakpoints */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    ul.discografia {
+        columns: 2;
+        column-gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    ul.discografia {
+        columns: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    p,
+    li {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        max-width: 1400px;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    p,
+    li {
+        font-size: 1.2rem;
+    }
+
+    ul.discografia {
+        columns: 4;
+    }
+}

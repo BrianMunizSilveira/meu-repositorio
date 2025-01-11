@@ -1,1 +1,200 @@
-main a,nav a{border-radius:5px;transition:background-color .3s,color .3s;text-decoration:none}aside,div.video,div.video iframe,main h2{border-radius:10px}aside h3,main a{background-color:var(--cor6);color:#fff}aside h3,nav,nav a{padding:10px}footer,main{padding:20px}footer a,main h1,main h2,main strong{color:var(--cor6)}footer a,main a,nav a{text-decoration:none}aside,aside h3,body,footer,header h1,header p,main a{color:#fff}#backToTopBtn:hover,aside,div.video{background-color:var(--cor7)}.info-icon,footer,nav{display:flex}body{font-family:var(--fonte-padrao);margin:0;padding:0;line-height:1.5;background:url('https://upload.wikimedia.org/wikipedia/commons/d/d6/Scarlxrd_-_Rock_am_Ring_2018-3546.jpg') center center/cover no-repeat fixed #000}aside,header h1,main h1,main h2,main strong{font-family:var(--fonte-josefin)}a.externo::after{content:'\00A0\1F517';font-size:1.1em}header{min-height:150px;text-align:center;padding-top:40px}header h1{font-size:2.5em;font-weight:400;margin-bottom:20px;text-shadow:2px 2px 0 rgba(0,0,0,.27)}footer a,main a,main strong,nav a{font-weight:700}header p{font-size:1.2em;max-width:600px;padding:0 10px 50px;margin:auto;text-shadow:2px 2px 0 rgba(0,0,0,.32)}nav{background-color:#050505e8;box-shadow:0 7px 7px rgba(0,0,0,.19);justify-content:center;gap:15px}nav a{color:#df0a3d}nav a:hover{background-color:#df0a3d;color:#050505}main{min-width:300px;max-width:1000px;margin:auto;background-color:#1a1a1acf;box-shadow:0 0 10px rgba(0,0,0,.42);border-radius:0 0 10px 10px}main h1,main h2{text-align:center;margin:1rem}main h1{font-size:2em}main h2{font-size:1.5em;background:linear-gradient(to right,#d9d9d9,transparent);padding:1rem}main p{text-align:justify;text-indent:20px;font-size:1em;line-height:1.7em;max-width:800px;margin:auto auto 1rem}main strong{font-size:1.1em;font-display:swap}main a{padding:5px 10px}main a:hover{background-color:var(--cor3);text-decoration:underline}main img{width:100%;height:auto;padding:1rem}main img.pequena{max-width:350px;display:block;margin:auto}div.video{margin:0 -20px 30px;padding:20px 20px 56.25%;position:relative}div.video iframe{position:absolute;top:0;left:0;width:100%;height:100%}aside{padding:2rem;box-shadow:3px 3px 8px rgba(0,0,0,.28);margin:1rem}aside p{margin:1rem 0}aside h3{margin:-10px -10px 0;border-radius:10px 10px 0 0}aside #discografia-iframe{width:100%;height:600px;border:none}footer{flex-wrap:wrap;justify-content:space-between;align-items:center;background-color:#222}footer p{margin:10px}footer a:hover{text-decoration:underline;color:var(--cor1)}#backToTopBtn{display:none;position:fixed;bottom:20px;right:20px;z-index:99;border:none;background-color:#eb0e49cc;color:#fff;cursor:pointer;padding:12px;border-radius:50%;font-size:18px;transition:background-color .3s}.myth-city{margin:auto auto 25px}.info-container{position:fixed;bottom:20px;left:20px;display:flex;align-items:center}.info-icon{background-color:var(--cor-destaque-1);width:30px;height:30px;justify-content:center;align-items:center;border-radius:50%;cursor:pointer;font-size:20px;transition:background-color var(--transicao-suave)}.info-icon:hover{background-color:var(--cor-destaque-2)}.info-text{display:none;margin-left:10px;background-color:var(--cor-destaque-3);padding:5px 10px;border-radius:5px}.info-container.active .info-text{display:inline-block}
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+    overflow-x: hidden;
+}
+
+/* Efeito Parallax no Header */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/d/d6/Scarlxrd_-_Rock_am_Ring_2018-3546.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+    z-index: -1;
+    filter: brightness(0.3);
+}
+
+/* Container principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 2.5rem 0 1.5rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--text);
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animações de entrada */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section {
+    background: var(--secondary);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section>p {
+    max-width: 800px;
+    text-align: justify;
+    margin: auto;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.quote {
+    border-left: 4px solid var(--primary);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #cccccc;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--primary);
+}
+
+.timeline-item {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+div.video {
+    margin: 20px -20px 30px;
+    padding: 20px 20px 56.25%;
+    position: relative
+}
+
+div.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+ul.discografia {
+    list-style: upper-roman;
+    columns: 3;
+    column-gap: 4rem;
+    padding-left: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary);
+    color: var(--text);
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
