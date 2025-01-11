@@ -176,6 +176,16 @@ li {
     line-height: 1.8;
 }
 
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 footer {
     display: flex;
     justify-content: center;
