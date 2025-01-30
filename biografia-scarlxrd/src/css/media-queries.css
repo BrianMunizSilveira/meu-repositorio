@@ -1,0 +1,130 @@
+/* Mobile - até 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    ul.discografia {
+        columns: 1;
+        column-gap: 0;
+    }
+
+    .timeline-item {
+        padding-left: 1.5rem;
+    }
+}
+
+/* Extra small devices - 481px até 767px */
+@media (min-width: 481px) and (max-width: 767px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    ul.discografia {
+        columns: 2;
+    }
+}
+
+/* Small tablets - 768px até 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    main {
+        padding: 1.75rem;
+    }
+
+    ul.discografia {
+        columns: 2;
+    }
+
+    section > p {
+        max-width: 600px;
+    }
+}
+
+/* Large tablets/laptops - 992px até 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    main {
+        max-width: 960px;
+    }
+
+    section > p {
+        max-width: 700px;
+    }
+}
+
+/* Desktops - 1200px até 1919px */
+@media (min-width: 1200px) and (max-width: 1919px) {
+    main {
+        max-width: 1140px;
+    }
+}
+
+/* Extra large screens - 1920px ou maior */
+@media (min-width: 1920px) {
+    main {
+        max-width: 1400px;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    p, li {
+        font-size: 1.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+/* Ajustes gerais para telas menores */
+@media (max-width: 991px) {
+    .parallax-bg {
+        transform: scale(1.05);
+    }
+
+    header {
+        height: 80vh;
+    }
+
+    .quote {
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    div.video {
+        margin: 15px -15px 20px;
+    }
+}
