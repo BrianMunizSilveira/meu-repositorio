@@ -169,30 +169,151 @@ div.video iframe {
     height: 100%
 }
 
-ul.discografia {
-    list-style: upper-roman;
-    columns: 3;
-    column-gap: 4rem;
-    padding-left: 2rem;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.8;
+/* Estilos para nova seção de discografia */
+.discografia-container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-li {
+.discografia-title {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.discogria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.discografia-section {
+    background: rgba(30, 30, 30, 0.7);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left: 4px solid #ff0000;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #5a5a5a;
+}
+
+.album-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.album-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: rgba(50, 50, 50, 0.5);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.album-card:hover {
+    background: rgba(70, 70, 70, 0.5);
+    transform: translateX(5px);
+}
+
+.album-card.highlighted {
+    border: 1px solid #ff0000;
+    background: rgba(255, 0, 0, 0.1);
+}
+
+.album-year {
+    background: #ff0000;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-weight: bold;
+    min-width: 50px;
+    text-align: center;
+}
+
+.album-info {
+    flex: 1;
+}
+
+.album-title {
+    color: #fff;
+    margin: 0;
     font-size: 1.1rem;
-    line-height: 1.8;
 }
 
-a {
-    color: var(--primary);
+.album-date, .album-collab, .album-note {
+    color: #aaa;
+    margin: 0.2rem 0 0;
+    font-size: 0.9rem;
+}
+
+.album-note {
+    color: #ff9999;
+    font-style: italic;
+}
+
+.album-collab {
+    color: #ff6666;
+    font-style: italic;
+}
+
+.discografia-cta {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 0, 0, 0.1);
+    border-radius: 6px;
+    border: 1px dashed #ff0000;
+}
+
+.discografia-cta h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.discografia-cta p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ff0000;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-a:hover {
-    text-decoration: underline;
+.cta-button:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .discografia-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 footer {
