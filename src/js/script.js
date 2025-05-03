@@ -78,20 +78,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 formFeedback.className = "form-feedback loading";
                 formFeedback.style.display = "block";
 
-                emailjs.sendForm('service_sii999k', 'template_ieno9yb', this)
-                    .then(function () {
+                // Coletar dados do formulário manualmente para garantir mapeamento correto
+                const formData = {
+                    from_name: contactForm.querySelector('[name="from_name"]')?.value || 'Remetente não identificado',
+                    from_email: contactForm.querySelector('[name="from_email"]')?.value,
+                    message: contactForm.querySelector('[name="message"]')?.value,
+                    reply_to: contactForm.querySelector('[name="from_email"]')?.value // Usa o email do remetente para reply
+                };
+
+                // Verificar campos obrigatórios
+                if (!formData.from_name || !formData.from_email || !formData.message) {
+                    formFeedback.textContent = "Preencha todos os campos obrigatórios!";
+                    formFeedback.className = "form-feedback error";
+                    setTimeout(() => formFeedback.style.display = "none", 5000);
+                    return;
+                }
+
+                // Enviar usando os parâmetros mapeados corretamente
+                emailjs.send('service_sii999k', 'template_ieno9yb', formData)
+                    .then(() => {
                         formFeedback.textContent = "Mensagem enviada com sucesso!";
                         formFeedback.className = "form-feedback success";
                         contactForm.reset();
-                        setTimeout(function () {
-                            formFeedback.style.display = "none";
-                        }, 5000);
-                    }, function (error) {
+                        setTimeout(() => formFeedback.style.display = "none", 5000);
+                    })
+                    .catch((error) => {
                         formFeedback.textContent = "Ocorreu um erro. Tente novamente.";
                         formFeedback.className = "form-feedback error";
-                        setTimeout(function () {
-                            formFeedback.style.display = "none";
-                        }, 5000);
+                        setTimeout(() => formFeedback.style.display = "none", 5000);
                         console.error("Erro ao enviar:", error);
                     });
             });
