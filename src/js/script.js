@@ -62,9 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Formulário de contato
     if (typeof emailjs !== 'undefined') {
-        emailjs.init("OseWI6pnm-kvssoSJ");
+        emailjs.init({
+            publicKey: "OseWI6pnm-kvssoSJ",
+            blockHeadless: true
+        });
 
         const contactForm = document.getElementById('contact-form');
         const formFeedback = document.getElementById('form-feedback');
@@ -73,28 +75,20 @@ document.addEventListener('DOMContentLoaded', function () {
             contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
 
-                // Mostrar feedback de carregamento
                 formFeedback.textContent = "Enviando mensagem...";
                 formFeedback.className = "form-feedback loading";
                 formFeedback.style.display = "block";
 
-                // Coletar dados do formulário manualmente para garantir mapeamento correto
                 const formData = {
-                    from_name: contactForm.querySelector('[name="from_name"]')?.value || 'Remetente não identificado',
-                    from_email: contactForm.querySelector('[name="from_email"]')?.value,
-                    message: contactForm.querySelector('[name="message"]')?.value,
-                    reply_to: contactForm.querySelector('[name="from_email"]')?.value // Usa o email do remetente para reply
+                    to_name: "Brian Muniz", // Seu nome fixo como destinatário
+                    from_name: contactForm.querySelector('[name="from_name"]').value.trim() || 'Visitante Anônimo',
+                    from_email: contactForm.querySelector('[name="from_email"]').value.trim(),
+                    message: contactForm.querySelector('[name="message"]').value.trim(),
+                    reply_to: contactForm.querySelector('[name="from_email"]').value.trim()
                 };
 
-                // Verificar campos obrigatórios
-                if (!formData.from_name || !formData.from_email || !formData.message) {
-                    formFeedback.textContent = "Preencha todos os campos obrigatórios!";
-                    formFeedback.className = "form-feedback error";
-                    setTimeout(() => formFeedback.style.display = "none", 5000);
-                    return;
-                }
+                console.log("Dados para envio:", formData);
 
-                // Enviar usando os parâmetros mapeados corretamente
                 emailjs.send('service_sii999k', 'template_ieno9yb', formData)
                     .then(() => {
                         formFeedback.textContent = "Mensagem enviada com sucesso!";
@@ -103,10 +97,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         setTimeout(() => formFeedback.style.display = "none", 5000);
                     })
                     .catch((error) => {
-                        formFeedback.textContent = "Ocorreu um erro. Tente novamente.";
+                        console.error("Erro completo:", error);
+                        formFeedback.textContent = "Erro ao enviar: " + (error.text || "Tente novamente");
                         formFeedback.className = "form-feedback error";
                         setTimeout(() => formFeedback.style.display = "none", 5000);
-                        console.error("Erro ao enviar:", error);
                     });
             });
         }
