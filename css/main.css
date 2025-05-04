@@ -261,18 +261,27 @@ h2 span {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 2em;
     opacity: 0;
     transition: opacity var(--transition-speed);
+
+    & h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+
+    & p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
 }
 
 .portfolio-item:hover .portfolio-caption {
     opacity: 1;
-}
-
-.portfolio-caption h3 {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    text-align: center;
 }
 
 /* Contact Section */
