@@ -309,6 +309,83 @@ h2 {
 }
 
 /* About Section - Mobile First */
+
+.about-section {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-text h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .section-content p {
+    line-height: 1.6;
+  }
+  
+  .skills-highlight h3,
+  .diferentials h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+  }
+  
+  .skills-list,
+  .differentials-list {
+    list-style-type: none;
+    padding-left: 1rem;
+  }
+  
+  .skills-list li,
+  .differentials-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+  }
+  
+  .skills-list li::before,
+  .differentials-list li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+    font-weight: 500;
+  }
+  
+  .commitment {
+    font-style: italic;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+  }
+
+  
 .about-section {
     padding: 60px 0;
 }
