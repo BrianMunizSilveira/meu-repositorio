@@ -1,4 +1,4 @@
-# 🚀 Portfólio de Desenvolvimento Web - Sigma Six
+# 🚀 Portfólio de Desenvolvimento Web
 
 ![Template](https://i.imgur.com/jS3MjTl.png)
 
@@ -8,36 +8,48 @@ Repositório dedicado ao desenvolvimento de projetos web front-end, explorando d
 
 ## 🎨 Projetos
 
-### 1. Biografia Scarlxrd | [Demo](https://repositorio-sigma-six.vercel.app/biografia-scarlxrd/index.html)
+### 1. Aplicativo de Clima | [Demo](https://clima-eta-two.vercel.app/)
+
+✔ Projeto completo para consultar condições climáticas em tempo real, contendo:
+
+- Busca por cidade ou seleção via menu de continentes
+
+- Exibição de temperatura, umidade, velocidade do vento e descrição do clima
+
+- Ícones dinâmicos conforme as condições meteorológicas
+
+- Imagem de fundo relacionada à cidade pesquisada
+
+🛠 Stack:
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" title="HTML5"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" title="CSS3"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" title="JavaScript"/>
+
+🔌 APIs utilizadas: OpenWeatherMap, Unsplash, FlagsAPI.
+
+### 2. Biografia Scarlxrd | [Demo](https://biografia-scarlxrd.vercel.app/)
 📌 Projeto completo sobre o artista Scarlxrd contendo:
 - Biografia detalhada
 - Discografia interativa
-- Player de áudio integrado
+- Acesso a página de Discografia
 - Timeline da carreira
 - Estatísticas musicais
 
 🛠 **Stack:**  
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" title="HTML5"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" title="CSS3"/>
-
-### 2. Estante Literária | [Demo](https://repositorio-sigma-six.vercel.app/estante/index.html)
-📚 Catálogo pessoal de leituras com:
-- +20 livros catalogados
-- Sistema de navegação por índice
-- Filtros por categoria
-- Detalhes sobre autores e obras
-
-🛠 **Stack:**  
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" title="HTML5"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" title="CSS3"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" title="JavaScript"/>
 
-## 📂 Estrutura
-```
-/
-├── /biografia-scarlxrd # Projeto 1 - Biografia musical
-├── /estante # Projeto 2 - Catálogo literário
-├── /cardapio # Projeto 3 - (Em desenvolvimento)
-└── README.md # Documentação
-```
+### 3. Estante Virtual | [Demo](https://brianmunizsilveira.github.io/projeto_estante/)
 
+✓ Projeto completo da minha Estante Virtual para organizar e exibir livros, todos livros lidos e resenhados por mim, contendo:
+
+- Listagem de livros com capas e informações básicas
+- Organização por categorias ou favoritos
+- Busca por título ou autor
+- Design responsivo e intuitivo
+
+**Stack:**
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" title="HTML5"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" title="CSS3"/> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" title="JavaScript"/>
+
+
+---
 
 ## 🤝 Como Contribuir
 1. Faça um fork do projeto
@@ -51,10 +63,10 @@ MIT License - Consulte [LICENSE.md](LICENSE.md) para detalhes.
 
 ## 📩 Contato
 <div align="left">
-  <a href="https://linktr.ee/decfalter" target="_blank">
+  <a href="https://linktr.ee/BrianMS" target="_blank">
     <img src="https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white" alt="Linktree"/>
   </a>
-  <a href="mailto:seuemail@exemplo.com">
+  <a href="mailto:brian.muniz.silveira@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="E-mail"/>
   </a>
 </div>
