@@ -115,6 +115,7 @@ body {
     top: 0;
     z-index: 100;
     transition: background var(--transition);
+    border-bottom: 2px solid var(--border);
 }
 
 .header-flex {
@@ -149,10 +150,10 @@ body {
 /* Navegação Desktop */
 .main-nav .nav-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1000;
     list-style: none;
-    margin: 0;
-    padding: 0;
     gap: 2rem;
 }
 
@@ -160,7 +161,7 @@ body {
     color: var(--text);
     text-decoration: none;
     font-weight: 500;
-    padding: 10px 0;
+    padding: 1.4rem;
     display: block;
     border-bottom: 2px solid transparent;
     transition: border-color var(--transition), color var(--transition), background var(--transition);
@@ -320,7 +321,7 @@ body {
 
 .about-flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 1.5rem;
 }

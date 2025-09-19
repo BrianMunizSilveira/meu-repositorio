@@ -16,10 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
-            z-index: 998;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            cursor: pointer;
+            pointer-events: none;
         `;
         document.body.appendChild(overlay);
 
