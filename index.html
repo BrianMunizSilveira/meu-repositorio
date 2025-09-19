@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 
 <head>
+  <!-- Metadados essenciais -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Brian Muniz Silveira">
@@ -9,316 +10,347 @@
     content="Portfólio de Brian Muniz Silveira, desenvolvedor web front-end especializado em criação de websites responsivos e acessíveis.">
   <meta name="keywords" content="desenvolvedor web, front-end, portfólio, Brian Muniz Silveira, websites responsivos">
 
-  <!-- Preload de recursos -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Brian Muniz Silveira | Desenvolvedor Front-end">
+  <meta property="og:description"
+    content="Portfólio de Brian Muniz Silveira, desenvolvedor web front-end especializado em criação de websites responsivos e acessíveis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://brianmunizsilveira.github.io/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/155079481?v=4">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Ícones e estilos -->
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="./css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" href="./src/img/favicon.png" type="image/x-icon">
 
+  <!-- Título da página -->
   <title>Brian Muniz Silveira | Desenvolvedor Front-end</title>
+
 </head>
 
 <body>
+  <!-- Link de acessibilidade para pular ao conteúdo principal -->
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-  <button id="backToTopBtn" aria-label="Voltar ao topo da página">↑</button>
-
-  <header class="main-header">
-    <div class="container">
-      <div class="header-logo">
-        <a href="./" aria-label="Página inicial - Brian Muniz Silveira">
-          <img src="./src/img/logo.png" alt="Logo BMS" width="50" height="50" loading="lazy">
-        </a>
-      </div>
-
+  <!-- Cabeçalho principal -->
+  <header class="main-header" role="banner">
+    <div class="container header-flex">
+      <a href="./" class="header-logo" aria-label="Página inicial">
+        <img src="./src/img/logo.png" alt="Logo BMS" width="48" height="48" loading="lazy">
+      </a>
       <nav class="main-nav" aria-label="Navegação principal">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#skills" class="nav-link">Habilidades</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projetos</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+          <li><a href="#skills"><i class="bi bi-lightning-charge"></i> Habilidades</a></li>
+          <li><a href="#about"><i class="bi bi-person"></i> Sobre</a></li>
+          <li><a href="#projects"><i class="bi bi-folder2-open"></i> Projetos</a></li>
+          <li><a href="#contact"><i class="bi bi-envelope"></i> Contato</a></li>
         </ul>
       </nav>
-
-      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Abrir menu de navegação"
-        aria-expanded="false" aria-controls="mobileMenu">
-        <i class="bi bi-list" aria-hidden="true"></i>
+      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Abrir menu" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <i class="bi bi-list"></i>
       </button>
     </div>
   </header>
 
-  <main id="main-content">
+  <!-- Conteúdo principal -->
+  <main id="main-content" tabindex="-1">
+    <!-- Seção Hero -->
     <section class="hero-section" aria-labelledby="hero-heading">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1 id="hero-heading">Transformando ideias em realidade virtual<span>.</span></h1>
-            <p class="hero-description">
-              Eleve sua presença online com soluções que combinam design cativante, funcionalidade intuitiva e
-              resultados concretos. Cada projeto é criado para encantar, engajar e transformar visitantes em clientes.
-            </p>
-            <a href="#contact" class="cta-button">Entre em contato</a>
-          </div>
-
-          <figure class="hero-image">
-            <img src="./src/img/eu1.webp" alt="Brian Muniz Silveira, desenvolvedor front-end" loading="lazy" width="400"
-              height="500">
-          </figure>
+      <div class="container hero-flex">
+        <div class="hero-text">
+          <h1 id="hero-heading">
+            <i class="bi bi-lightbulb"></i>
+            Transformando ideias em realidade virtual<span>.</span>
+          </h1>
+          <p>
+            <i class="bi bi-globe"></i>
+            Eleve sua presença online com soluções que combinam design cativante, funcionalidade intuitiva e resultados
+            concretos.
+          </p>
+          <a href="#contact" class="cta-button"><i class="bi bi-send"></i> Entre em contato</a>
         </div>
+        <figure class="hero-image">
+          <img src="https://avatars.githubusercontent.com/u/155079481?v=4"
+            alt="Brian Muniz Silveira, desenvolvedor front-end" loading="lazy" width="350" height="450">
+        </figure>
       </div>
     </section>
 
+    <!-- Seção de Habilidades -->
     <section id="skills" class="skills-section" aria-labelledby="skills-heading">
       <div class="container">
-        <header class="section-header">
-          <h2 id="skills-heading">Minhas <span>Habilidades</span></h2>
-        </header>
-
+        <h2 id="skills-heading"><i class="bi bi-lightning-charge"></i> Minhas <span>Habilidades</span></h2>
         <div class="skills-grid">
           <article class="skill-card">
-            <i class="bi bi-code-square skill-icon" aria-hidden="true"></i>
-            <h3 class="skill-title">Desenvolvimento Web</h3>
-            <p class="skill-description">
-              Especializado no desenvolvimento de websites responsivos, com foco em performance otimizada,
-              acessibilidade e design intuitivo. Utilizo tecnologias modernas como HTML5, CSS3, JavaScript para criar
-              soluções web eficientes e escaláveis.
+            <i class="bi bi-code-square skill-icon"></i>
+            <h3>Desenvolvimento Web</h3>
+            <p>Websites responsivos, performance otimizada, acessibilidade e design intuitivo. HTML5, CSS3, JavaScript.
             </p>
           </article>
-
           <article class="skill-card">
-            <i class="bi bi-book skill-icon" aria-hidden="true"></i>
-            <h3 class="skill-title">Aprendizado Contínuo</h3>
-            <p class="skill-description">
-              Dedicação ao aprendizado contínuo e desenvolvimento pessoal por meio da leitura. Exploro uma vasta gama de
-              temas, de tecnologia a literatura, enriquecendo minha perspectiva e criatividade no desenvolvimento de
-              soluções.
-            </p>
+            <i class="bi bi-book skill-icon"></i>
+            <h3>Aprendizado Contínuo</h3>
+            <p>Leitura constante de temas variados, ampliando criatividade e visão técnica.</p>
           </article>
-
           <article class="skill-card">
-            <i class="bi bi-box skill-icon" aria-hidden="true"></i>
-            <h3 class="skill-title">Speedcubing</h3>
-            <p class="skill-description">
-              Com experiência em Speedcubing, cultivo habilidades como pensamento rápido, resolução de problemas e foco
-              sob pressão. Sempre em busca de soluções rápidas e eficientes tanto no cubo quanto no código.
-            </p>
+            <i class="bi bi-box skill-icon"></i>
+            <h3>Speedcubing</h3>
+            <p>Pensamento rápido, resolução de problemas e foco sob pressão, aplicados ao desenvolvimento.</p>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Seção Sobre -->
     <section id="about" class="about-section" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="about-content">
-          <figure class="about-image">
-            <img src="./src/img/eu2.webp" alt="Brian Muniz em seu ambiente de trabalho" loading="lazy" width="400"
-              height="500" style="border-radius: 5%">
-          </figure>
-
-          <section class="about-section" id="about">
-            <div class="container">
-              <div class="about-content">
-                <div class="about-text">
-                  <h1>Brian Muniz Silveira</h1>
-                  <h2>Desenvolvedor Front-End | Estudante Autodidata</h2>
-
-                  <div class="section-content">
-                    <p>Combinando sólidos conhecimentos em desenvolvimento web com uma abordagem metódica e detalhista,
-                      dedico-me à criação de interfaces modernas, acessíveis e alinhadas às melhores práticas do
-                      mercado. Minha formação autodidata é complementada por disciplina rigorosa e constante busca por
-                      excelência técnica.</p>
-
-                    <div class="skills-highlight">
-                      <h3>Foco Técnico Atual:</h3>
-                      <ul class="skills-list">
-                        <li><span class="highlight">Tecnologias:</span> React.js, JavaScript (ES6+), HTML5, CSS3 e
-                          frameworks modernos</li>
-                        <li><span class="highlight">Princípios:</span> Clean Code, Design Systems, Performance
-                          Optimization e Web Accessibility (WCAG)</li>
-                        <li><span class="highlight">Em evolução:</span> TypeScript, Next.js e testes automatizados
-                          (Jest/Cypress)</li>
-                      </ul>
-                    </div>
-
-                    <div class="diferentials">
-                      <h3>Diferenciais:</h3>
-                      <ul class="differentials-list">
-                        <li>Capacidade analítica desenvolvida através de resolução sistemática de problemas (com
-                          influência do speedcubing)</li>
-                        <li>Visão criativa e organizacional, aprimorada por hábitos de leitura técnica e gestão de
-                          projetos pessoais</li>
-                      </ul>
-                    </div>
-
-                    <p class="commitment">Comprometido com a entrega de soluções robustas e escaláveis alinhadas às
-                      demandas do mercado contemporâneo.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      <div class="container about-flex">
+        <figure class="about-image">
+          <img src="./src/img/eu2.webp" alt="Brian Muniz em seu ambiente de trabalho" loading="lazy" width="350"
+            height="450" style="border-radius: 5%">
+        </figure>
+        <div class="about-text">
+          <h2 id="about-heading"><i class="bi bi-person"></i> Sobre mim</h2>
+          <h3>Brian Muniz Silveira</h3>
+          <p><i class="bi bi-laptop"></i> Desenvolvedor Front-End | Estudante Autodidata</p>
+          <p>Crio interfaces modernas, acessíveis e alinhadas às melhores práticas. Busco excelência técnica e evolução
+            constante.</p>
+          <ul>
+            <li><strong><i class="bi bi-tools"></i> Tecnologias:</strong> React.js, JavaScript (ES6+), HTML5, CSS3,
+              frameworks modernos</li>
+            <li><strong><i class="bi bi-lightbulb"></i> Princípios:</strong> Clean Code, Design Systems, Performance,
+              Acessibilidade (WCAG)</li>
+            <li><strong><i class="bi bi-graph-up"></i> Em evolução:</strong> TypeScript, Next.js, testes automatizados
+            </li>
+          </ul>
+          <ul>
+            <li><i class="bi bi-cube"></i> Resolução sistemática de problemas (influência do speedcubing)</li>
+            <li><i class="bi bi-bookmark-star"></i> Visão criativa e organizacional, aprimorada por leitura técnica e
+              projetos pessoais</li>
+          </ul>
         </div>
       </div>
     </section>
 
+    <!-- Seção Portfólio -->
     <section id="projects" class="portfolio-section" aria-labelledby="portfolio-heading">
       <div class="container">
-        <header class="section-header">
-          <h2 id="portfolio-heading">Meu <span>Portfólio</span></h2>
-        </header>
-
+        <h2 id="portfolio-heading"><i class="bi bi-folder2-open"></i> Meu <span>Portfólio</span></h2>
         <div class="portfolio-grid">
+          <!-- 1. Alfabeto Cirílico -->
           <article class="portfolio-item">
-            <figure class="portfolio-image" style="background-image: url('./src/img/john-noonan-unsplash.webp')"
-              loading="lazy">
-              <a href="https://clima-eta-two.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="portfolio-link" aria-labelledby="project-1-title">
+            <a href="https://alfabeto-cirilico.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-1-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/projeto-8.png')" loading="lazy">
                 <figcaption class="portfolio-caption">
-                  <h3 id="project-1-title">Projeto: Clima</h3>
-                  <p>Aplicativo interativo que fornece previsões meteorológicas detalhadas para qualquer cidade do
-                    mundo, com atualizações em tempo real e interface intuitiva.</p>
+                  <h3 id="project-1-title"><i class="bi bi-translate"></i> Alfabeto Cirílico</h3>
+                  <p>Aprenda o alfabeto cirílico de forma interativa e gratuita neste site educacional.</p>
                 </figcaption>
-              </a>
-            </figure>
+              </figure>
+            </a>
           </article>
-
+          <!-- 2. Clima -->
           <article class="portfolio-item">
-            <figure class="portfolio-image" style="background-image: url('./src/img/chris-curry-unsplash.webp')"
-              loading="lazy">
-              <a href="https://morse-code-flax.vercel.app/history.html" target="_blank" rel="noopener noreferrer"
-                class="portfolio-link" aria-labelledby="project-2-title">
+            <a href="https://clima-eta-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
+              aria-labelledby="project-2-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/john-noonan-unsplash.webp')"
+                loading="lazy">
                 <figcaption class="portfolio-caption">
-                  <h3 id="project-2-title">História do Código Morse</h3>
-                  <p>Mergulhe na fascinante evolução do Código Morse, desde sua criação por Samuel Morse até seu impacto
-                    nas comunicações modernas, com exemplos interativos e curiosidades históricas.</p>
+                  <h3 id="project-2-title"><i class="bi bi-cloud-sun"></i> Clima</h3>
+                  <p>Aplicativo de previsão do tempo com interface intuitiva, consumo de API e atualizações em tempo
+                    real.</p>
                 </figcaption>
-              </a>
-            </figure>
+              </figure>
+            </a>
           </article>
-
+          <!-- 3. One Piece -->
           <article class="portfolio-item">
-            <figure class="portfolio-image" style="background-image: url('./src/img/kelly-sikkema-unsplash.webp')"
-              loading="lazy">
-              <a href="https://brianmunizsilveira.github.io/projeto_estante/" target="_blank" rel="noopener noreferrer"
-                class="portfolio-link" aria-labelledby="project-3-title">
+            <a href="https://brianmunizsilveira.github.io/projeto-one-piece/" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-3-title">
+              <figure class="portfolio-image"
+                style="background-image: url(https://raw.githubusercontent.com/BrianMunizSilveira/projeto-one-piece/main/image.png)"
+                loading="lazy">
                 <figcaption class="portfolio-caption">
-                  <h3 id="project-3-title">Projeto: Estante</h3>
-                  <p>Biblioteca digital personalizada onde organizo e compartilho minhas leituras favoritas, com
-                    resenhas, categorias e um sistema intuitivo de busca e recomendações literárias.</p>
+                  <h3 id="project-3-title"><i class="bi bi-people"></i> One Piece</h3>
+                  <p>Catálogo interativo de personagens do universo One Piece.</p>
                 </figcaption>
-              </a>
-            </figure>
+              </figure>
+            </a>
           </article>
-
+          <!-- 4. Quem é Scarlxrd? -->
           <article class="portfolio-item">
-            <figure class="portfolio-image" style="background-image: url('./src/img/scarlxrd.webp')" loading="lazy">
-              <a href="https://biografia-scarlxrd.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="portfolio-link" aria-labelledby="project-4-title">
+            <a href="https://biografia-scarlxrd.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-4-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/scarlxrd.webp')" loading="lazy">
                 <figcaption class="portfolio-caption">
-                  <h3 id="project-4-title">Quem é Scarlxrd?</h3>
-                  <p>Explore a trajetória musical e pessoal do artista britânico Scarlxrd, sua transformação de youtuber
-                    para ícone do trap metal, e como sua estética única revolucionou a cena musical alternativa.</p>
+                  <h3 id="project-4-title"><i class="bi bi-music-note-beamed"></i> Quem é Scarlxrd?</h3>
+                  <p>Trajetória do artista Scarlxrd e sua revolução no trap metal.</p>
                 </figcaption>
-              </a>
-            </figure>
+              </figure>
+            </a>
           </article>
-
+          <!-- 5. Tasty Mysti -->
           <article class="portfolio-item">
-            <figure class="portfolio-image" style="background-image: url('./src/img/lofi.gif')" loading="lazy">
-              <a href="https://projeto-lofi.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="portfolio-link" aria-labelledby="project-5-title">
+            <a href="https://tastymysti.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
+              aria-labelledby="project-5-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/tastymysti.vercel.app_.png')"
+                loading="lazy">
                 <figcaption class="portfolio-caption">
-                  <h3 id="project-5-title">O que é Lo-Fi?</h3>
-                  <p>Um guia completo sobre o universo Lo-Fi, suas origens na cultura hip-hop dos anos 90,
-                    características sonoras distintivas e como se tornou a trilha sonora ideal para estudos e
-                    relaxamento no mundo digital.</p>
+                  <h3 id="project-5-title"><i class="bi bi-controller"></i> Tasty Mysti</h3>
+                  <p>Site pessoal do canal "TastyMysti", reunindo conteúdo de games e links das redes sociais.</p>
                 </figcaption>
-              </a>
-            </figure>
+              </figure>
+            </a>
           </article>
-
+          <!-- 6. O que é Lo-Fi? -->
           <article class="portfolio-item">
-            <figure class="portfolio-image" style="background-image: url('./src/img/dw6.webp')" loading="lazy">
-              <a href="https://dw6threekingdoms.vercel.app/" target="_blank" rel="noopener noreferrer"
-                class="portfolio-link" aria-labelledby="project-6-title">
+            <a href="https://projeto-lofi.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
+              aria-labelledby="project-6-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/lofi.gif')" loading="lazy">
                 <figcaption class="portfolio-caption">
-                  <h3 id="project-6-title">DW6 Characters</h3>
-                  <p>Catálogo interativo dos personagens de Dynasty Warriors 6, apresentando biografias detalhadas,
-                    habilidades especiais e curiosidades históricas sobre os heróis e vilões da antiga China durante o
-                    período dos Três Reinos.</p>
+                  <h3 id="project-6-title"><i class="bi bi-headphones"></i> O que é Lo-Fi?</h3>
+                  <p>Guia sobre o universo Lo-Fi, suas origens e características sonoras.</p>
                 </figcaption>
-              </a>
-            </figure>
+              </figure>
+            </a>
           </article>
-
+          <!-- 7. Estante -->
+          <article class="portfolio-item">
+            <a href="https://brianmunizsilveira.github.io/projeto_estante/" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-7-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/kelly-sikkema-unsplash.webp')"
+                loading="lazy">
+                <figcaption class="portfolio-caption">
+                  <h3 id="project-7-title"><i class="bi bi-journal-bookmark"></i> Estante</h3>
+                  <p>Biblioteca digital pessoal com resenhas e sistema de busca de livros.</p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <!-- 8. Calculadora -->
+          <article class="portfolio-item">
+            <a href="https://calculadora-tau-neon.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-8-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/projeto-11.png')" loading="lazy">
+                <figcaption class="portfolio-caption">
+                  <h3 id="project-8-title"><i class="bi bi-calculator"></i> Calculadora</h3>
+                  <p>Calculadora responsiva e acessível, desenvolvida com HTML5, CSS3 e JavaScript.</p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <!-- 9. História do Código Morse -->
+          <article class="portfolio-item">
+            <a href="https://morse-code-flax.vercel.app/history.html" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-9-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/chris-curry-unsplash.webp')"
+                loading="lazy">
+                <figcaption class="portfolio-caption">
+                  <h3 id="project-9-title"><i class="bi bi-morse"></i> História do Código Morse</h3>
+                  <p>Exploração interativa da evolução do Código Morse e seu impacto nas comunicações.</p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <!-- 10. DW6 Characters -->
+          <article class="portfolio-item">
+            <a href="https://dw6threekingdoms.vercel.app/" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-10-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/dw6.webp')" loading="lazy">
+                <figcaption class="portfolio-caption">
+                  <h3 id="project-10-title"><i class="bi bi-people-fill"></i> DW6 Characters</h3>
+                  <p>Catálogo interativo dos personagens de Dynasty Warriors 6 com biografias detalhadas.</p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <!-- 11. Mobile First -->
+          <article class="portfolio-item">
+            <a href="https://brianmunizsilveira.github.io/mobile-first/" target="_blank" rel="noopener noreferrer"
+              class="portfolio-link" aria-labelledby="project-11-title">
+              <figure class="portfolio-image" style="background-image: url('./src/img/projeto-12.png')" loading="lazy">
+                <figcaption class="portfolio-caption">
+                  <h3 id="project-11-title"><i class="bi bi-phone"></i> Mobile First</h3>
+                  <p>Projeto demonstrando o conceito de Mobile First em conjunto com SCSS.</p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
+          <!-- 12. FP Sellection -->
+          <article class="portfolio-item">
+            <a href="https://projeto-fp.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
+              aria-labelledby="project-12-title">
+              <figure class="portfolio-image"
+                style="background-image: url('https://camo.githubusercontent.com/c7f4e2d259b7cb25a584c53f0dcb911e74253706e48c68c371008f58d2eabdf1/68747470733a2f2f692e696d6775722e636f6d2f3450315a4179722e706e67')"
+                loading="lazy">
+                <figcaption class="portfolio-caption">
+                  <h3 id="project-12-title"><i class="bi bi-car-front"></i> FP Sellection</h3>
+                  <p>Página web que exibe uma seleção de carros de luxo, como Porsche, Ferrari e Lamborghini.</p>
+                </figcaption>
+              </figure>
+            </a>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- Seção de Contato -->
     <section id="contact" class="contact-section" aria-labelledby="contact-heading">
       <div class="container">
-        <header class="section-header">
-          <h2 id="contact-heading">Fale <span>comigo</span></h2>
-        </header>
-
-        <form id="contact-form" class="contact-form" aria-labelledby="contact-heading">
+        <h2 id="contact-heading"><i class="bi bi-envelope"></i> Fale <span>comigo</span></h2>
+        <form id="contact-form" class="contact-form" autocomplete="off">
           <div class="form-group">
-            <label for="name">Seu nome:</label>
-            <input type="text" id="name" name="from_name" required placeholder="Seu nome completo" aria-required="true">
+            <label for="name"><i class="bi bi-person"></i> Seu nome:</label>
+            <input type="text" id="name" name="from_name" required placeholder="Seu nome completo" autocomplete="name">
           </div>
-
           <div class="form-group">
-            <label for="email">Seu e-mail:</label>
-            <input type="email" id="email" name="from_email" required placeholder="seu@email.com" aria-required="true">
+            <label for="email"><i class="bi bi-envelope"></i> Seu e-mail:</label>
+            <input type="email" id="email" name="from_email" required placeholder="seu@email.com" autocomplete="email">
           </div>
-
           <div class="form-group">
-            <label for="message">Sua mensagem:</label>
-            <textarea id="message" name="message" required placeholder="Como posso te ajudar?"
-              aria-required="true"></textarea>
+            <label for="message"><i class="bi bi-chat-dots"></i> Sua mensagem:</label>
+            <textarea id="message" name="message" required placeholder="Como posso te ajudar?" rows="5"></textarea>
           </div>
-
-          <button type="submit" class="submit-button">Enviar mensagem</button>
-
+          <button type="submit" class="submit-button"><i class="bi bi-send"></i> Enviar mensagem</button>
           <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="main-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <img src="./src/img/logo.webp" alt="Brian Muniz Silveira - Desenvolvedor Front-end" class="footer-logo"
-            loading="lazy">
-        </div>
-
-        <div class="footer-social">
-          <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer" class="social-link"
-            aria-label="GitHub">
-            <i class="bi bi-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer"
-            class="social-link" aria-label="LinkedIn">
-            <i class="bi bi-linkedin" aria-hidden="true"></i>
-          </a>
-        </div>
+  <!-- Rodapé -->
+  <footer class="main-footer" role="contentinfo">
+    <div class="container footer-flex">
+      <div class="footer-brand">
+        <img src="./src/img/logo.webp" alt="Brian Muniz Silveira - Desenvolvedor Front-end" class="footer-logo"
+          loading="lazy">
       </div>
-
-      <div class="footer-contact">
-        <a href="mailto:brian.muniz.silveira@gmail.com" class="contact-link">
-          <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-          brian.muniz.silveira@gmail.com
+      <div class="footer-social">
+        <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
         </a>
       </div>
-
-      <div class="footer-copyright">
-        <p>&copy; <span id="current-year"></span> Brian Muniz Silveira. Todos os direitos reservados.</p>
+      <div class="footer-contact">
+        <a href="mailto:brian.muniz.silveira@gmail.com">
+          <i class="bi bi-envelope-fill"></i> brian.muniz.silveira@gmail.com
+        </a>
       </div>
+    </div>
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> Brian Muniz Silveira. Todos os direitos reservados.</p>
     </div>
   </footer>
 
+  <!-- Botão de voltar ao topo -->
+  <button id="backToTopBtn" aria-label="Voltar ao topo da página"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Scripts -->
   <script src="./src/js/script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 </body>
