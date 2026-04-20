@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Precise Architect | Brian Muniz Silveira</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#20201f",
+                    "inverse-primary": "#3958b8",
+                    "tertiary": "#b5c4ff",
+                    "tertiary-fixed-dim": "#b5c4ff",
+                    "secondary-fixed-dim": "#ffb874",
+                    "surface": "#131313",
+                    "on-primary": "#00287e",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "surface-variant": "#353535",
+                    "primary-container": "#2546a6",
+                    "secondary-fixed": "#ffdcbf",
+                    "outline": "#8e909e",
+                    "on-primary-container": "#abbcff",
+                    "on-tertiary-container": "#abbdff",
+                    "on-secondary": "#4b2800",
+                    "on-secondary-container": "#4e2a00",
+                    "on-tertiary-fixed": "#00164e",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#6b3b00",
+                    "inverse-on-surface": "#313030",
+                    "on-primary-fixed-variant": "#1b3f9f",
+                    "outline-variant": "#444652",
+                    "secondary": "#ffb874",
+                    "on-error": "#690005",
+                    "surface-bright": "#393939",
+                    "on-tertiary": "#092a76",
+                    "tertiary-container": "#304995",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#1c1b1b",
+                    "surface-tint": "#b6c4ff",
+                    "on-secondary-fixed": "#2d1600",
+                    "surface-dim": "#131313",
+                    "on-surface": "#e5e2e1",
+                    "primary-fixed": "#dce1ff",
+                    "inverse-surface": "#e5e2e1",
+                    "surface-container-highest": "#353535",
+                    "background": "#131313",
+                    "secondary-container": "#e38403",
+                    "on-background": "#e5e2e1",
+                    "on-tertiary-fixed-variant": "#28428d",
+                    "primary": "#b6c4ff",
+                    "surface-container-high": "#2a2a2a",
+                    "on-surface-variant": "#c4c5d4",
+                    "on-primary-fixed": "#00164f",
+                    "tertiary-fixed": "#dce1ff",
+                    "error-container": "#93000a",
+                    "surface-container-lowest": "#0e0e0e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #b6c4ff 0%, #2546a6 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary/30 selection:text-secondary">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-neutral-100">PRECISE_ARCHITECT</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-neutral-400 font-medium hover:text-blue-300 transition-all duration-300 ease-out font-['Manrope'] tracking-tight text-lg" href="#skills">Habilidades</a>
+<a class="text-neutral-400 font-medium hover:text-blue-300 transition-all duration-300 ease-out font-['Manrope'] tracking-tight text-lg" href="#about">Sobre</a>
+<a class="text-neutral-400 font-medium hover:text-blue-300 transition-all duration-300 ease-out font-['Manrope'] tracking-tight text-lg" href="#projects">Projetos</a>
+<a class="text-neutral-400 font-medium hover:text-blue-300 transition-all duration-300 ease-out font-['Manrope'] tracking-tight text-lg" href="#contact">Contato</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-all">
+                Resume
+            </button>
+</div>
+</header>
+<main class="pt-24 overflow-hidden">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col md:flex-row items-center px-6 max-w-7xl mx-auto py-20 gap-12">
+<div class="flex-1 space-y-8 text-left">
+<div class="inline-block px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/15">
+<span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Front-End Developer</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight">
+                    Transformando ideias em <span class="text-transparent bg-clip-text hero-gradient">realidade digital</span>.
+                </h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                    Elevando sua presença online com soluções que combinam design cativante, funcionalidade intuitiva e resultados concretos.
+                </p>
+<div class="flex gap-4 items-center">
+<button class="hero-gradient text-on-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all active:scale-95">
+                        Entre em contato
+                    </button>
+<a class="text-on-surface font-semibold flex items-center gap-2 group" href="#projects">
+                        Ver Portfólio
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="flex-1 relative w-full aspect-square md:aspect-auto">
+<div class="absolute inset-0 hero-gradient opacity-20 blur-[100px] rounded-full"></div>
+<div class="relative z-10 w-full h-full min-h-[400px] bg-surface-container-low rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/10">
+<img class="w-full h-full object-cover grayscale mix-blend-luminosity hover:grayscale-0 transition-all duration-700" data-alt="Modern high-tech workspace with clean lines, dark tones, multiple monitors showing code, and ambient blue and amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_9jOA48euZ-dKtCU_6WCSr3pUbTUjGSWtx8KjBQWvOnEh_dYQeHDaSh21V2ZA3EcliXncnX8Xz7_xLwhuOdmLnAuT0YNO-TKoCMMCyCyCVcqV_hxGYdQUlxtFaKYeANeMGYmSXy3jqcDTOZPYE4E85BfRrjM5PbGfc7S9ubwIGCzUh-6IEUdbAkotKpaz0yGJah31FvdiGByyREQPOWKnhF-Gi-NVQaoSN4RG3duZGsYBn1vR09ZFwWaLiSaI5T9orgP_VGcUsGzb"/>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-surface/60 backdrop-blur-md rounded-2xl border border-outline-variant/10">
+<div class="flex gap-2 mb-2">
+<div class="w-3 h-3 rounded-full bg-error"></div>
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+</div>
+<code class="text-primary-fixed-dim text-sm font-mono block">const architect = { vision: "precise", execution: "flawless" };</code>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="bg-surface-container-low py-24 px-6" id="skills">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="space-y-4">
+<span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Expertise</span>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight">Minhas Habilidades</h2>
+</div>
+<p class="text-on-surface-variant max-w-md text-right md:text-right">
+                        Equilibrando o rigor técnico com o pensamento lateral para construir arquiteturas digitais robustas.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Web Dev -->
+<div class="group p-8 bg-surface-container-highest rounded-3xl hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="mb-6 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">code</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Desenvolvimento Web</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Interfaces responsivas de alta performance e acessibilidade garantida (HTML5, CSS3, JS).</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">React</span>
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Tailwind</span>
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">TS</span>
+</div>
+</div>
+<!-- Learning -->
+<div class="group p-8 bg-surface-container-highest rounded-3xl hover:bg-surface-container-high transition-all duration-500">
+<div class="mb-6 w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-3xl">auto_stories</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Aprendizado Contínuo</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Curiosidade incansável. Estudo temas diversos para manter uma visão criativa e atualizada.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Self-taught</span>
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Trends</span>
+</div>
+</div>
+<!-- Speedcubing -->
+<div class="group p-8 bg-surface-container-highest rounded-3xl hover:bg-surface-container-high transition-all duration-500">
+<div class="mb-6 w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-3xl">psychology</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Speedcubing</h3>
+<p class="text-on-surface-variant leading-relaxed mb-6">Raciocínio lógico acelerado e foco extremo na resolução de problemas complexos.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Logic</span>
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Speed</span>
+<span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Focus</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto" id="about">
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto space-y-12">
+<div class="space-y-4">
+<span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">O Arquiteto</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight">Sobre mim</h2>
+</div>
+<div class="space-y-8">
+<div>
+<h3 class="text-3xl font-semibold text-primary mb-2">Brian Muniz Silveira</h3>
+<p class="text-on-surface-variant text-xl leading-relaxed italic">
+                            Front-End Developer | Autodidact Student
+                        </p>
+</div>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-3xl mx-auto">
+                        Dedico meu tempo à criação de interfaces modernas, intuitivas e altamente acessíveis. Minha jornada é guiada pela busca incessante da perfeição no código e na experiência do usuário, tratando cada projeto como uma peça única de arquitetura digital.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 text-left border-t border-outline-variant/10">
+<div class="space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-widest text-outline">Tech Stack</h4>
+<ul class="text-on-surface font-medium space-y-3">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> React &amp; Next.js</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> JavaScript (ES6+)</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Tailwind CSS</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> HTML5 &amp; CSS3</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-xs font-bold uppercase tracking-widest text-outline">Princípios</h4>
+<ul class="text-on-surface font-medium space-y-3">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Clean Code</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Design Systems</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Performance First</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Accessibility</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section (Bento Grid) -->
+<section class="bg-surface-container-lowest py-24 px-6" id="projects">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 space-y-4">
+<span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Showcase</span>
+<h2 class="text-4xl md:text-5xl font-bold tracking-tight">Meu Portfólio</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Project 1: Alfabeto Cirílico -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-[16/10] md:aspect-auto h-[400px]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100" data-alt="Digital language learning interface with elegant typography and clean white space, highlighting Cyrillic characters" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNlQMZ32TUxYZAomf01o80YXQXqhaOYFLlhuQDS_r-3BpabV5w2f0EysxHfgSwMmNXmkOFK2zUiOZrLWLCYkvzHdR4FVE8iTQWXqAnRzKK1XC-mIYMHQIKrsaQoQY4ugG0WplAvG9reDRTPyYEiBZo5w-QOhSPS-JUaBmOgyG6kiGLBbdeN9oIbq-ICwdIaJfaxd08VQ0w-h02aQX0qh9Pge-enKhUqdYTzQw4FGRHvtfIdVOfEdsVPPmJweeU7QXJb2CS0Su6MZlq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold mb-2">Alfabeto Cirílico</h3>
+<p class="text-on-surface-variant max-w-md mb-4">Guia interativo para aprendizado de caracteres cirílicos com foco em UX.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold group/link" href="#">
+                                Ver Projeto <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Project 2: Clima -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" data-alt="Minimalist weather application dashboard with sleek glassmorphism panels showing atmospheric data and elegant icons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG6pbk6RG9e0t85moZHyZ3LH_f_3ppoM0YpL9Yf9LRJZlH5NyeGPZ7WMaS8eNMzHY6Sv4U-8OOWIY1xHV3d97R7LlFVxbxsCoSlGkqwPhoqhA79nLAyaUxLW0AvJSQ_j6HFtUvUXvDOlioqaJ46mI5e5j__COYHgvTrtWws--qylblpMzEvLo6CY-cQMDeZEtGkfVdN9sVQbSK9VRBYifSgF-IqhiYyAeigPo2NiIi3iTHHiOiUSdGDfwHHV0iY_37Kk49PsYRNSCB"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold mb-2">Clima Dashboard</h3>
+<p class="text-on-surface-variant mb-4">App de meteorologia com dados em tempo real e visual minimalista.</p>
+<a class="inline-flex items-center gap-2 text-secondary font-bold" href="#">
+<span class="material-symbols-outlined">visibility</span>
+</a>
+</div>
+</div>
+<!-- Project 3: Estante Digital -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" data-alt="Sophisticated digital library management system showing book covers and reading progress in a dark themed UI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzDmdR5WCQQ0d3HeDkEeSEag-BfKqm4HSI3WmmjXBkWh1fC-D99eiVsbs1zahI8QRFT6ttsXW1nXV53NT9ylagxOklh-VY_XGtHpLbmtNGXtmpZWRcvtPYSbTo7vG4ZR60zec437mRWjXyzQ7qVnLIl24c-wk7zzzEv8l8pHSfaoLKs6Vo31xYCyB7OdjOlHZbNqs5w_goMX9iM1lJNhy8SGGCY51KxFZZbCpuHyExKWdnyZxFyTDfj2sFu5MbMAqxcs4IfI5xLQG9"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold mb-2">Estante Digital</h3>
+<p class="text-on-surface-variant mb-4">Biblioteca pessoal digital com categorização inteligente.</p>
+<a class="inline-flex items-center gap-2 text-tertiary font-bold" href="#">
+<span class="material-symbols-outlined">visibility</span>
+</a>
+</div>
+</div>
+<!-- Project 4: One Piece Characters -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-low h-[400px]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-50 group-hover:opacity-90" data-alt="Dynamic character encyclopedia UI with vibrant anime-style artwork and card-based navigation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7dhU3s9104QNGPKmZS-FbvB1YkkoaYOUDaCnbqZAGZrk3HsD5nmVzhrK-zhyRu1XuEoquhSYXuaDPdnT8Ar0tN7rUAuU3gNbMQpHW6tlUfZjFHGLkpfhVIr0NJCmC7CwQxUuSdFMtwf-bBJlJAVf2f9cDM40KGOJZYDl52lCnRr73b3rTDsB4q7CHwNmTwsaB-xxVL8Cnb6XXZmKcuk6RXkHIo1A_PHsDZa3GEH2F9Uw5y9ACYgoAtW3_mXOxsD3SZ66-JF3QxFOK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/10 to-transparent p-8 flex flex-col justify-end">
+<h3 class="text-2xl font-bold mb-2">One Piece Library</h3>
+<p class="text-on-surface-variant max-w-md mb-4">Base de dados visual para personagens, utilizando filtragem avançada em React.</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold" href="#">
+                                Ver Projeto <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-6 max-w-7xl mx-auto" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div class="space-y-8">
+<div class="space-y-4">
+<span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Conexão</span>
+<h2 class="text-4xl md:text-6xl font-bold tracking-tight">Fale comigo</h2>
+</div>
+<p class="text-on-surface-variant text-xl leading-relaxed">
+                        Tem um projeto em mente ou quer apenas bater um papo sobre front-end? Vamos construir algo incrível juntos.
+                    </p>
+<div class="space-y-6 pt-6">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs uppercase font-bold text-outline tracking-widest">Email</p>
+<p class="text-lg font-medium">brian@precise.dev</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-all">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs uppercase font-bold text-outline tracking-widest">Localização</p>
+<p class="text-lg font-medium">São Paulo, Brasil</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 md:p-12 rounded-[2rem] border border-outline-variant/10 shadow-2xl">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-sm font-bold tracking-tight text-on-surface-variant ml-1">Nome Completo</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline/50 transition-all" placeholder="Seu nome" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold tracking-tight text-on-surface-variant ml-1">Email Profissional</label>
+<input class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline/50 transition-all" placeholder="seu@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold tracking-tight text-on-surface-variant ml-1">Sua Mensagem</label>
+<textarea class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline/50 transition-all resize-none" placeholder="Como posso ajudar?" rows="4"></textarea>
+</div>
+<button class="w-full hero-gradient text-on-primary py-4 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary-container/20" type="submit">
+                            Enviar Mensagem
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-bold text-neutral-100">PRECISE_ARCHITECT</div>
+<p class="text-neutral-500 font-['Inter'] text-sm leading-relaxed">© 2024 Precise Architect. Built with logic and aesthetics.</p>
+<div class="flex gap-6">
+<a class="text-neutral-500 hover:text-blue-400 transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="text-neutral-500 hover:text-blue-400 transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="text-neutral-500 hover:text-blue-400 transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="text-neutral-500 hover:text-blue-400 transition-colors opacity-80 hover:opacity-100" href="#">Email</a>
+</div>
+</div>
+</footer>
+</body></html>

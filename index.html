@@ -1,358 +1,535 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html class="dark scroll-smooth" lang="pt-BR">
 <head>
-  <!-- Metadados essenciais -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Brian Muniz Silveira">
-  <meta name="description"
-    content="Portfólio de Brian Muniz Silveira, desenvolvedor web front-end especializado em criação de websites responsivos e acessíveis.">
+  <meta name="description" content="Portfólio de Brian Muniz Silveira, desenvolvedor web front-end especializado em criação de websites responsivos e acessíveis.">
   <meta name="keywords" content="desenvolvedor web, front-end, portfólio, Brian Muniz Silveira, websites responsivos">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Brian Muniz Silveira | Desenvolvedor Front-end">
-  <meta property="og:description"
-    content="Portfólio de Brian Muniz Silveira, desenvolvedor web front-end especializado em criação de websites responsivos e acessíveis.">
+  <meta property="og:title" content="Precise Architect | Brian Muniz Silveira">
+  <meta property="og:description" content="Portfólio de Brian Muniz Silveira, desenvolvedor web front-end especializado em criação de websites responsivos e acessíveis.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://brianmunizsilveira.github.io/">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/155079481?v=4">
   <meta property="og:locale" content="pt_BR">
 
-  <!-- Ícones e estilos -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="./css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="icon" href="./src/img/favicon.png" type="image/x-icon">
 
-  <!-- Título da página -->
-  <title>Brian Muniz Silveira | Desenvolvedor Front-end</title>
+  <title>B.M.S | Brian Muniz Silveira</title>
 
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#20201f",
+            "inverse-primary": "#3958b8",
+            "tertiary": "#b5c4ff",
+            "surface": "#131313",
+            "on-primary": "#00287e",
+            "surface-variant": "#353535",
+            "primary-container": "#2546a6",
+            "outline": "#8e909e",
+            "on-primary-container": "#abbcff",
+            "on-secondary": "#4b2800",
+            "error": "#ffb4ab",
+            "outline-variant": "#444652",
+            "secondary": "#ffb874",
+            "on-error": "#690005",
+            "surface-container-low": "#1c1b1b",
+            "surface-dim": "#131313",
+            "on-surface": "#e5e2e1",
+            "primary": "#b6c4ff",
+            "surface-container-high": "#2a2a2a",
+            "on-surface-variant": "#c4c5d4",
+            "surface-container-lowest": "#0e0e0e"
+          },
+          "fontFamily": {
+            "headline": ["Manrope", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+            "label": ["Inter", "sans-serif"]
+          }
+        },
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .hero-gradient {
+      background: linear-gradient(135deg, #b6c4ff 0%, #2546a6 100%);
+    }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #b6c4ff;
+      color: #00287e;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    .main-nav.nav-open {
+      display: flex !important;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(13, 13, 13, 0.98);
+      padding: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    .form-feedback {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .form-feedback.success {
+      background-color: rgba(72, 187, 120, 0.2);
+      color: #48bb78;
+      border: 1px solid #48bb78;
+    }
+    .form-feedback.error {
+      background-color: rgba(245, 101, 101, 0.2);
+      color: #f56565;
+      border: 1px solid #f56565;
+    }
+    .form-feedback.loading {
+      background-color: rgba(66, 153, 225, 0.2);
+      color: #4299e1;
+      border: 1px solid #4299e1;
+    }
+  </style>
 </head>
+<body class="bg-surface text-on-surface selection:bg-secondary/30 selection:text-secondary">
+  <a href="#main-content" class="skip-link font-bold rounded-br-lg shadow-lg">Pular para o conteúdo principal</a>
 
-<body>
-  <!-- Link de acessibilidade para pular ao conteúdo principal -->
-  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-
-  <!-- Cabeçalho principal -->
-  <header class="main-header" role="banner">
-    <div class="container header-flex">
-      <a href="./" class="header-logo" aria-label="Página inicial">
-        <img src="./src/img/logo.png" alt="Logo BMS" width="48" height="48" loading="lazy">
+  <!-- Header -->
+  <header class="main-header fixed top-0 left-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+    <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+      <a href="./" class="text-2xl font-black tracking-tighter text-neutral-100 flex items-center gap-3">
+        <img src="./src/img/logo.png" alt="Logo BMS" class="w-8 h-8 rounded-md" loading="lazy">
+      B.M.S
       </a>
-      <nav class="main-nav" aria-label="Navegação principal">
-        <ul class="nav-list">
-          <li><a href="#skills"><i class="bi bi-lightning-charge"></i> Habilidades</a></li>
-          <li><a href="#about"><i class="bi bi-person"></i> Sobre</a></li>
-          <li><a href="#projects"><i class="bi bi-folder2-open"></i> Projetos</a></li>
-          <li><a href="#contact"><i class="bi bi-envelope"></i> Contato</a></li>
-        </ul>
+      
+      <nav class="main-nav hidden md:flex items-center gap-8">
+        <a class="text-neutral-400 font-medium hover:text-primary transition-all duration-300 ease-out font-['Manrope'] tracking-tight text-lg" href="#skills">Habilidades</a>
+        <a class="text-neutral-400 font-medium hover:text-primary transition-all duration-300 ease-out font-['Manrope'] tracking-tight text-lg" href="#about">Sobre</a>
+        <a class="text-neutral-400 font-medium hover:text-primary transition-all duration-300 ease-out font-['Manrope'] tracking-tight text-lg" href="#projects">Projetos</a>
       </nav>
-      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Abrir menu" aria-expanded="false"
-        aria-controls="mobileMenu">
-        <i class="bi bi-list"></i>
+      
+      <button id="mobileMenuButton" class="md:hidden text-neutral-100 p-2" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="material-symbols-outlined text-3xl">menu</span>
       </button>
+
+      <a href="#contact" class="hidden md:block bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-all">
+        Contato
+      </a>
     </div>
   </header>
 
-  <!-- Conteúdo principal -->
-  <main id="main-content" tabindex="-1">
-    <!-- Seção Hero -->
-    <section class="hero-section" aria-labelledby="hero-heading">
-      <div class="container hero-flex">
-        <div class="hero-text">
-          <h1 id="hero-heading">
-            <i class="bi bi-lightbulb"></i>
-            Transformando ideias em realidade virtual<span>.</span>
-          </h1>
-          <p>
-            <i class="bi bi-globe"></i>
-            Eleve sua presença online com soluções que combinam design cativante, funcionalidade intuitiva e resultados
-            concretos.
+  <main id="main-content" class="pt-24 overflow-hidden" tabindex="-1">
+    
+    <!-- Hero Section -->
+    <section class="min-h-[819px] flex flex-col md:flex-row items-center px-6 max-w-7xl mx-auto py-20 gap-12">
+      <div class="flex-1 space-y-8 text-left">
+        <div class="inline-block px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/15">
+          <span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Front-End Developer</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight">
+          Transformando ideias em <span class="text-transparent bg-clip-text hero-gradient">realidade virtual</span>.
+        </h1>
+        <p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed">
+          Eleve sua presença online com soluções que combinam design cativante, funcionalidade intuitiva e resultados concretos.
+        </p>
+        <div class="flex gap-4 items-center">
+          <a href="#contact" class="hero-gradient text-on-primary px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-all active:scale-95 inline-block">
+            Entre em contato
+          </a>
+          <a class="text-on-surface font-semibold flex items-center gap-2 group ml-4" href="#projects">
+            Ver Portfólio
+            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <div class="flex-1 relative w-full aspect-square md:aspect-auto">
+        <div class="absolute inset-0 hero-gradient opacity-20 blur-[100px] rounded-full"></div>
+        <div class="relative z-10 w-full h-full min-h-[400px] bg-surface-container-low rounded-3xl overflow-hidden shadow-2xl border border-outline-variant/10">
+          <img class="w-full h-full object-cover grayscale mix-blend-luminosity hover:grayscale-0 transition-all duration-700" alt="Tech workspace abstraction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_9jOA48euZ-dKtCU_6WCSr3pUbTUjGSWtx8KjBQWvOnEh_dYQeHDaSh21V2ZA3EcliXncnX8Xz7_xLwhuOdmLnAuT0YNO-TKoCMMCyCyCVcqV_hxGYdQUlxtFaKYeANeMGYmSXy3jqcDTOZPYE4E85BfRrjM5PbGfc7S9ubwIGCzUh-6IEUdbAkotKpaz0yGJah31FvdiGByyREQPOWKnhF-Gi-NVQaoSN4RG3duZGsYBn1vR09ZFwWaLiSaI5T9orgP_VGcUsGzb"/>
+          <div class="absolute bottom-6 left-6 right-6 p-6 bg-surface/60 backdrop-blur-md rounded-2xl border border-outline-variant/10">
+            <div class="flex gap-2 mb-2">
+              <div class="w-3 h-3 rounded-full bg-error"></div>
+              <div class="w-3 h-3 rounded-full bg-secondary"></div>
+              <div class="w-3 h-3 rounded-full bg-primary"></div>
+            </div>
+            <code class="text-primary text-sm font-mono block">const developer = { vision: "precise", code: "clean" };</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="bg-surface-container-low py-24 px-6" id="skills">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div class="space-y-4">
+            <span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Expertise</span>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Minhas Habilidades</h2>
+          </div>
+          <p class="text-on-surface-variant max-w-md md:text-right">
+            Equilibrando rigor técnico, visão criativa e pensamento lógico para construir arquiteturas digitais incríveis.
           </p>
-          <a href="#contact" class="cta-button"><i class="bi bi-send"></i> Entre em contato</a>
         </div>
-        <figure class="hero-image">
-          <img src="https://avatars.githubusercontent.com/u/155079481?v=4"
-            alt="Brian Muniz Silveira, desenvolvedor front-end" loading="lazy" width="350" height="450">
-        </figure>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="group p-8 bg-surface-container-highest rounded-3xl hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+            <div class="mb-6 w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary text-3xl">code</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Desenvolvimento Web</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-6">Websites responsivos, performance otimizada, acessibilidade e design intuitivo.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">HTML5</span>
+              <span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">CSS3</span>
+              <span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">JS</span>
+            </div>
+          </div>
+          
+          <div class="group p-8 bg-surface-container-highest rounded-3xl hover:bg-surface-container-high transition-all duration-500">
+            <div class="mb-6 w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center">
+              <span class="material-symbols-outlined text-secondary text-3xl">menu_book</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Aprendizado Contínuo</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-6">Leitura constante de temas variados, ampliando a criatividade e visão técnica sistêmica.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Autodidata</span>
+              <span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Leitura</span>
+            </div>
+          </div>
+          
+          <div class="group p-8 bg-surface-container-highest rounded-3xl hover:bg-surface-container-high transition-all duration-500">
+            <div class="mb-6 w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center">
+              <span class="material-symbols-outlined text-tertiary text-3xl">psychology</span>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Speedcubing</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-6">Pensamento rápido, resolução analítica de problemas e foco profundo sob pressão.</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Lógica</span>
+              <span class="px-3 py-1 bg-surface-container-lowest rounded-full text-xs font-bold tracking-tight uppercase text-outline">Velocidade</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Seção de Habilidades -->
-    <section id="skills" class="skills-section" aria-labelledby="skills-heading">
-      <div class="container">
-        <h2 id="skills-heading"><i class="bi bi-lightning-charge"></i> Minhas <span>Habilidades</span></h2>
-        <div class="skills-grid">
-          <article class="skill-card">
-            <i class="bi bi-code-square skill-icon"></i>
-            <h3>Desenvolvimento Web</h3>
-            <p>Websites responsivos, performance otimizada, acessibilidade e design intuitivo. HTML5, CSS3, JavaScript.
+    <!-- About Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto" id="about">
+      <div class="flex flex-col md:flex-row items-center gap-12 bg-surface-container-low rounded-[3rem] p-8 md:p-16 border border-outline-variant/10 shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 hero-gradient opacity-[0.03] blur-3xl rounded-full scale-150"></div>
+        
+        <div class="flex-shrink-0 w-64 h-64 md:w-80 md:h-80 relative z-10">
+          <div class="absolute inset-0 bg-primary/20 rounded-3xl translate-x-3 translate-y-3"></div>
+          <img src="./src/img/eu2.webp" alt="Brian Muniz Silveira" class="w-full h-full object-cover rounded-3xl relative z-10 border border-outline-variant/20 shadow-lg grayscale hover:grayscale-0 transition-all duration-500" loading="lazy">
+        </div>
+        
+        <div class="flex-1 space-y-8 z-10">
+          <div class="space-y-3">
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight">Sobre mim</h2>
+          </div>
+          <div>
+            <h3 class="text-3xl font-semibold text-primary mb-2">Brian Muniz Silveira</h3>
+            <p class="text-on-surface-variant text-xl leading-relaxed italic border-l-4 border-secondary pl-4 py-1">
+              Desenvolvedor Front-End | Estudante Autodidata
             </p>
-          </article>
-          <article class="skill-card">
-            <i class="bi bi-book skill-icon"></i>
-            <h3>Aprendizado Contínuo</h3>
-            <p>Leitura constante de temas variados, ampliando criatividade e visão técnica.</p>
-          </article>
-          <article class="skill-card">
-            <i class="bi bi-box skill-icon"></i>
-            <h3>Speedcubing</h3>
-            <p>Pensamento rápido, resolução de problemas e foco sob pressão, aplicados ao desenvolvimento.</p>
-          </article>
+          </div>
+          <p class="text-on-surface text-lg leading-relaxed max-w-3xl">
+            Crio interfaces modernas, acessíveis e alinhadas às melhores práticas. Busco a excelência técnica e a evolução constante, tratando cada projeto como uma peça única de engenharia digital.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6 border-t border-outline-variant/10">
+            <div class="space-y-4">
+              <h4 class="text-xs font-bold uppercase tracking-widest text-outline">Tecnologias</h4>
+              <ul class="text-on-surface-variant font-medium space-y-3">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> React.js & Next.js</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> JavaScript (ES6+)</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> TypeScript</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> HTML5 & CSS3</li>
+              </ul>
+            </div>
+            <div class="space-y-4">
+              <h4 class="text-xs font-bold uppercase tracking-widest text-outline">Princípios</h4>
+              <ul class="text-on-surface-variant font-medium space-y-3">
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Clean Code</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Design Systems</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Performance First</li>
+                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Acessibilidade (WCAG)</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Seção Sobre -->
-    <section id="about" class="about-section" aria-labelledby="about-heading">
-      <div class="container about-flex">
-        <figure class="about-image">
-          <img src="./src/img/eu2.webp" alt="Brian Muniz em seu ambiente de trabalho" loading="lazy" width="350"
-            height="450" style="border-radius: 5%">
-        </figure>
-        <div class="about-text">
-          <h2 id="about-heading"><i class="bi bi-person"></i> Sobre mim</h2>
-          <h3>Brian Muniz Silveira</h3>
-          <p><i class="bi bi-laptop"></i> Desenvolvedor Front-End | Estudante Autodidata</p>
-          <p>Crio interfaces modernas, acessíveis e alinhadas às melhores práticas. Busco excelência técnica e evolução
-            constante.</p>
-          <ul>
-            <li><strong><i class="bi bi-tools"></i> Tecnologias:</strong> React.js, JavaScript (ES6+), HTML5, CSS3,
-              frameworks modernos</li>
-            <li><strong><i class="bi bi-lightbulb"></i> Princípios:</strong> Clean Code, Design Systems, Performance,
-              Acessibilidade (WCAG)</li>
-            <li><strong><i class="bi bi-graph-up"></i> Em evolução:</strong> TypeScript, Next.js, testes automatizados
-            </li>
-          </ul>
-          <ul>
-            <li><i class="bi bi-cube"></i> Resolução sistemática de problemas (influência do speedcubing)</li>
-            <li><i class="bi bi-bookmark-star"></i> Visão criativa e organizacional, aprimorada por leitura técnica e
-              projetos pessoais</li>
-          </ul>
+    <!-- Projects Section -->
+    <section class="bg-surface-container-lowest py-24 px-6" id="projects">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20 space-y-4">
+          <span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Showcase</span>
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tight">Meu Portfólio</h2>
+          <p class="text-on-surface-variant max-w-2xl mx-auto text-lg pt-4">Explore a seleção dos meus melhores trabalhos, demonstrando inovação em interface e tecnologia.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          
+          <!-- Row 1 -->
+          <div class="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-[16/10] md:aspect-auto h-[400px]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100" src="./src/img/projeto-8.png" alt="Alfabeto Cirílico" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-3xl font-bold mb-2">Alfabeto Cirílico</h3>
+              <p class="text-on-surface-variant max-w-md mb-4 text-lg">Aprenda o alfabeto cirílico de forma interativa e gratuita neste site educacional.</p>
+              <a class="inline-flex items-center gap-2 text-primary font-bold text-lg group/link" href="https://alfabeto-cirilico.vercel.app/" target="_blank" rel="noopener">
+                Visualizar <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">open_in_new</span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="./src/img/john-noonan-unsplash.webp" alt="Clima" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">Clima</h3>
+              <p class="text-on-surface-variant mb-6">App de previsão do tempo com interface intuitiva e consumo de API em tempo real.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="https://clima-eta-two.vercel.app/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">visibility</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px] hover:-translate-y-2 transition-transform duration-500">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="https://raw.githubusercontent.com/BrianMunizSilveira/projeto-one-piece/main/image.png" alt="One Piece" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">One Piece</h3>
+              <p class="text-on-surface-variant mb-6">Catálogo interativo de personagens do universo.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-tertiary/10 text-tertiary hover:bg-tertiary hover:text-on-tertiary transition-all" href="https://brianmunizsilveira.github.io/projeto-one-piece/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px] hover:-translate-y-2 transition-transform duration-500 delay-100">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="./src/img/scarlxrd.webp" alt="Quem é Scarlxrd?" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">Quem é Scarlxrd?</h3>
+              <p class="text-on-surface-variant mb-6">Trajetória do artista e sua revolução no trap metal.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all" href="https://biografia-scarlxrd.vercel.app/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px] hover:-translate-y-2 transition-transform duration-500 delay-200">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="./src/img/tastymysti.vercel.app_.png" alt="Tasty Mysti" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">Tasty Mysti</h3>
+              <p class="text-on-surface-variant mb-6">Site pessoal focado em criação de conteúdo gamer.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="https://tastymysti.vercel.app/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-[16/10] md:aspect-auto h-[400px]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-50 group-hover:opacity-90" src="./src/img/lofi.gif" alt="O que é Lo-Fi?" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-3xl font-bold mb-2">O que é Lo-Fi?</h3>
+              <p class="text-on-surface-variant max-w-md mb-4 text-lg">Guia completo visual sobre o universo musical Lo-Fi.</p>
+              <a class="inline-flex items-center gap-2 text-tertiary font-bold text-lg group/link" href="https://projeto-lofi.vercel.app/" target="_blank" rel="noopener">
+                Visualizar <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="./src/img/kelly-sikkema-unsplash.webp" alt="Estante" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">Estante</h3>
+              <p class="text-on-surface-variant mb-6">Biblioteca digital pessoal moderna.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all" href="https://projeto-estante.vercel.app/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">visibility</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="./src/img/projeto-11.png" alt="Calculadora" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">Calculadora</h3>
+              <p class="text-on-surface-variant mb-6">Interface responsiva para cálculos ágeis com JS.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="https://calculadora-tau-neon.vercel.app/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">visibility</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-8 group relative overflow-hidden rounded-3xl bg-surface-container-low aspect-[16/10] md:aspect-auto h-[400px]">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 group-hover:opacity-100" src="./src/img/chris-curry-unsplash.webp" alt="História do Código Morse" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-3xl font-bold mb-2">História do Código Morse</h3>
+              <p class="text-on-surface-variant max-w-md mb-4 text-lg">Exploração interativa da evolução e impacto nas comunicações globais.</p>
+              <a class="inline-flex items-center gap-2 text-primary font-bold text-lg group/link" href="https://morse-code-flax.vercel.app/history.html" target="_blank" rel="noopener">
+                Visualizar <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px] hover:-translate-y-2 transition-transform duration-500">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="./src/img/dw6.webp" alt="DW6 Characters" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">DW6 Characters</h3>
+              <p class="text-on-surface-variant mb-6">Dynasty Warriors 6 com biografias ricas.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-on-primary transition-all" href="https://dw6threekingdoms.vercel.app/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px] hover:-translate-y-2 transition-transform duration-500 delay-100">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80" src="./src/img/projeto-12.png" alt="Mobile First" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">Mobile First</h3>
+              <p class="text-on-surface-variant mb-6">Arquitetura Mobile First com SCSS modular.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary/10 text-secondary hover:bg-secondary hover:text-on-secondary transition-all" href="https://brianmunizsilveira.github.io/mobile-first/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="md:col-span-4 group relative overflow-hidden rounded-3xl bg-surface-container-high h-[400px] hover:-translate-y-2 transition-transform duration-500 delay-200">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-40 group-hover:opacity-80 bg-center" src="https://i.imgur.com/4P1ZAyr.png" alt="FP Sellection" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/90 to-transparent p-8 flex flex-col justify-end">
+              <h3 class="text-2xl font-bold mb-2">FP Sellection</h3>
+              <p class="text-on-surface-variant mb-6">Exposição visual de carros de luxo e sua aura.</p>
+              <a class="flex items-center justify-center w-12 h-12 rounded-full bg-tertiary/10 text-tertiary hover:bg-tertiary hover:text-on-tertiary transition-all" href="https://projeto-fp.vercel.app/" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">open_in_new</span>
+              </a>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
 
-    <!-- Seção Portfólio -->
-    <section id="projects" class="portfolio-section" aria-labelledby="portfolio-heading">
-      <div class="container">
-        <h2 id="portfolio-heading"><i class="bi bi-folder2-open"></i> Meu <span>Portfólio</span></h2>
-        <div class="portfolio-grid">
-          <!-- 1. Alfabeto Cirílico -->
-          <article class="portfolio-item">
-            <a href="https://alfabeto-cirilico.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-1-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/projeto-8.png')" loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-1-title"><i class="bi bi-translate"></i> Alfabeto Cirílico</h3>
-                  <p>Aprenda o alfabeto cirílico de forma interativa e gratuita neste site educacional.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 2. Clima -->
-          <article class="portfolio-item">
-            <a href="https://clima-eta-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
-              aria-labelledby="project-2-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/john-noonan-unsplash.webp')"
-                loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-2-title"><i class="bi bi-cloud-sun"></i> Clima</h3>
-                  <p>Aplicativo de previsão do tempo com interface intuitiva, consumo de API e atualizações em tempo
-                    real.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 3. One Piece -->
-          <article class="portfolio-item">
-            <a href="https://brianmunizsilveira.github.io/projeto-one-piece/" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-3-title">
-              <figure class="portfolio-image"
-                style="background-image: url(https://raw.githubusercontent.com/BrianMunizSilveira/projeto-one-piece/main/image.png)"
-                loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-3-title"><i class="bi bi-people"></i> One Piece</h3>
-                  <p>Catálogo interativo de personagens do universo One Piece.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 4. Quem é Scarlxrd? -->
-          <article class="portfolio-item">
-            <a href="https://biografia-scarlxrd.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-4-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/scarlxrd.webp')" loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-4-title"><i class="bi bi-music-note-beamed"></i> Quem é Scarlxrd?</h3>
-                  <p>Trajetória do artista Scarlxrd e sua revolução no trap metal.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 5. Tasty Mysti -->
-          <article class="portfolio-item">
-            <a href="https://tastymysti.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
-              aria-labelledby="project-5-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/tastymysti.vercel.app_.png')"
-                loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-5-title"><i class="bi bi-controller"></i> Tasty Mysti</h3>
-                  <p>Site pessoal do canal "TastyMysti", reunindo conteúdo de games e links das redes sociais.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 6. O que é Lo-Fi? -->
-          <article class="portfolio-item">
-            <a href="https://projeto-lofi.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
-              aria-labelledby="project-6-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/lofi.gif')" loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-6-title"><i class="bi bi-headphones"></i> O que é Lo-Fi?</h3>
-                  <p>Guia sobre o universo Lo-Fi, suas origens e características sonoras.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 7. Estante -->
-          <article class="portfolio-item">
-            <a href="https://projeto-estante.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-7-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/kelly-sikkema-unsplash.webp')"
-                loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-7-title"><i class="bi bi-journal-bookmark"></i> Estante</h3>
-                  <p>Biblioteca digital pessoal com resenhas e sistema de busca de livros.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 8. Calculadora -->
-          <article class="portfolio-item">
-            <a href="https://calculadora-tau-neon.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-8-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/projeto-11.png')" loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-8-title"><i class="bi bi-calculator"></i> Calculadora</h3>
-                  <p>Calculadora responsiva e acessível, desenvolvida com HTML5, CSS3 e JavaScript.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 9. História do Código Morse -->
-          <article class="portfolio-item">
-            <a href="https://morse-code-flax.vercel.app/history.html" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-9-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/chris-curry-unsplash.webp')"
-                loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-9-title"><i class="bi bi-morse"></i> História do Código Morse</h3>
-                  <p>Exploração interativa da evolução do Código Morse e seu impacto nas comunicações.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 10. DW6 Characters -->
-          <article class="portfolio-item">
-            <a href="https://dw6threekingdoms.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-10-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/dw6.webp')" loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-10-title"><i class="bi bi-people-fill"></i> DW6 Characters</h3>
-                  <p>Catálogo interativo dos personagens de Dynasty Warriors 6 com biografias detalhadas.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 11. Mobile First -->
-          <article class="portfolio-item">
-            <a href="https://brianmunizsilveira.github.io/mobile-first/" target="_blank" rel="noopener noreferrer"
-              class="portfolio-link" aria-labelledby="project-11-title">
-              <figure class="portfolio-image" style="background-image: url('./src/img/projeto-12.png')" loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-11-title"><i class="bi bi-phone"></i> Mobile First</h3>
-                  <p>Projeto demonstrando o conceito de Mobile First em conjunto com SCSS.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
-          <!-- 12. FP Sellection -->
-          <article class="portfolio-item">
-            <a href="https://projeto-fp.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link"
-              aria-labelledby="project-12-title">
-              <figure class="portfolio-image"
-                style="background-image: url('https://camo.githubusercontent.com/c7f4e2d259b7cb25a584c53f0dcb911e74253706e48c68c371008f58d2eabdf1/68747470733a2f2f692e696d6775722e636f6d2f3450315a4179722e706e67')"
-                loading="lazy">
-                <figcaption class="portfolio-caption">
-                  <h3 id="project-12-title"><i class="bi bi-car-front"></i> FP Sellection</h3>
-                  <p>Página web que exibe uma seleção de carros de luxo, como Porsche, Ferrari e Lamborghini.</p>
-                </figcaption>
-              </figure>
-            </a>
-          </article>
+    <!-- Contact Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto" id="contact">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <span class="text-secondary font-label text-xs tracking-widest uppercase font-bold">Conexão</span>
+            <h2 class="text-4xl md:text-6xl font-bold tracking-tight">Fale comigo</h2>
+          </div>
+          <p class="text-on-surface-variant text-xl leading-relaxed">
+            Tem um projeto em mente ou quer apenas bater um papo sobre front-end? Vamos construir algo incrível juntos.
+          </p>
+          <div class="space-y-6 pt-6">
+            <div class="flex items-center gap-4 group">
+              <div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-all shadow-md">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <div>
+                <p class="text-xs uppercase font-bold text-outline tracking-widest">Email</p>
+                <a href="mailto:brian.muniz.silveira@gmail.com" class="text-lg font-medium hover:text-primary transition-colors">brian.muniz.silveira@gmail.com</a>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 group">
+              <div class="w-14 h-14 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-all shadow-md">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <p class="text-xs uppercase font-bold text-outline tracking-widest">Localização</p>
+                <p class="text-lg font-medium">Brasil</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Seção de Contato -->
-    <section id="contact" class="contact-section" aria-labelledby="contact-heading">
-      <div class="container">
-        <h2 id="contact-heading"><i class="bi bi-envelope"></i> Fale <span>comigo</span></h2>
-        <form id="contact-form" class="contact-form" autocomplete="off">
-          <div class="form-group">
-            <label for="name"><i class="bi bi-person"></i> Seu nome:</label>
-            <input type="text" id="name" name="from_name" required placeholder="Seu nome completo" autocomplete="name">
-          </div>
-          <div class="form-group">
-            <label for="email"><i class="bi bi-envelope"></i> Seu e-mail:</label>
-            <input type="email" id="email" name="from_email" required placeholder="seu@email.com" autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="message"><i class="bi bi-chat-dots"></i> Sua mensagem:</label>
-            <textarea id="message" name="message" required placeholder="Como posso te ajudar?" rows="5"></textarea>
-          </div>
-          <button type="submit" class="submit-button"><i class="bi bi-send"></i> Enviar mensagem</button>
-          <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
-        </form>
+        
+        <div class="bg-surface-container-low p-8 md:p-12 rounded-[2rem] border border-outline-variant/10 shadow-2xl relative">
+          <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <form id="contact-form" class="space-y-6 relative z-10" autocomplete="off">
+            <div class="space-y-2">
+              <label for="name" class="text-sm font-bold tracking-tight text-on-surface-variant ml-1">Nome Completo</label>
+              <input type="text" id="name" name="from_name" required class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline/50 transition-all shadow-inner" placeholder="Seu nome" autocomplete="name"/>
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="text-sm font-bold tracking-tight text-on-surface-variant ml-1">Seu E-mail</label>
+              <input type="email" id="email" name="from_email" required class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline/50 transition-all shadow-inner" placeholder="seu@email.com" autocomplete="email"/>
+            </div>
+            <div class="space-y-2">
+              <label for="message" class="text-sm font-bold tracking-tight text-on-surface-variant ml-1">Sua Mensagem</label>
+              <textarea id="message" name="message" required class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/40 rounded-xl py-4 px-6 text-on-surface placeholder:text-outline/50 transition-all resize-none shadow-inner" placeholder="Como posso ajudar?" rows="5"></textarea>
+            </div>
+            <button type="submit" class="w-full hero-gradient text-on-primary py-4 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary-container/20 mt-4 flex items-center justify-center gap-2">
+              Enviar Mensagem <span class="material-symbols-outlined">send</span>
+            </button>
+            <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="main-footer" role="contentinfo">
-    <div class="container footer-flex">
-      <div class="footer-brand">
-        <img src="./src/img/logo.webp" alt="Brian Muniz Silveira - Desenvolvedor Front-end" class="footer-logo"
-          loading="lazy">
+  <!-- Footer -->
+  <footer class="bg-surface-container-lowest w-full py-12 px-8 border-t border-outline-variant/10">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8 max-w-7xl mx-auto">
+      <div class="flex items-center gap-4">
+        <img src="./src/img/logo.webp" alt="Brian Muniz Silveira" class="w-10 h-10 rounded-lg opacity-80" loading="lazy">
+        <div class="text-lg font-black tracking-tighter text-on-surface">B.M.S</div>
       </div>
-      <div class="footer-social">
-        <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i class="bi bi-github"></i>
+      <p class="text-on-surface-variant font-['Inter'] text-sm leading-relaxed text-center md:text-left">
+        &copy; <span id="current-year"></span> Brian Muniz Silveira. Todos os direitos reservados.
+      </p>
+      <div class="flex gap-6">
+        <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+          </svg>
         </a>
-        <a href="https://www.linkedin.com/in/brian-muniz-silveira/" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
+        <a href="https://github.com/BrianMunizSilveira" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/10 transition-all" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
         </a>
       </div>
-      <div class="footer-contact">
-        <a href="mailto:brian.muniz.silveira@gmail.com">
-          <i class="bi bi-envelope-fill"></i> brian.muniz.silveira@gmail.com
-        </a>
-      </div>
-    </div>
-    <div class="container">
-      <p>&copy; <span id="current-year"></span> Brian Muniz Silveira. Todos os direitos reservados.</p>
     </div>
   </footer>
-
-  <!-- Botão de voltar ao topo -->
-  <button id="backToTopBtn" aria-label="Voltar ao topo da página"><i class="bi bi-arrow-up"></i></button>
 
   <!-- Scripts -->
   <script src="./src/js/script.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
 </body>
-
 </html>
